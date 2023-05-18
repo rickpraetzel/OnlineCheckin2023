@@ -29,7 +29,6 @@ Begin mPage InformedConsentPage
    _ImplicitInstance=   False
    _mDesignHeight  =   0
    _mDesignWidth   =   0
-   _mName          =   ""
    _mPanelIndex    =   -1
    Begin WebImageViewer ImageView1
       ControlID       =   ""
@@ -65,7 +64,7 @@ Begin mPage InformedConsentPage
       Caption         =   ""
       ControlID       =   ""
       Enabled         =   True
-      Height          =   308
+      Height          =   339
       Hint            =   ""
       Index           =   -2147483648
       Indicator       =   ""
@@ -84,7 +83,7 @@ Begin mPage InformedConsentPage
       Text            =   "I understand that outfitting for equipment rentals may include an information and safety orientation.  I agree to participate in this orientation.\n\rTHERE IS RISK ASSOCIATED WITH LIFE. \rYOU ARE RESPONSIBLE FOR YOUR OWN SAFEY \n\nIn accordance with the requests of our insurance provider and in consideration of being allowed to participate in any way in the program, related events and activities, I the undersigned, acknowledge, appreciate, and agree that:\n\n1.  THERE IS RISK ASSOCIATED WITH LIFE. The risk of injury from the activities involved in this program is significant, including the potential for permanent paralysis and death.\r\r2. By clicking the AGREE button, I ACKNOWLEDGE FULL AND SOLE RESPONSIBILITY FOR THE USE, CARE, AND RETURN OF THIS GEAR, whether used by myself or use shared with another. \r\r3.  I KNOWINGLY AND FREELY ASSUME ALL SUCH RISKS, both known and unknown, COMMITTING TO MANAGING THESE RISKS WITH AND ACCORDING TO RELEASEE INSTRUCTIONS and assume full responsibility for my participation.\r\r4.  I willingly agree to comply with terms and conditions for participation. If I observe any unusual significant hazard during my presence or participation, I will remove myself from participation and bring such to the attention of the nearest official immediately.\r\r5.  By participating in or attending any activity in connection with this program, whether on or off the premises, I consent to the use of any photographs, pictures, film or videotape taken of me or provided by me for publicity, promotion, television, websites or any other use, and expressly waive any right of privacy, compensation, copyright or other ownership right connected to same.\r\r6.  I, for myself and on behalf of my heirs, assigns, personal representatives and next of kin, HEREBY RELEASE, INDEMNIFY, AND HOLD HARMLESS THE: Zion Adventure Company, LLC, its officers, officials, agents and/or employees, other participants, sponsors, advertisers, and, if applicable, owners and lessors of premises used to conduct the event (RELEASEES), from any and all claims, demands, losses, and liability arising out of or related to any INJURY, DISABILITY OR DEATH I may suffer, or loss or damage to person or property, WHETHER ARISING FROM THE NEGLIGENCE OF THE RELEASEES OR OTHERWISE, to the fullest extent permitted by law.\r\rI HAVE READ THIS RELEASE OF LIABILITY AND ASSUMPTION OF RISK AGREEMENT, FULLY UNDERSTAND ITS TERMS, UNDERSTAND THAT I HAVE GIVEN UP SUBSTANTIAL RIGHTS BY ACCEPTING IT, AND ACCEPT IT FREELY AND VOLUNTARILY WITHOUT ANY INDUCEMENT.\r"
       TextAlignment   =   0
       Tooltip         =   ""
-      Top             =   192
+      Top             =   161
       Visible         =   True
       Width           =   299
       _mPanelIndex    =   -1
@@ -183,16 +182,16 @@ Begin mPage InformedConsentPage
       _mPanelIndex    =   -1
    End
    Begin ActivatibleButton SubmitButton
-      Bold            =   False
+      AllowAutoDisable=   False
+      Cancel          =   False
+      Caption         =   "Submit"
       ControlID       =   ""
+      Default         =   False
       Enabled         =   True
-      FontName        =   ""
-      FontSize        =   0.0
-      Height          =   45
+      Height          =   34
       Index           =   -2147483648
-      Indicator       =   ""
-      Italic          =   False
-      Left            =   102
+      Indicator       =   0
+      Left            =   95
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   True
@@ -200,15 +199,10 @@ Begin mPage InformedConsentPage
       LockRight       =   False
       LockTop         =   True
       LockVertical    =   False
-      Multiline       =   False
       Scope           =   2
       TabIndex        =   0
-      Text            =   "SUBMIT"
-      TextAlignment   =   2
-      TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   725
-      Underline       =   False
+      Top             =   728
       Visible         =   True
       Width           =   130
       _mPanelIndex    =   -1

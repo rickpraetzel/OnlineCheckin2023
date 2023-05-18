@@ -22,7 +22,6 @@ Begin WebContainer CCInfoControl
    Width           =   304
    _mDesignHeight  =   0
    _mDesignWidth   =   0
-   _mName          =   ""
    _mPanelIndex    =   -1
    Begin WebLabel Label1
       Bold            =   False
@@ -111,7 +110,7 @@ Begin WebContainer CCInfoControl
       TextAlignment   =   0
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   170
+      Top             =   155
       Underline       =   False
       Visible         =   True
       Width           =   160
@@ -140,7 +139,7 @@ Begin WebContainer CCInfoControl
       SelectedRowValue=   ""
       TabIndex        =   3
       Tooltip         =   ""
-      Top             =   205
+      Top             =   190
       Visible         =   True
       Width           =   75
       _mPanelIndex    =   -1
@@ -167,10 +166,10 @@ Begin WebContainer CCInfoControl
       Scope           =   2
       TabIndex        =   4
       Text            =   "/"
-      TextAlignment   =   0
+      TextAlignment   =   2
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   207
+      Top             =   192
       Underline       =   False
       Visible         =   True
       Width           =   21
@@ -199,7 +198,7 @@ Begin WebContainer CCInfoControl
       SelectedRowValue=   ""
       TabIndex        =   5
       Tooltip         =   ""
-      Top             =   205
+      Top             =   190
       Visible         =   True
       Width           =   80
       _mPanelIndex    =   -1
@@ -229,7 +228,7 @@ Begin WebContainer CCInfoControl
       TextAlignment   =   0
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   85
+      Top             =   72
       Underline       =   False
       Visible         =   True
       Width           =   257
@@ -261,7 +260,7 @@ Begin WebContainer CCInfoControl
       Text            =   ""
       TextAlignment   =   0
       Tooltip         =   ""
-      Top             =   120
+      Top             =   107
       Visible         =   True
       Width           =   293
       _mPanelIndex    =   -1
@@ -291,7 +290,7 @@ Begin WebContainer CCInfoControl
       TextAlignment   =   0
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   170
+      Top             =   155
       Underline       =   False
       Visible         =   True
       Width           =   70
@@ -323,7 +322,7 @@ Begin WebContainer CCInfoControl
       Text            =   ""
       TextAlignment   =   0
       Tooltip         =   ""
-      Top             =   205
+      Top             =   190
       Visible         =   True
       Width           =   81
       _mPanelIndex    =   -1

@@ -29,7 +29,6 @@ Begin mPage StoreCreditCardPage
    _ImplicitInstance=   False
    _mDesignHeight  =   0
    _mDesignWidth   =   0
-   _mName          =   ""
    _mPanelIndex    =   -1
    Begin WebImageViewer ImageView1
       ControlID       =   ""
@@ -175,7 +174,7 @@ Begin mPage StoreCreditCardPage
       Tooltip         =   ""
       Top             =   370
       Visible         =   False
-      Width           =   32
+      Width           =   301
       _mDesignHeight  =   0
       _mDesignWidth   =   0
       _mPanelIndex    =   -1
@@ -183,37 +182,43 @@ Begin mPage StoreCreditCardPage
    Begin ANetProfileManager ANetProfileManager1
       Index           =   -2147483648
       isProcessingLiveRequests=   False
+      Left            =   0.0
       LockedInPosition=   False
       Scope           =   2
       TabPanelIndex   =   0
+      Top             =   0.0
    End
    Begin WebTimer RequestTimer
       ControlID       =   ""
       Enabled         =   True
       Index           =   -2147483648
+      Left            =   0.0
       Location        =   0
       LockedInPosition=   False
       Period          =   500
       RunMode         =   1
       Scope           =   2
+      Top             =   0.0
       _mPanelIndex    =   -1
    End
    Begin WebTimer AdvancePageTimer
       ControlID       =   ""
       Enabled         =   True
       Index           =   -2147483648
+      Left            =   0.0
       Location        =   0
       LockedInPosition=   False
       Period          =   100
       RunMode         =   0
       Scope           =   2
+      Top             =   0.0
       _mPanelIndex    =   -1
    End
    Begin MovementControl MovementControl1
       ControlCount    =   0
       ControlID       =   ""
       Enabled         =   True
-      Height          =   32
+      Height          =   55
       Index           =   -2147483648
       Indicator       =   ""
       LayoutDirection =   0
@@ -232,7 +237,7 @@ Begin mPage StoreCreditCardPage
       Tooltip         =   ""
       Top             =   638
       Visible         =   False
-      Width           =   32
+      Width           =   302
       _mDesignHeight  =   0
       _mDesignWidth   =   0
       _mPanelIndex    =   -1

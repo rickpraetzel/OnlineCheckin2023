@@ -22,7 +22,6 @@ Begin WebContainer AcknowlegeControl
    Width           =   319
    _mDesignHeight  =   0
    _mDesignWidth   =   0
-   _mName          =   ""
    _mPanelIndex    =   -1
    Begin WebCheckbox Checkbox1
       Caption         =   "Untitled"
@@ -46,7 +45,7 @@ Begin WebContainer AcknowlegeControl
       Top             =   4
       Value           =   False
       Visible         =   True
-      Width           =   26
+      Width           =   24
       _mPanelIndex    =   -1
    End
    Begin WebTextArea TextArea1
@@ -55,11 +54,11 @@ Begin WebContainer AcknowlegeControl
       Caption         =   ""
       ControlID       =   ""
       Enabled         =   True
-      Height          =   104
+      Height          =   59
       Hint            =   ""
       Index           =   -2147483648
       Indicator       =   ""
-      Left            =   39
+      Left            =   34
       LockBottom      =   True
       LockedInPosition=   False
       LockHorizontal  =   False
@@ -71,7 +70,7 @@ Begin WebContainer AcknowlegeControl
       ReadOnly        =   True
       Scope           =   2
       TabIndex        =   1
-      Text            =   "I have read and understand the above informed consent"
+      Text            =   "I have read and understand the above informed consent."
       TextAlignment   =   0
       Tooltip         =   ""
       Top             =   4

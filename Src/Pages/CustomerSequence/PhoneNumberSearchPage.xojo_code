@@ -29,7 +29,6 @@ Begin mPage PhoneNumberSearchPage
    _ImplicitInstance=   False
    _mDesignHeight  =   0
    _mDesignWidth   =   0
-   _mName          =   ""
    _mPanelIndex    =   -1
    Begin WebImageViewer ImageView1
       ControlID       =   ""
@@ -81,7 +80,7 @@ Begin mPage PhoneNumberSearchPage
       Scope           =   2
       TabIndex        =   0
       Text            =   "Please enter your phone number"
-      TextAlignment   =   0
+      TextAlignment   =   2
       TextColor       =   &c00000000
       Tooltip         =   ""
       Top             =   140
@@ -112,7 +111,7 @@ Begin mPage PhoneNumberSearchPage
       Scope           =   2
       TabIndex        =   0
       Text            =   "We will check for existing records first"
-      TextAlignment   =   0
+      TextAlignment   =   2
       TextColor       =   &c00000000
       Tooltip         =   ""
       Top             =   212

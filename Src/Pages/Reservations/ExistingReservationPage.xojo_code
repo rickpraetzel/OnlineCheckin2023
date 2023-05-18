@@ -29,7 +29,6 @@ Begin mPage ExistingReservationPage
    _ImplicitInstance=   False
    _mDesignHeight  =   0
    _mDesignWidth   =   0
-   _mName          =   ""
    _mPanelIndex    =   -1
    Begin WebImageViewer ImageView1
       ControlID       =   ""
@@ -122,7 +121,7 @@ Begin mPage ExistingReservationPage
       ControlCount    =   0
       ControlID       =   ""
       Enabled         =   True
-      Height          =   32
+      Height          =   49
       Index           =   -2147483648
       Indicator       =   ""
       LayoutDirection =   0
@@ -140,7 +139,7 @@ Begin mPage ExistingReservationPage
       TabIndex        =   1
       Tooltip         =   ""
       Top             =   546
-      Visible         =   False
+      Visible         =   True
       Width           =   304
       _mDesignHeight  =   0
       _mDesignWidth   =   0

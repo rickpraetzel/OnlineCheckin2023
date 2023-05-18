@@ -22,7 +22,6 @@ Begin WebContainer MovementControl
    Width           =   304
    _mDesignHeight  =   0
    _mDesignWidth   =   0
-   _mName          =   ""
    _mPanelIndex    =   -1
    Begin WebLabel BackButton
       Bold            =   False
@@ -104,7 +103,7 @@ End
 
 	#tag Method, Flags = &h0
 		Sub setPrimaryButtonText(value as string)
-		  SubmitButton.text = value
+		  SubmitButton.caption = value
 		End Sub
 	#tag EndMethod
 

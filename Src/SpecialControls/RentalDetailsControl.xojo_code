@@ -4,7 +4,7 @@ Begin WebContainer RentalDetailsControl
    ControlCount    =   0
    ControlID       =   ""
    Enabled         =   True
-   Height          =   251
+   Height          =   267
    Indicator       =   0
    LayoutDirection =   0
    LayoutType      =   0
@@ -22,7 +22,6 @@ Begin WebContainer RentalDetailsControl
    Width           =   304
    _mDesignHeight  =   0
    _mDesignWidth   =   0
-   _mName          =   ""
    _mPanelIndex    =   -1
    Begin WebLabel Label1
       Bold            =   False
@@ -136,7 +135,7 @@ Begin WebContainer RentalDetailsControl
       Scope           =   2
       TabIndex        =   3
       Text            =   "TODAY"
-      TextAlignment   =   0
+      TextAlignment   =   2
       TextColor       =   &c00000000
       Tooltip         =   ""
       Top             =   108
@@ -167,7 +166,7 @@ Begin WebContainer RentalDetailsControl
       Scope           =   2
       TabIndex        =   4
       Text            =   "TOMORROW"
-      TextAlignment   =   0
+      TextAlignment   =   2
       TextColor       =   &c00000000
       Tooltip         =   ""
       Top             =   162
@@ -198,7 +197,7 @@ Begin WebContainer RentalDetailsControl
       Scope           =   2
       TabIndex        =   5
       Text            =   "OTHER"
-      TextAlignment   =   0
+      TextAlignment   =   2
       TextColor       =   &c00000000
       Tooltip         =   ""
       Top             =   217

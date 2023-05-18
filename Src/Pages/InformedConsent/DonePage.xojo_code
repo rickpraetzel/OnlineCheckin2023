@@ -29,7 +29,6 @@ Begin WebPage DonePage
    _ImplicitInstance=   False
    _mDesignHeight  =   0
    _mDesignWidth   =   0
-   _mName          =   ""
    _mPanelIndex    =   -1
    Begin WebImageViewer ImageView1
       ControlID       =   ""
@@ -81,7 +80,7 @@ Begin WebPage DonePage
       Scope           =   2
       TabIndex        =   0
       Text            =   "Thank you\n\nPlease see an outfitter"
-      TextAlignment   =   0
+      TextAlignment   =   2
       TextColor       =   &c00000000
       Tooltip         =   ""
       Top             =   132
@@ -94,11 +93,13 @@ Begin WebPage DonePage
       ControlID       =   ""
       Enabled         =   True
       Index           =   -2147483648
+      Left            =   0.0
       Location        =   0
       LockedInPosition=   False
       Period          =   5000
       RunMode         =   0
       Scope           =   2
+      Top             =   0.0
       _mPanelIndex    =   -1
    End
 End

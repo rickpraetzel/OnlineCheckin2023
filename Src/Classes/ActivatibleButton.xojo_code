@@ -1,6 +1,6 @@
 #tag Class
 Protected Class ActivatibleButton
-Inherits WebLabel
+Inherits WebButton
 	#tag Event
 		Sub Pressed()
 		  if me.isActive then
@@ -38,6 +38,38 @@ Inherits WebLabel
 
 	#tag ViewBehavior
 		#tag ViewProperty
+			Name="AllowAutoDisable"
+			Visible=true
+			Group="Button"
+			InitialValue="False"
+			Type="Boolean"
+			EditorType=""
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="Cancel"
+			Visible=true
+			Group="Button"
+			InitialValue="False"
+			Type="Boolean"
+			EditorType=""
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="Caption"
+			Visible=true
+			Group="Button"
+			InitialValue="Untitled"
+			Type="String"
+			EditorType="String"
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="Default"
+			Visible=true
+			Group="Button"
+			InitialValue="False"
+			Type="Boolean"
+			EditorType=""
+		#tag EndViewProperty
+		#tag ViewProperty
 			Name="_mPanelIndex"
 			Visible=false
 			Group="Behavior"
@@ -60,54 +92,6 @@ Inherits WebLabel
 			InitialValue=""
 			Type="String"
 			EditorType="MultiLineEditor"
-		#tag EndViewProperty
-		#tag ViewProperty
-			Name="Bold"
-			Visible=true
-			Group="Behavior"
-			InitialValue=""
-			Type="Boolean"
-			EditorType=""
-		#tag EndViewProperty
-		#tag ViewProperty
-			Name="Italic"
-			Visible=true
-			Group="Behavior"
-			InitialValue=""
-			Type="Boolean"
-			EditorType=""
-		#tag EndViewProperty
-		#tag ViewProperty
-			Name="FontName"
-			Visible=true
-			Group="Behavior"
-			InitialValue=""
-			Type="String"
-			EditorType="MultiLineEditor"
-		#tag EndViewProperty
-		#tag ViewProperty
-			Name="FontSize"
-			Visible=true
-			Group="Behavior"
-			InitialValue=""
-			Type="Double"
-			EditorType=""
-		#tag EndViewProperty
-		#tag ViewProperty
-			Name="Underline"
-			Visible=true
-			Group="Behavior"
-			InitialValue=""
-			Type="Boolean"
-			EditorType=""
-		#tag EndViewProperty
-		#tag ViewProperty
-			Name="TextColor"
-			Visible=true
-			Group="Behavior"
-			InitialValue="&c000000"
-			Type="Color"
-			EditorType=""
 		#tag EndViewProperty
 		#tag ViewProperty
 			Name="TabIndex"
@@ -135,20 +119,6 @@ Inherits WebLabel
 				"7 - Light"
 				"8 - Dark"
 				"9 - Link"
-			#tag EndEnumValues
-		#tag EndViewProperty
-		#tag ViewProperty
-			Name="TextAlignment"
-			Visible=true
-			Group="Label"
-			InitialValue="0"
-			Type="Xojo.TextAlignments"
-			EditorType="Enum"
-			#tag EnumValues
-				"0 - Default"
-				"1 - Left"
-				"2 - Center"
-				"3 - Right"
 			#tag EndEnumValues
 		#tag EndViewProperty
 		#tag ViewProperty
@@ -232,14 +202,6 @@ Inherits WebLabel
 			EditorType=""
 		#tag EndViewProperty
 		#tag ViewProperty
-			Name="Multiline"
-			Visible=true
-			Group="Behavior"
-			InitialValue="False"
-			Type="Boolean"
-			EditorType=""
-		#tag EndViewProperty
-		#tag ViewProperty
 			Name="Name"
 			Visible=true
 			Group="ID"
@@ -254,14 +216,6 @@ Inherits WebLabel
 			InitialValue=""
 			Type="String"
 			EditorType=""
-		#tag EndViewProperty
-		#tag ViewProperty
-			Name="Text"
-			Visible=true
-			Group="Behavior"
-			InitialValue="Untitled"
-			Type="String"
-			EditorType="MultiLineEditor"
 		#tag EndViewProperty
 		#tag ViewProperty
 			Name="Top"

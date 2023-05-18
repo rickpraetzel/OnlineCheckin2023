@@ -22,7 +22,6 @@ Begin WebContainer EnterReservationsControls
    Width           =   231
    _mDesignHeight  =   0
    _mDesignWidth   =   0
-   _mName          =   ""
    _mPanelIndex    =   -1
    Begin WebTextField ResIdField
       AllowAutoComplete=   False
@@ -50,7 +49,7 @@ Begin WebContainer EnterReservationsControls
       Text            =   ""
       TextAlignment   =   0
       Tooltip         =   ""
-      Top             =   11
+      Top             =   10
       Visible         =   True
       Width           =   102
       _mPanelIndex    =   -1
@@ -77,7 +76,7 @@ Begin WebContainer EnterReservationsControls
       Scope           =   2
       TabIndex        =   1
       Text            =   "BACK"
-      TextAlignment   =   0
+      TextAlignment   =   2
       TextColor       =   &c00000000
       Tooltip         =   ""
       Top             =   79
@@ -108,7 +107,7 @@ Begin WebContainer EnterReservationsControls
       Scope           =   2
       TabIndex        =   2
       Text            =   "SUBMIT"
-      TextAlignment   =   0
+      TextAlignment   =   2
       TextColor       =   &c00000000
       Tooltip         =   ""
       Top             =   71

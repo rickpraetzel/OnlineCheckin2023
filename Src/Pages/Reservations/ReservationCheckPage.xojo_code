@@ -29,7 +29,6 @@ Begin mPage ReservationCheckPage
    _ImplicitInstance=   False
    _mDesignHeight  =   0
    _mDesignWidth   =   0
-   _mName          =   ""
    _mPanelIndex    =   -1
    Begin WebImageViewer ImageView1
       ControlID       =   ""
@@ -81,7 +80,7 @@ Begin mPage ReservationCheckPage
       Scope           =   2
       TabIndex        =   0
       Text            =   "Are you checking in for a reservation that you have already made?"
-      TextAlignment   =   0
+      TextAlignment   =   2
       TextColor       =   &c00000000
       Tooltip         =   ""
       Top             =   140
@@ -112,7 +111,7 @@ Begin mPage ReservationCheckPage
       TabIndex        =   1
       Tooltip         =   ""
       Top             =   271
-      Visible         =   False
+      Visible         =   True
       Width           =   303
       _mDesignHeight  =   0
       _mDesignWidth   =   0
