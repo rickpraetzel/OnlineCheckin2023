@@ -2,6 +2,7 @@
 Begin mPage EnterReservationPage
    AllowTabOrderWrap=   True
    Compatibility   =   ""
+   ControlCount    =   0
    ControlID       =   ""
    Enabled         =   True
    Height          =   429
@@ -28,6 +29,7 @@ Begin mPage EnterReservationPage
    _ImplicitInstance=   False
    _mDesignHeight  =   0
    _mDesignWidth   =   0
+   _mName          =   ""
    _mPanelIndex    =   -1
    Begin WebImageViewer ImageView1
       ControlID       =   ""
@@ -120,6 +122,7 @@ Begin mPage EnterReservationPage
       _mPanelIndex    =   -1
    End
    Begin EnterReservationsControls EnterReservationsControls1
+      ControlCount    =   0
       ControlID       =   ""
       Enabled         =   True
       Height          =   60
@@ -278,6 +281,14 @@ End
 	#tag EndEvent
 #tag EndEvents
 #tag ViewBehavior
+	#tag ViewProperty
+		Name="ControlCount"
+		Visible=false
+		Group="Behavior"
+		InitialValue=""
+		Type="Integer"
+		EditorType=""
+	#tag EndViewProperty
 	#tag ViewProperty
 		Name="_mPanelIndex"
 		Visible=false

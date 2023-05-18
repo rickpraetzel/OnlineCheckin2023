@@ -2,6 +2,7 @@
 Begin mPage StoreCreditCardPage
    AllowTabOrderWrap=   True
    Compatibility   =   ""
+   ControlCount    =   0
    ControlID       =   ""
    Enabled         =   True
    Height          =   720
@@ -28,6 +29,7 @@ Begin mPage StoreCreditCardPage
    _ImplicitInstance=   False
    _mDesignHeight  =   0
    _mDesignWidth   =   0
+   _mName          =   ""
    _mPanelIndex    =   -1
    Begin WebImageViewer ImageView1
       ControlID       =   ""
@@ -151,6 +153,7 @@ Begin mPage StoreCreditCardPage
       _mPanelIndex    =   -1
    End
    Begin CCInfoControl CCInfoControl1
+      ControlCount    =   0
       ControlID       =   ""
       Enabled         =   True
       Height          =   32
@@ -180,39 +183,34 @@ Begin mPage StoreCreditCardPage
    Begin ANetProfileManager ANetProfileManager1
       Index           =   -2147483648
       isProcessingLiveRequests=   False
-      Left            =   0.0
       LockedInPosition=   False
       Scope           =   2
       TabPanelIndex   =   0
-      Top             =   0.0
    End
    Begin WebTimer RequestTimer
       ControlID       =   ""
       Enabled         =   True
       Index           =   -2147483648
-      Left            =   0.0
       Location        =   0
       LockedInPosition=   False
       Period          =   500
       RunMode         =   1
       Scope           =   2
-      Top             =   0.0
       _mPanelIndex    =   -1
    End
    Begin WebTimer AdvancePageTimer
       ControlID       =   ""
       Enabled         =   True
       Index           =   -2147483648
-      Left            =   0.0
       Location        =   0
       LockedInPosition=   False
       Period          =   100
       RunMode         =   0
       Scope           =   2
-      Top             =   0.0
       _mPanelIndex    =   -1
    End
    Begin MovementControl MovementControl1
+      ControlCount    =   0
       ControlID       =   ""
       Enabled         =   True
       Height          =   32
@@ -240,6 +238,7 @@ Begin mPage StoreCreditCardPage
       _mPanelIndex    =   -1
    End
    Begin PoliciesDialogue PoliciesDialogue1
+      ControlCount    =   0
       ControlID       =   ""
       Enabled         =   True
       Height          =   425
@@ -628,6 +627,14 @@ End
 	#tag EndEvent
 #tag EndEvents
 #tag ViewBehavior
+	#tag ViewProperty
+		Name="ControlCount"
+		Visible=false
+		Group="Behavior"
+		InitialValue=""
+		Type="Integer"
+		EditorType=""
+	#tag EndViewProperty
 	#tag ViewProperty
 		Name="_mPanelIndex"
 		Visible=false

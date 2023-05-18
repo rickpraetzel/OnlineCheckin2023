@@ -2,6 +2,7 @@
 Begin mPage ReturnCustomerPage
    AllowTabOrderWrap=   True
    Compatibility   =   ""
+   ControlCount    =   0
    ControlID       =   ""
    Enabled         =   True
    Height          =   750
@@ -28,6 +29,7 @@ Begin mPage ReturnCustomerPage
    _ImplicitInstance=   False
    _mDesignHeight  =   0
    _mDesignWidth   =   0
+   _mName          =   ""
    _mPanelIndex    =   -1
    Begin WebImageViewer ImageView1
       ControlID       =   ""
@@ -89,6 +91,7 @@ Begin mPage ReturnCustomerPage
       _mPanelIndex    =   -1
    End
    Begin CustomerInfoControl CustomerInfoControl1
+      ControlCount    =   0
       ControlID       =   ""
       Enabled         =   True
       Height          =   422
@@ -117,6 +120,7 @@ Begin mPage ReturnCustomerPage
       _mPanelIndex    =   -1
    End
    Begin MovementControl MovementControl1
+      ControlCount    =   0
       ControlID       =   ""
       Enabled         =   True
       Height          =   53
@@ -175,6 +179,7 @@ Begin mPage ReturnCustomerPage
       _mPanelIndex    =   -1
    End
    Begin MultiReservationChecker MultiReservationChecker1
+      ControlCount    =   0
       ControlID       =   ""
       Enabled         =   True
       Height          =   300
@@ -416,6 +421,14 @@ End
 	#tag EndEvent
 #tag EndEvents
 #tag ViewBehavior
+	#tag ViewProperty
+		Name="ControlCount"
+		Visible=false
+		Group="Behavior"
+		InitialValue=""
+		Type="Integer"
+		EditorType=""
+	#tag EndViewProperty
 	#tag ViewProperty
 		Name="_mPanelIndex"
 		Visible=false

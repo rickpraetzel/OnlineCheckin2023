@@ -2,6 +2,7 @@
 Begin mPage RentalDetailsPage
    AllowTabOrderWrap=   True
    Compatibility   =   ""
+   ControlCount    =   0
    ControlID       =   ""
    Enabled         =   True
    Height          =   454
@@ -28,6 +29,7 @@ Begin mPage RentalDetailsPage
    _ImplicitInstance=   False
    _mDesignHeight  =   0
    _mDesignWidth   =   0
+   _mName          =   ""
    _mPanelIndex    =   -1
    Begin WebImageViewer ImageView1
       ControlID       =   ""
@@ -89,6 +91,7 @@ Begin mPage RentalDetailsPage
       _mPanelIndex    =   -1
    End
    Begin RentalDetailsControl RentalDetailsControl1
+      ControlCount    =   0
       ControlID       =   ""
       Enabled         =   True
       Height          =   262
@@ -116,6 +119,7 @@ Begin mPage RentalDetailsPage
       _mPanelIndex    =   -1
    End
    Begin DateDropDown DateDropDown1
+      ControlCount    =   0
       ControlID       =   ""
       Enabled         =   True
       Height          =   230
@@ -190,6 +194,14 @@ End
 	#tag EndEvent
 #tag EndEvents
 #tag ViewBehavior
+	#tag ViewProperty
+		Name="ControlCount"
+		Visible=false
+		Group="Behavior"
+		InitialValue=""
+		Type="Integer"
+		EditorType=""
+	#tag EndViewProperty
 	#tag ViewProperty
 		Name="_mPanelIndex"
 		Visible=false
