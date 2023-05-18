@@ -29,7 +29,6 @@ Begin WebPage SelectPersonPage
    _ImplicitInstance=   False
    _mDesignHeight  =   0
    _mDesignWidth   =   0
-   _mName          =   ""
    _mPanelIndex    =   -1
    Begin WebImageViewer ImageView1
       ControlID       =   ""
@@ -65,7 +64,7 @@ Begin WebPage SelectPersonPage
       Enabled         =   True
       FontName        =   ""
       FontSize        =   0.0
-      Height          =   130
+      Height          =   76
       Index           =   -2147483648
       Indicator       =   ""
       Italic          =   False
@@ -80,11 +79,11 @@ Begin WebPage SelectPersonPage
       Multiline       =   True
       Scope           =   0
       TabIndex        =   0
-      Text            =   "The information you provided matches existing records, please select which one is you"
+      Text            =   "The information you provided matches existing records, please select which one is you..."
       TextAlignment   =   0
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   140
+      Top             =   125
       Underline       =   False
       Visible         =   True
       Width           =   294
@@ -94,7 +93,7 @@ Begin WebPage SelectPersonPage
       ControlCount    =   0
       ControlID       =   ""
       Enabled         =   True
-      Height          =   57
+      Height          =   55
       Index           =   -2147483648
       Indicator       =   ""
       LayoutDirection =   0
@@ -111,7 +110,7 @@ Begin WebPage SelectPersonPage
       ScrollDirection =   0
       TabIndex        =   1
       Tooltip         =   ""
-      Top             =   260
+      Top             =   209
       Visible         =   True
       Width           =   304
       _mDesignHeight  =   0

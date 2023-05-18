@@ -4,7 +4,7 @@ Begin WebContainer DynamicItemSelector
    ControlCount    =   0
    ControlID       =   ""
    Enabled         =   True
-   Height          =   60
+   Height          =   40
    Indicator       =   0
    LayoutDirection =   0
    LayoutType      =   0
@@ -22,15 +22,14 @@ Begin WebContainer DynamicItemSelector
    Width           =   304
    _mDesignHeight  =   0
    _mDesignWidth   =   0
-   _mName          =   ""
    _mPanelIndex    =   -1
-   Begin WebLabel NotListedButton
+   Begin WebButton NotListedButton
       Bold            =   False
       ControlID       =   ""
       Enabled         =   True
       FontName        =   ""
       FontSize        =   0.0
-      Height          =   45
+      Height          =   28
       Index           =   -2147483648
       Indicator       =   ""
       Italic          =   False
@@ -80,7 +79,7 @@ End
 	#tag Method, Flags = &h0
 		Sub loadItems(customers() as bookingtoolkit.customer)
 		  const kVerticalPadding = 30
-		  const kControlHeight = 60
+		  const kControlHeight = 40
 		  const kControlWidth = 304
 		  dim currentTop as integer = 1
 		  dim xCoord as integer = me.Width/2 - kControlWidth/2
@@ -111,7 +110,7 @@ End
 		  end if
 		  
 		  const kVerticalPadding = 30
-		  const kControlHeight = 60
+		  const kControlHeight = 40
 		  const kControlWidth = 304
 		  dim currentTop as integer = 1
 		  dim xCoord as integer = me.Width/2 - kControlWidth/2
@@ -134,7 +133,7 @@ End
 
 	#tag Method, Flags = &h0
 		Sub setDeclineText(value as string)
-		  NotListedButton.Text = value
+		  NotListedButton.Caption = value
 		End Sub
 	#tag EndMethod
 
