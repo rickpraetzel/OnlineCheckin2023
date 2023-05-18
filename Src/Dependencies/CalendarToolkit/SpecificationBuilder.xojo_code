@@ -411,6 +411,8 @@ Private Class SpecificationBuilder
 				"0 - HALFDAY"
 				"1 - FULLDAY"
 				"2 - NONE"
+				"3 - THIRDDAY"
+				"4 - TWOTHIRDSDAY"
 			#tag EndEnumValues
 		#tag EndViewProperty
 		#tag ViewProperty

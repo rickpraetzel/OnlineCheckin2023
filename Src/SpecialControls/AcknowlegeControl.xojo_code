@@ -1,6 +1,7 @@
 #tag WebContainerControl
 Begin WebContainer AcknowlegeControl
    Compatibility   =   ""
+   ControlCount    =   0
    ControlID       =   ""
    Enabled         =   True
    Height          =   110
@@ -21,6 +22,7 @@ Begin WebContainer AcknowlegeControl
    Width           =   319
    _mDesignHeight  =   0
    _mDesignWidth   =   0
+   _mName          =   ""
    _mPanelIndex    =   -1
    Begin WebCheckbox Checkbox1
       Caption         =   "Untitled"
@@ -109,6 +111,14 @@ End
 	#tag EndEvent
 #tag EndEvents
 #tag ViewBehavior
+	#tag ViewProperty
+		Name="ControlCount"
+		Visible=false
+		Group="Behavior"
+		InitialValue=""
+		Type="Integer"
+		EditorType=""
+	#tag EndViewProperty
 	#tag ViewProperty
 		Name="_mPanelIndex"
 		Visible=false

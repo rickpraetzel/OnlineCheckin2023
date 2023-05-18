@@ -2,6 +2,7 @@
 Begin mPage InformedConsentPage
    AllowTabOrderWrap=   True
    Compatibility   =   ""
+   ControlCount    =   0
    ControlID       =   ""
    Enabled         =   True
    Height          =   793
@@ -28,6 +29,7 @@ Begin mPage InformedConsentPage
    _ImplicitInstance=   False
    _mDesignHeight  =   0
    _mDesignWidth   =   0
+   _mName          =   ""
    _mPanelIndex    =   -1
    Begin WebImageViewer ImageView1
       ControlID       =   ""
@@ -212,6 +214,7 @@ Begin mPage InformedConsentPage
       _mPanelIndex    =   -1
    End
    Begin AcknowlegeControl AcknowlegeControl1
+      ControlCount    =   0
       ControlID       =   ""
       Enabled         =   True
       Height          =   61
@@ -350,6 +353,14 @@ End
 	#tag EndEvent
 #tag EndEvents
 #tag ViewBehavior
+	#tag ViewProperty
+		Name="ControlCount"
+		Visible=false
+		Group="Behavior"
+		InitialValue=""
+		Type="Integer"
+		EditorType=""
+	#tag EndViewProperty
 	#tag ViewProperty
 		Name="_mPanelIndex"
 		Visible=false

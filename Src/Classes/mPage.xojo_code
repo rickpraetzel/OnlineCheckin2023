@@ -72,6 +72,14 @@ Inherits WebPage
 
 	#tag ViewBehavior
 		#tag ViewProperty
+			Name="ControlCount"
+			Visible=false
+			Group="Behavior"
+			InitialValue=""
+			Type="Integer"
+			EditorType=""
+		#tag EndViewProperty
+		#tag ViewProperty
 			Name="_mPanelIndex"
 			Visible=false
 			Group="Behavior"

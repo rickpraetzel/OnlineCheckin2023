@@ -2,6 +2,7 @@
 Begin WebPage SelectPersonPage
    AllowTabOrderWrap=   True
    Compatibility   =   ""
+   ControlCount    =   0
    ControlID       =   ""
    Enabled         =   True
    Height          =   356
@@ -28,6 +29,7 @@ Begin WebPage SelectPersonPage
    _ImplicitInstance=   False
    _mDesignHeight  =   0
    _mDesignWidth   =   0
+   _mName          =   ""
    _mPanelIndex    =   -1
    Begin WebImageViewer ImageView1
       ControlID       =   ""
@@ -89,6 +91,7 @@ Begin WebPage SelectPersonPage
       _mPanelIndex    =   -1
    End
    Begin DynamicItemSelector DynamicCustomerSelectors1
+      ControlCount    =   0
       ControlID       =   ""
       Enabled         =   True
       Height          =   57
@@ -158,6 +161,14 @@ End
 	#tag EndEvent
 #tag EndEvents
 #tag ViewBehavior
+	#tag ViewProperty
+		Name="ControlCount"
+		Visible=false
+		Group="Behavior"
+		InitialValue=""
+		Type="Integer"
+		EditorType=""
+	#tag EndViewProperty
 	#tag ViewProperty
 		Name="_mPanelIndex"
 		Visible=false

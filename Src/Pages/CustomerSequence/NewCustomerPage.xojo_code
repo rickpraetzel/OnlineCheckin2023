@@ -2,6 +2,7 @@
 Begin mPage NewCustomerPage
    AllowTabOrderWrap=   True
    Compatibility   =   ""
+   ControlCount    =   0
    ControlID       =   ""
    Enabled         =   True
    Height          =   783
@@ -28,6 +29,7 @@ Begin mPage NewCustomerPage
    _ImplicitInstance=   False
    _mDesignHeight  =   0
    _mDesignWidth   =   0
+   _mName          =   ""
    _mPanelIndex    =   -1
    Begin WebImageViewer ImageView1
       ControlID       =   ""
@@ -89,6 +91,7 @@ Begin mPage NewCustomerPage
       _mPanelIndex    =   -1
    End
    Begin CustomerInfoControl CustomerInfoControl1
+      ControlCount    =   0
       ControlID       =   ""
       Enabled         =   True
       Height          =   431
@@ -117,6 +120,7 @@ Begin mPage NewCustomerPage
       _mPanelIndex    =   -1
    End
    Begin MovementControl MovementControl1
+      ControlCount    =   0
       ControlID       =   ""
       Enabled         =   True
       Height          =   44
@@ -270,6 +274,14 @@ End
 	#tag EndEvent
 #tag EndEvents
 #tag ViewBehavior
+	#tag ViewProperty
+		Name="ControlCount"
+		Visible=false
+		Group="Behavior"
+		InitialValue=""
+		Type="Integer"
+		EditorType=""
+	#tag EndViewProperty
 	#tag ViewProperty
 		Name="_mPanelIndex"
 		Visible=false

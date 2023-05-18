@@ -2,6 +2,7 @@
 Begin mPage ExistingReservationPage
    AllowTabOrderWrap=   True
    Compatibility   =   ""
+   ControlCount    =   0
    ControlID       =   ""
    Enabled         =   True
    Height          =   615
@@ -28,6 +29,7 @@ Begin mPage ExistingReservationPage
    _ImplicitInstance=   False
    _mDesignHeight  =   0
    _mDesignWidth   =   0
+   _mName          =   ""
    _mPanelIndex    =   -1
    Begin WebImageViewer ImageView1
       ControlID       =   ""
@@ -58,6 +60,7 @@ Begin mPage ExistingReservationPage
       _ProtectImage   =   False
    End
    Begin GroupDetailsControl GroupDetailsControl1
+      ControlCount    =   0
       ControlID       =   ""
       Enabled         =   True
       Height          =   324
@@ -74,7 +77,7 @@ Begin mPage ExistingReservationPage
       LockTop         =   True
       LockVertical    =   False
       Scope           =   2
-      ScrollDirection =   "ScrollDirections.None"
+      ScrollDirection =   0
       TabIndex        =   0
       Tooltip         =   ""
       Top             =   192
@@ -116,13 +119,14 @@ Begin mPage ExistingReservationPage
       _mPanelIndex    =   -1
    End
    Begin MovementControl MovementControl1
+      ControlCount    =   0
       ControlID       =   ""
       Enabled         =   True
       Height          =   32
       Index           =   -2147483648
       Indicator       =   ""
-      LayoutDirection =   "LayoutDirections.LeftToRight"
-      LayoutType      =   "LayoutTypes.Fixed"
+      LayoutDirection =   0
+      LayoutType      =   0
       Left            =   0
       LockBottom      =   False
       LockedInPosition=   False
@@ -132,7 +136,7 @@ Begin mPage ExistingReservationPage
       LockTop         =   True
       LockVertical    =   False
       Scope           =   0
-      ScrollDirection =   "ScrollDirections.None"
+      ScrollDirection =   0
       TabIndex        =   1
       Tooltip         =   ""
       Top             =   546
@@ -185,6 +189,14 @@ End
 	#tag EndEvent
 #tag EndEvents
 #tag ViewBehavior
+	#tag ViewProperty
+		Name="ControlCount"
+		Visible=false
+		Group="Behavior"
+		InitialValue=""
+		Type="Integer"
+		EditorType=""
+	#tag EndViewProperty
 	#tag ViewProperty
 		Name="_mPanelIndex"
 		Visible=false

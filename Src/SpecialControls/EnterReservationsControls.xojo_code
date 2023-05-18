@@ -1,6 +1,7 @@
 #tag WebContainerControl
 Begin WebContainer EnterReservationsControls
    Compatibility   =   ""
+   ControlCount    =   0
    ControlID       =   ""
    Enabled         =   True
    Height          =   127
@@ -21,6 +22,7 @@ Begin WebContainer EnterReservationsControls
    Width           =   231
    _mDesignHeight  =   0
    _mDesignWidth   =   0
+   _mName          =   ""
    _mPanelIndex    =   -1
    Begin WebTextField ResIdField
       AllowAutoComplete=   False
@@ -187,6 +189,14 @@ End
 	#tag EndEvent
 #tag EndEvents
 #tag ViewBehavior
+	#tag ViewProperty
+		Name="ControlCount"
+		Visible=false
+		Group="Behavior"
+		InitialValue=""
+		Type="Integer"
+		EditorType=""
+	#tag EndViewProperty
 	#tag ViewProperty
 		Name="_mPanelIndex"
 		Visible=false

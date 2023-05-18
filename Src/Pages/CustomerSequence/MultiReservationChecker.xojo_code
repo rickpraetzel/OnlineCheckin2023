@@ -1,6 +1,7 @@
 #tag WebPage
 Begin WebDialog MultiReservationChecker
    Compatibility   =   ""
+   ControlCount    =   0
    ControlID       =   ""
    Enabled         =   True
    Height          =   300
@@ -21,6 +22,7 @@ Begin WebDialog MultiReservationChecker
    Width           =   304
    _mDesignHeight  =   0
    _mDesignWidth   =   0
+   _mName          =   ""
    _mPanelIndex    =   -1
    Begin WebLabel Label1
       Bold            =   False
@@ -54,13 +56,14 @@ Begin WebDialog MultiReservationChecker
       _mPanelIndex    =   -1
    End
    Begin DynamicItemSelector DynamicItemSelector1
+      ControlCount    =   0
       ControlID       =   ""
       Enabled         =   True
       Height          =   57
       Index           =   -2147483648
       Indicator       =   ""
-      LayoutDirection =   "LayoutDirections.LeftToRight"
-      LayoutType      =   "LayoutTypes.Fixed"
+      LayoutDirection =   0
+      LayoutType      =   0
       Left            =   0
       LockBottom      =   False
       LockedInPosition=   False
@@ -70,7 +73,7 @@ Begin WebDialog MultiReservationChecker
       LockTop         =   True
       LockVertical    =   False
       Scope           =   0
-      ScrollDirection =   "ScrollDirections.None"
+      ScrollDirection =   0
       TabIndex        =   1
       Tooltip         =   ""
       Top             =   130
@@ -127,6 +130,14 @@ End
 	#tag EndEvent
 #tag EndEvents
 #tag ViewBehavior
+	#tag ViewProperty
+		Name="ControlCount"
+		Visible=false
+		Group="Behavior"
+		InitialValue=""
+		Type="Integer"
+		EditorType=""
+	#tag EndViewProperty
 	#tag ViewProperty
 		Name="_mPanelIndex"
 		Visible=false

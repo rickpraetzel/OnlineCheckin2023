@@ -2,6 +2,7 @@
 Begin mPage ReservationCheckPage
    AllowTabOrderWrap=   True
    Compatibility   =   ""
+   ControlCount    =   0
    ControlID       =   ""
    Enabled         =   True
    Height          =   400
@@ -28,6 +29,7 @@ Begin mPage ReservationCheckPage
    _ImplicitInstance=   False
    _mDesignHeight  =   0
    _mDesignWidth   =   0
+   _mName          =   ""
    _mPanelIndex    =   -1
    Begin WebImageViewer ImageView1
       ControlID       =   ""
@@ -89,9 +91,11 @@ Begin mPage ReservationCheckPage
       _mPanelIndex    =   -1
    End
    Begin YesNoSelector YesNoSelector1
+      ControlCount    =   0
       ControlID       =   ""
       Enabled         =   True
       Height          =   46
+      Index           =   -2147483648
       Indicator       =   0
       LayoutDirection =   0
       LayoutType      =   0
@@ -167,6 +171,14 @@ End
 	#tag EndEvent
 #tag EndEvents
 #tag ViewBehavior
+	#tag ViewProperty
+		Name="ControlCount"
+		Visible=false
+		Group="Behavior"
+		InitialValue=""
+		Type="Integer"
+		EditorType=""
+	#tag EndViewProperty
 	#tag ViewProperty
 		Name="_mPanelIndex"
 		Visible=false
