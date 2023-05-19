@@ -23,16 +23,16 @@ Begin WebContainer MovementControl
    _mDesignHeight  =   0
    _mDesignWidth   =   0
    _mPanelIndex    =   -1
-   Begin WebLabel BackButton
-      Bold            =   False
+   Begin WebButton BackButton
+      AllowAutoDisable=   False
+      Cancel          =   False
+      Caption         =   "BACK"
       ControlID       =   ""
+      Default         =   False
       Enabled         =   True
-      FontName        =   ""
-      FontSize        =   0.0
       Height          =   38
       Index           =   -2147483648
       Indicator       =   ""
-      Italic          =   False
       Left            =   13
       LockBottom      =   False
       LockedInPosition=   False
@@ -41,29 +41,24 @@ Begin WebContainer MovementControl
       LockRight       =   False
       LockTop         =   True
       LockVertical    =   False
-      Multiline       =   False
       Scope           =   2
       TabIndex        =   0
-      Text            =   "BACK"
-      TextAlignment   =   2
-      TextColor       =   &c00000000
       Tooltip         =   ""
       Top             =   7
-      Underline       =   False
       Visible         =   True
-      Width           =   100
+      Width           =   112
       _mPanelIndex    =   -1
    End
    Begin activatiblebutton SubmitButton
-      Bold            =   False
+      AllowAutoDisable=   False
+      Cancel          =   False
+      Caption         =   "SUBMIT"
       ControlID       =   ""
-      Enabled         =   True
-      FontName        =   ""
-      FontSize        =   0.0
+      Default         =   False
+      Enabled         =   False
       Height          =   32
       Index           =   -2147483648
       Indicator       =   ""
-      Italic          =   False
       Left            =   149
       LockBottom      =   False
       LockedInPosition=   False
@@ -72,15 +67,10 @@ Begin WebContainer MovementControl
       LockRight       =   False
       LockTop         =   True
       LockVertical    =   False
-      Multiline       =   False
       Scope           =   0
       TabIndex        =   1
-      Text            =   "SUBMIT"
-      TextAlignment   =   2
-      TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   10
-      Underline       =   False
+      Top             =   7
       Visible         =   True
       Width           =   128
       _mPanelIndex    =   -1
@@ -91,13 +81,13 @@ End
 #tag WindowCode
 	#tag Method, Flags = &h0
 		Sub ActivatePrimary()
-		  SubmitButton.activate()
+		  SubmitButton.enabled = true
 		End Sub
 	#tag EndMethod
 
 	#tag Method, Flags = &h0
 		Sub deactivatePrimary()
-		  SubmitButton.deactivate()
+		  SubmitButton.enabled = false
 		End Sub
 	#tag EndMethod
 
@@ -109,7 +99,7 @@ End
 
 	#tag Method, Flags = &h0
 		Sub setSecondaryButtonText(value as string)
-		  BackButton.text = value
+		  BackButton.caption = value
 		End Sub
 	#tag EndMethod
 

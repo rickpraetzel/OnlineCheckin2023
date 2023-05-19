@@ -29,7 +29,6 @@ Begin mPage ReturnCustomerPage
    _ImplicitInstance=   False
    _mDesignHeight  =   0
    _mDesignWidth   =   0
-   _mName          =   ""
    _mPanelIndex    =   -1
    Begin WebImageViewer ImageView1
       ControlID       =   ""
@@ -81,7 +80,7 @@ Begin mPage ReturnCustomerPage
       Scope           =   2
       TabIndex        =   0
       Text            =   "Welcome back"
-      TextAlignment   =   0
+      TextAlignment   =   2
       TextColor       =   &c00000000
       Tooltip         =   ""
       Top             =   132
@@ -168,7 +167,7 @@ Begin mPage ReturnCustomerPage
       Multiline       =   True
       Scope           =   2
       TabIndex        =   0
-      Text            =   "Please verify that the information below is correct"
+      Text            =   "Please verify that the information below is correct..."
       TextAlignment   =   0
       TextColor       =   &c00000000
       Tooltip         =   ""

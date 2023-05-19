@@ -5,7 +5,7 @@ Begin mPage InformedConsentPage
    ControlCount    =   0
    ControlID       =   ""
    Enabled         =   True
-   Height          =   793
+   Height          =   749
    ImplicitInstance=   True
    Index           =   -2147483648
    Indicator       =   0
@@ -37,7 +37,7 @@ Begin mPage InformedConsentPage
       HorizontalAlignment=   0
       Index           =   -2147483648
       Indicator       =   ""
-      Left            =   109
+      Left            =   105
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   True
@@ -68,7 +68,7 @@ Begin mPage InformedConsentPage
       Hint            =   ""
       Index           =   -2147483648
       Indicator       =   ""
-      Left            =   10
+      Left            =   7
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   True
@@ -80,12 +80,12 @@ Begin mPage InformedConsentPage
       ReadOnly        =   True
       Scope           =   2
       TabIndex        =   0
-      Text            =   "I understand that outfitting for equipment rentals may include an information and safety orientation.  I agree to participate in this orientation.\n\rTHERE IS RISK ASSOCIATED WITH LIFE. \rYOU ARE RESPONSIBLE FOR YOUR OWN SAFEY \n\nIn accordance with the requests of our insurance provider and in consideration of being allowed to participate in any way in the program, related events and activities, I the undersigned, acknowledge, appreciate, and agree that:\n\n1.  THERE IS RISK ASSOCIATED WITH LIFE. The risk of injury from the activities involved in this program is significant, including the potential for permanent paralysis and death.\r\r2. By clicking the AGREE button, I ACKNOWLEDGE FULL AND SOLE RESPONSIBILITY FOR THE USE, CARE, AND RETURN OF THIS GEAR, whether used by myself or use shared with another. \r\r3.  I KNOWINGLY AND FREELY ASSUME ALL SUCH RISKS, both known and unknown, COMMITTING TO MANAGING THESE RISKS WITH AND ACCORDING TO RELEASEE INSTRUCTIONS and assume full responsibility for my participation.\r\r4.  I willingly agree to comply with terms and conditions for participation. If I observe any unusual significant hazard during my presence or participation, I will remove myself from participation and bring such to the attention of the nearest official immediately.\r\r5.  By participating in or attending any activity in connection with this program, whether on or off the premises, I consent to the use of any photographs, pictures, film or videotape taken of me or provided by me for publicity, promotion, television, websites or any other use, and expressly waive any right of privacy, compensation, copyright or other ownership right connected to same.\r\r6.  I, for myself and on behalf of my heirs, assigns, personal representatives and next of kin, HEREBY RELEASE, INDEMNIFY, AND HOLD HARMLESS THE: Zion Adventure Company, LLC, its officers, officials, agents and/or employees, other participants, sponsors, advertisers, and, if applicable, owners and lessors of premises used to conduct the event (RELEASEES), from any and all claims, demands, losses, and liability arising out of or related to any INJURY, DISABILITY OR DEATH I may suffer, or loss or damage to person or property, WHETHER ARISING FROM THE NEGLIGENCE OF THE RELEASEES OR OTHERWISE, to the fullest extent permitted by law.\r\rI HAVE READ THIS RELEASE OF LIABILITY AND ASSUMPTION OF RISK AGREEMENT, FULLY UNDERSTAND ITS TERMS, UNDERSTAND THAT I HAVE GIVEN UP SUBSTANTIAL RIGHTS BY ACCEPTING IT, AND ACCEPT IT FREELY AND VOLUNTARILY WITHOUT ANY INDUCEMENT.\r"
+      Text            =   "I understand that outfitting for equipment rentals may include an information and safety orientation.  I agree to participate in this orientation.\n\nYOU ARE RESPONSIBLE FOR YOUR OWN SAFETY .\n\nIn accordance with the requests of our insurance provider and in consideration of being allowed to participate in any way in the program, related events and activities, I the undersigned, acknowledge, appreciate, and agree that:\n\n1.  THERE IS RISK ASSOCIATED WITH LIFE. The risk of injury from the activities involved in this program is significant, including the potential for permanent paralysis and death.\n\n2. By clicking the AGREE button, I ACKNOWLEDGE FULL AND SOLE RESPONSIBILITY FOR THE USE, CARE, AND RETURN OF THIS GEAR, whether used by myself or use shared with another. \n\n3.  I KNOWINGLY AND FREELY ASSUME ALL SUCH RISKS, both known and unknown, COMMITTING TO MANAGING THESE RISKS WITH AND ACCORDING TO RELEASEE INSTRUCTIONS and assume full responsibility for my participation.\n\n4.  I willingly agree to comply with terms and conditions for participation. If I observe any unusual significant hazard during my presence or participation, I will remove myself from participation and bring such to the attention of the nearest official immediately.\n\n5.  By participating in or attending any activity in connection with this program, whether on or off the premises, I consent to the use of any photographs, pictures, film or videotape taken of me or provided by me for publicity, promotion, television, websites or any other use, and expressly waive any right of privacy, compensation, copyright or other ownership right connected to same.\n\n6.  I, for myself and on behalf of my heirs, assigns, personal representatives and next of kin, HEREBY RELEASE, INDEMNIFY, AND HOLD HARMLESS THE: Zion Adventure Company, LLC, its officers, officials, agents and/or employees, other participants, sponsors, advertisers, and, if applicable, owners and lessors of premises used to conduct the event (RELEASEES), from any and all claims, demands, losses, and liability arising out of or related to any INJURY, DISABILITY OR DEATH I may suffer, or loss or damage to person or property, WHETHER ARISING FROM THE NEGLIGENCE OF THE RELEASEES OR OTHERWISE, to the fullest extent permitted by law.\n\nI HAVE READ THIS RELEASE OF LIABILITY AND ASSUMPTION OF RISK AGREEMENT, FULLY UNDERSTAND ITS TERMS, UNDERSTAND THAT I HAVE GIVEN UP SUBSTANTIAL RIGHTS BY ACCEPTING IT, AND ACCEPT IT FREELY AND VOLUNTARILY WITHOUT ANY INDUCEMENT.\n"
       TextAlignment   =   0
       Tooltip         =   ""
       Top             =   161
       Visible         =   True
-      Width           =   299
+      Width           =   305
       _mPanelIndex    =   -1
    End
    Begin WebLabel Label1
@@ -98,7 +98,7 @@ Begin mPage InformedConsentPage
       Index           =   -2147483648
       Indicator       =   ""
       Italic          =   False
-      Left            =   5
+      Left            =   1
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   True
@@ -129,7 +129,7 @@ Begin mPage InformedConsentPage
       Index           =   -2147483648
       Indicator       =   ""
       Italic          =   False
-      Left            =   25
+      Left            =   21
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   True
@@ -144,7 +144,7 @@ Begin mPage InformedConsentPage
       TextAlignment   =   0
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   625
+      Top             =   598
       Underline       =   False
       Visible         =   True
       Width           =   284
@@ -161,7 +161,7 @@ Begin mPage InformedConsentPage
       Hint            =   ""
       Index           =   -2147483648
       Indicator       =   ""
-      Left            =   20
+      Left            =   7
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   True
@@ -174,24 +174,24 @@ Begin mPage InformedConsentPage
       Scope           =   2
       TabIndex        =   0
       Text            =   ""
-      TextAlignment   =   0
+      TextAlignment   =   2
       Tooltip         =   ""
-      Top             =   663
+      Top             =   636
       Visible         =   True
-      Width           =   284
+      Width           =   305
       _mPanelIndex    =   -1
    End
    Begin ActivatibleButton SubmitButton
       AllowAutoDisable=   False
       Cancel          =   False
-      Caption         =   "Submit"
+      Caption         =   "AGREE"
       ControlID       =   ""
       Default         =   False
       Enabled         =   True
       Height          =   34
       Index           =   -2147483648
       Indicator       =   0
-      Left            =   95
+      Left            =   91
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   True
@@ -202,7 +202,7 @@ Begin mPage InformedConsentPage
       Scope           =   2
       TabIndex        =   0
       Tooltip         =   ""
-      Top             =   728
+      Top             =   695
       Visible         =   True
       Width           =   130
       _mPanelIndex    =   -1
@@ -216,7 +216,7 @@ Begin mPage InformedConsentPage
       Indicator       =   ""
       LayoutDirection =   0
       LayoutType      =   0
-      Left            =   0
+      Left            =   7
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   True
@@ -230,7 +230,7 @@ Begin mPage InformedConsentPage
       Tooltip         =   ""
       Top             =   515
       Visible         =   True
-      Width           =   319
+      Width           =   305
       _mDesignHeight  =   0
       _mDesignWidth   =   0
       _mPanelIndex    =   -1

@@ -4,7 +4,7 @@ Begin WebContainer ItemSelector
    ControlCount    =   0
    ControlID       =   ""
    Enabled         =   True
-   Height          =   60
+   Height          =   44
    Indicator       =   0
    LayoutDirection =   0
    LayoutType      =   0
@@ -22,19 +22,19 @@ Begin WebContainer ItemSelector
    Width           =   304
    _mDesignHeight  =   0
    _mDesignWidth   =   0
-   _mName          =   ""
    _mPanelIndex    =   -1
-   Begin WebLabel CustomerNameField
-      Bold            =   False
+   Begin WebRectangle Rectangle1
+      BackgroundColor =   &cFFFFFF00
+      ControlCount    =   0
       ControlID       =   ""
       Enabled         =   True
-      FontName        =   ""
-      FontSize        =   0.0
-      Height          =   45
+      HasBackgroundColor=   False
+      Height          =   44
       Index           =   -2147483648
       Indicator       =   ""
-      Italic          =   False
-      Left            =   12
+      LayoutDirection =   0
+      LayoutType      =   0
+      Left            =   0
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   False
@@ -42,18 +42,48 @@ Begin WebContainer ItemSelector
       LockRight       =   False
       LockTop         =   True
       LockVertical    =   False
-      Multiline       =   False
       Scope           =   2
-      TabIndex        =   0
-      Text            =   "Untitled"
-      TextAlignment   =   2
-      TextColor       =   &c00000000
+      TabIndex        =   1
+      TabStop         =   True
       Tooltip         =   ""
-      Top             =   8
-      Underline       =   False
+      Top             =   0
       Visible         =   True
-      Width           =   280
+      Width           =   304
+      _mDesignHeight  =   0
+      _mDesignWidth   =   0
       _mPanelIndex    =   -1
+      Begin WebLabel CustomerNameField
+         Bold            =   False
+         ControlID       =   ""
+         Enabled         =   True
+         FontName        =   ""
+         FontSize        =   0.0
+         Height          =   32
+         Index           =   -2147483648
+         Indicator       =   ""
+         Italic          =   False
+         Left            =   12
+         LockBottom      =   False
+         LockedInPosition=   False
+         LockHorizontal  =   False
+         LockLeft        =   True
+         LockRight       =   False
+         LockTop         =   True
+         LockVertical    =   False
+         Multiline       =   False
+         Parent          =   "Rectangle1"
+         Scope           =   2
+         TabIndex        =   0
+         Text            =   "Untitled"
+         TextAlignment   =   2
+         TextColor       =   &c00000000
+         Tooltip         =   ""
+         Top             =   6
+         Underline       =   False
+         Visible         =   True
+         Width           =   280
+         _mPanelIndex    =   -1
+      End
    End
 End
 #tag EndWebContainerControl

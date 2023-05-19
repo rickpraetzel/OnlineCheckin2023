@@ -4,7 +4,7 @@ Begin WebContainer DynamicItemSelector
    ControlCount    =   0
    ControlID       =   ""
    Enabled         =   True
-   Height          =   40
+   Height          =   36
    Indicator       =   0
    LayoutDirection =   0
    LayoutType      =   0
@@ -24,32 +24,28 @@ Begin WebContainer DynamicItemSelector
    _mDesignWidth   =   0
    _mPanelIndex    =   -1
    Begin WebButton NotListedButton
-      Bold            =   False
+      AllowAutoDisable=   False
+      Cancel          =   False
+      Caption         =   "I am not listed."
       ControlID       =   ""
+      Default         =   False
       Enabled         =   True
-      FontName        =   ""
-      FontSize        =   0.0
-      Height          =   28
+      Height          =   32
       Index           =   -2147483648
       Indicator       =   ""
-      Italic          =   False
-      Left            =   13
-      LockBottom      =   False
+      Left            =   12
+      LockBottom      =   True
       LockedInPosition=   False
       LockHorizontal  =   False
       LockLeft        =   True
       LockRight       =   True
-      LockTop         =   True
+      LockTop         =   False
       LockVertical    =   False
-      Multiline       =   False
+      Parent          =   "nil"
       Scope           =   2
-      TabIndex        =   0
-      Text            =   "I AM NOT LISTED"
-      TextAlignment   =   2
-      TextColor       =   &c00000000
+      TabIndex        =   2
       Tooltip         =   ""
-      Top             =   8
-      Underline       =   False
+      Top             =   0
       Visible         =   True
       Width           =   280
       _mPanelIndex    =   -1
@@ -78,7 +74,7 @@ End
 
 	#tag Method, Flags = &h0
 		Sub loadItems(customers() as bookingtoolkit.customer)
-		  const kVerticalPadding = 30
+		  const kVerticalPadding = 12
 		  const kControlHeight = 40
 		  const kControlWidth = 304
 		  dim currentTop as integer = 1
@@ -92,6 +88,7 @@ End
 		    AddHandler custControl.Selected, WeakAddressOf handleSelected
 		    dynamicControls.Append(custControl)
 		    currentTop = currentTop + kControlHeight + kVerticalPadding
+		    'me.height = me.height + kControlHeight + kVerticalPadding
 		    
 		  next
 		  

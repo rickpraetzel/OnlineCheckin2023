@@ -4,7 +4,7 @@ Begin WebContainer AcknowlegeControl
    ControlCount    =   0
    ControlID       =   ""
    Enabled         =   True
-   Height          =   110
+   Height          =   66
    Indicator       =   0
    LayoutDirection =   0
    LayoutType      =   0
@@ -19,47 +19,22 @@ Begin WebContainer AcknowlegeControl
    TabIndex        =   0
    Top             =   0
    Visible         =   True
-   Width           =   319
+   Width           =   305
    _mDesignHeight  =   0
    _mDesignWidth   =   0
    _mPanelIndex    =   -1
-   Begin WebCheckbox Checkbox1
-      Caption         =   "Untitled"
-      ControlID       =   ""
-      Enabled         =   True
-      Height          =   30
-      Indeterminate   =   False
-      Index           =   -2147483648
-      Indicator       =   ""
-      Left            =   11
-      LockBottom      =   False
-      LockedInPosition=   False
-      LockHorizontal  =   False
-      LockLeft        =   True
-      LockRight       =   False
-      LockTop         =   True
-      LockVertical    =   False
-      Scope           =   2
-      TabIndex        =   0
-      Tooltip         =   ""
-      Top             =   4
-      Value           =   False
-      Visible         =   True
-      Width           =   24
-      _mPanelIndex    =   -1
-   End
    Begin WebTextArea TextArea1
       AllowReturnKey  =   True
       AllowSpellChecking=   False
       Caption         =   ""
       ControlID       =   ""
       Enabled         =   True
-      Height          =   59
+      Height          =   65
       Hint            =   ""
       Index           =   -2147483648
       Indicator       =   ""
-      Left            =   34
-      LockBottom      =   True
+      Left            =   0
+      LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   False
       LockLeft        =   True
@@ -70,12 +45,37 @@ Begin WebContainer AcknowlegeControl
       ReadOnly        =   True
       Scope           =   2
       TabIndex        =   1
-      Text            =   "I have read and understand the above informed consent."
+      Text            =   "     I have read and accept the con- ditions of the above informed consent."
       TextAlignment   =   0
       Tooltip         =   ""
-      Top             =   4
+      Top             =   0
       Visible         =   True
-      Width           =   251
+      Width           =   305
+      _mPanelIndex    =   -1
+   End
+   Begin WebCheckbox Checkbox1
+      Caption         =   "Untitled"
+      ControlID       =   ""
+      Enabled         =   True
+      Height          =   30
+      Indeterminate   =   False
+      Index           =   -2147483648
+      Indicator       =   ""
+      Left            =   9
+      LockBottom      =   False
+      LockedInPosition=   False
+      LockHorizontal  =   False
+      LockLeft        =   True
+      LockRight       =   False
+      LockTop         =   True
+      LockVertical    =   False
+      Scope           =   2
+      TabIndex        =   0
+      Tooltip         =   ""
+      Top             =   0
+      Value           =   False
+      Visible         =   True
+      Width           =   24
       _mPanelIndex    =   -1
    End
 End

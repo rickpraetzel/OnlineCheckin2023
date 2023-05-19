@@ -3,7 +3,7 @@ Protected Class ActivatibleButton
 Inherits WebButton
 	#tag Event
 		Sub Pressed()
-		  if me.isActive then
+		  if me.enabled then
 		    RaiseEvent PressedButton
 		    
 		  end if
@@ -13,15 +13,13 @@ Inherits WebButton
 
 	#tag Method, Flags = &h0
 		Sub activate()
-		  isActive = true
-		  'me.Style = ButtonStyle_Primary
+		  enabled = true
 		End Sub
 	#tag EndMethod
 
 	#tag Method, Flags = &h0
 		Sub deactivate()
-		  isActive = false
-		  'me.Style = ButtonStyle_Inactive
+		  Enabled = false
 		End Sub
 	#tag EndMethod
 
