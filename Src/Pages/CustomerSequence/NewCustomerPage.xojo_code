@@ -29,7 +29,6 @@ Begin mPage NewCustomerPage
    _ImplicitInstance=   False
    _mDesignHeight  =   0
    _mDesignWidth   =   0
-   _mName          =   ""
    _mPanelIndex    =   -1
    Begin WebImageViewer ImageView1
       ControlID       =   ""
@@ -128,7 +127,7 @@ Begin mPage NewCustomerPage
       Indicator       =   ""
       LayoutDirection =   0
       LayoutType      =   0
-      Left            =   0
+      Left            =   1
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   False
@@ -141,7 +140,7 @@ Begin mPage NewCustomerPage
       TabIndex        =   1
       Tooltip         =   ""
       Top             =   719
-      Visible         =   False
+      Visible         =   True
       Width           =   302
       _mDesignHeight  =   0
       _mDesignWidth   =   0
