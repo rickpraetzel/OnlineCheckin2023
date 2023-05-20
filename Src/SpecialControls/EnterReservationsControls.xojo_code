@@ -145,6 +145,8 @@ End
 #tag Events Label1
 	#tag Event
 		Sub Pressed()
+		  'return to Are you checking in for a reservation?
+		  session.ReservationCheck.show
 		  
 		End Sub
 	#tag EndEvent

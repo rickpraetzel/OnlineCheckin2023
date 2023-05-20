@@ -152,6 +152,19 @@ End
 #tag EndWebPage
 
 #tag WindowCode
+	#tag Event
+		Sub Opening()
+		  
+		End Sub
+	#tag EndEvent
+
+	#tag Event
+		Sub Shown()
+		  EnterReservationsControls1.left = EnterReservationsControls1.parent.Width/2 - EnterReservationsControls1.Width/2
+		End Sub
+	#tag EndEvent
+
+
 	#tag Method, Flags = &h21
 		Private Function findReservationErrors(res as bookingtoolkit.reservation) As String
 		  dim today as xojo.core.date = xojo.core.date.Now()

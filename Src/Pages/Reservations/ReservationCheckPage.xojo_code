@@ -121,6 +121,13 @@ End
 #tag EndWebPage
 
 #tag WindowCode
+	#tag Event
+		Sub Shown()
+		  YesNoSelector1.left = YesNoSelector1.parent.Width/2 - YesNoSelector1.Width/2
+		End Sub
+	#tag EndEvent
+
+
 	#tag Method, Flags = &h21
 		Private Sub repositionControls()
 		  dim requiredLines as integer = 1

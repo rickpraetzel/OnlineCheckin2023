@@ -22,7 +22,6 @@ Begin WebContainer YesNoSelector
    Width           =   304
    _mDesignHeight  =   0
    _mDesignWidth   =   0
-   _mName          =   ""
    _mPanelIndex    =   -1
    Begin WebLabel Label1
       Bold            =   True
@@ -90,6 +89,14 @@ End
 #tag EndWebContainerControl
 
 #tag WindowCode
+	#tag Event
+		Sub Resized()
+		  label1.left = self.width/3 - label1.width/2
+		  label2.left = 2* self.width/3 - label2.width/2
+		End Sub
+	#tag EndEvent
+
+
 	#tag Hook, Flags = &h0
 		Event NoSelected()
 	#tag EndHook

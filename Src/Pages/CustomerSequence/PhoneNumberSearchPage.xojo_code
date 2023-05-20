@@ -186,6 +186,18 @@ End
 #tag EndWebPage
 
 #tag WindowCode
+	#tag Event
+		Sub Shown()
+		  'dim i,n as integer
+		  '
+		  'i = session.PhoneNumberSearch.width
+		  'n = session.PhoneNumberSearch.height
+		  '
+		  'MessageBox str(i) + " x " + str(n)
+		End Sub
+	#tag EndEvent
+
+
 	#tag Method, Flags = &h0
 		Sub show(cust as bookingtoolkit.customer, res as bookingtoolkit.reservation)
 		  PhoneField.Text = ""
