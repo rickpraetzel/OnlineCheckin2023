@@ -1,5 +1,5 @@
 #tag WebPage
-Begin WebDialog WrongResIdWebDialog
+Begin WebDialog MessageBoxWebDialog
    Compatibility   =   ""
    ControlCount    =   0
    ControlID       =   ""
@@ -22,7 +22,6 @@ Begin WebDialog WrongResIdWebDialog
    Width           =   310
    _mDesignHeight  =   0
    _mDesignWidth   =   0
-   _mName          =   ""
    _mPanelIndex    =   -1
    Begin WebLabel Label1
       Bold            =   False
@@ -45,7 +44,6 @@ Begin WebDialog WrongResIdWebDialog
       Multiline       =   True
       Scope           =   2
       TabIndex        =   0
-      TabStop         =   True
       Text            =   "There is a problem with the reservation ID you entered..."
       TextAlignment   =   0
       TextColor       =   &c00000000
@@ -76,7 +74,6 @@ Begin WebDialog WrongResIdWebDialog
       LockVertical    =   False
       Scope           =   2
       TabIndex        =   1
-      TabStop         =   True
       Tooltip         =   ""
       Top             =   100
       Visible         =   True

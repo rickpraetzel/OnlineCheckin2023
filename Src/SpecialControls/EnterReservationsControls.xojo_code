@@ -156,14 +156,14 @@ End
 		Sub Pressed()
 		  if len(ResIdField.Text) < 6 or not IsNumeric(ResIdField.Text) then
 		    'MessageBox "There is a problem with the reservation ID that you entered"
-		    WrongResIdWebDialog.show
+		    MessageBoxWebDialog.show
 		    Return
 		    
 		  end if
 		  
 		  if instr(ResIdField.Text, " ") > 0 or len(ResIdField.Text) < 6 then
-		    WrongResIdWebDialog.show
 		    'MessageBox "There is a problem with the reservation ID that you entered"
+		    MessageBoxWebDialog.show
 		    'ResIdField.Style = FieldStyle_Alert
 		    return
 		    
