@@ -1,70 +1,40 @@
-#tag WebContainerControl
-Begin WebContainer EnterReservationsControls
+#tag WebPage
+Begin WebDialog WrongResIdWebDialog
    Compatibility   =   ""
    ControlCount    =   0
    ControlID       =   ""
    Enabled         =   True
-   Height          =   127
+   Height          =   158
+   Index           =   -2147483648
    Indicator       =   0
    LayoutDirection =   0
    LayoutType      =   0
    Left            =   0
    LockBottom      =   False
    LockHorizontal  =   False
-   LockLeft        =   True
+   LockLeft        =   False
    LockRight       =   False
-   LockTop         =   True
+   LockTop         =   False
    LockVertical    =   False
-   ScrollDirection =   0
    TabIndex        =   0
    Top             =   0
    Visible         =   True
-   Width           =   231
+   Width           =   310
    _mDesignHeight  =   0
    _mDesignWidth   =   0
+   _mName          =   ""
    _mPanelIndex    =   -1
-   Begin WebTextField ResIdField
-      AllowAutoComplete=   False
-      AllowSpellChecking=   False
-      Caption         =   ""
-      ControlID       =   ""
-      Enabled         =   True
-      FieldType       =   0
-      Height          =   30
-      Hint            =   ""
-      Index           =   -2147483648
-      Indicator       =   ""
-      Left            =   65
-      LockBottom      =   False
-      LockedInPosition=   False
-      LockHorizontal  =   True
-      LockLeft        =   False
-      LockRight       =   False
-      LockTop         =   True
-      LockVertical    =   False
-      MaximumCharactersAllowed=   0
-      ReadOnly        =   False
-      Scope           =   2
-      TabIndex        =   0
-      Text            =   ""
-      TextAlignment   =   0
-      Tooltip         =   ""
-      Top             =   10
-      Visible         =   True
-      Width           =   102
-      _mPanelIndex    =   -1
-   End
    Begin WebLabel Label1
       Bold            =   False
       ControlID       =   ""
       Enabled         =   True
       FontName        =   ""
       FontSize        =   0.0
-      Height          =   30
+      Height          =   50
       Index           =   -2147483648
       Indicator       =   ""
       Italic          =   False
-      Left            =   20
+      Left            =   42
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   False
@@ -74,120 +44,55 @@ Begin WebContainer EnterReservationsControls
       LockVertical    =   False
       Multiline       =   True
       Scope           =   2
-      TabIndex        =   1
-      Text            =   "BACK"
-      TextAlignment   =   2
+      TabIndex        =   0
+      TabStop         =   True
+      Text            =   "There is a problem with the reservation ID you entered..."
+      TextAlignment   =   0
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   79
+      Top             =   20
       Underline       =   False
       Visible         =   True
-      Width           =   76
+      Width           =   226
       _mPanelIndex    =   -1
    End
-   Begin WebLabel SubmitButton
-      Bold            =   False
+   Begin WebButton Button1
+      AllowAutoDisable=   False
+      Cancel          =   False
+      Caption         =   "OK"
       ControlID       =   ""
+      Default         =   True
       Enabled         =   True
-      FontName        =   ""
-      FontSize        =   0.0
-      Height          =   45
+      Height          =   38
       Index           =   -2147483648
-      Indicator       =   ""
-      Italic          =   False
-      Left            =   113
+      Indicator       =   1
+      Left            =   105
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   False
-      LockLeft        =   False
-      LockRight       =   True
+      LockLeft        =   True
+      LockRight       =   False
       LockTop         =   True
       LockVertical    =   False
-      Multiline       =   False
       Scope           =   2
-      TabIndex        =   2
-      Text            =   "SUBMIT"
-      TextAlignment   =   2
-      TextColor       =   &c00000000
+      TabIndex        =   1
+      TabStop         =   True
       Tooltip         =   ""
-      Top             =   71
-      Underline       =   False
+      Top             =   100
       Visible         =   True
-      Width           =   98
+      Width           =   100
       _mPanelIndex    =   -1
    End
 End
-#tag EndWebContainerControl
+#tag EndWebPage
 
 #tag WindowCode
-	#tag Method, Flags = &h0
-		Sub clear()
-		  ResIdField.Text = ""
-		End Sub
-	#tag EndMethod
-
-
-	#tag Hook, Flags = &h0
-		Event FailedToLocateReservation()
-	#tag EndHook
-
-	#tag Hook, Flags = &h0
-		Event GoBack()
-	#tag EndHook
-
-	#tag Hook, Flags = &h0
-		Event ReservationFound(res as BookingToolkit.reservation)
-	#tag EndHook
-
-
 #tag EndWindowCode
 
-#tag Events Label1
+#tag Events Button1
 	#tag Event
 		Sub Pressed()
-		  'return to Are you checking in for a reservation?
-		  session.ReservationCheck.show
-		  
-		End Sub
-	#tag EndEvent
-#tag EndEvents
-#tag Events SubmitButton
-	#tag Event
-		Sub Pressed()
-		  if len(ResIdField.Text) < 6 or not IsNumeric(ResIdField.Text) then
-		    'MessageBox "There is a problem with the reservation ID that you entered"
-		    WrongResIdWebDialog.show
-		    Return
-		    
-		  end if
-		  
-		  if instr(ResIdField.Text, " ") > 0 or len(ResIdField.Text) < 6 then
-		    WrongResIdWebDialog.show
-		    'MessageBox "There is a problem with the reservation ID that you entered"
-		    'ResIdField.Style = FieldStyle_Alert
-		    return
-		    
-		  end if
-		  
-		  dim res as bookingtoolkit.reservation
-		  try
-		    session.logEntry("Searching for reservation by numeric ID...")
-		    res = session.ERC_Controller.getReservation(new SQLSerial(ResIdField.Text))
-		    
-		    session.logEntry("Success")
-		    
-		    RaiseEvent ReservationFound(res)
-		    
-		  catch err as BookingToolkit.Exceptions.NoSuchItemException
-		    session.logEntry("Failed")
-		    'ResIdField.Style = FieldStyle_Alert
-		    
-		    RaiseEvent FailedToLocateReservation
-		    
-		  end try
-		  
-		  
-		  
+		  self.close
 		End Sub
 	#tag EndEvent
 #tag EndEvents
@@ -205,6 +110,14 @@ End
 		Visible=false
 		Group="Behavior"
 		InitialValue="-1"
+		Type="Integer"
+		EditorType=""
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="Index"
+		Visible=false
+		Group="ID"
+		InitialValue="-2147483648"
 		Type="Integer"
 		EditorType=""
 	#tag EndViewProperty
@@ -257,59 +170,87 @@ End
 		EditorType=""
 	#tag EndViewProperty
 	#tag ViewProperty
-		Name="LockBottom"
+		Name="Height"
 		Visible=true
 		Group="Behavior"
-		InitialValue="False"
+		InitialValue="400"
+		Type="Integer"
+		EditorType=""
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="LayoutType"
+		Visible=true
+		Group="Behavior"
+		InitialValue="LayoutTypes.Fixed"
+		Type="LayoutTypes"
+		EditorType="Enum"
+		#tag EnumValues
+			"0 - Fixed"
+			"1 - Flex"
+		#tag EndEnumValues
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="LockBottom"
+		Visible=false
+		Group="Behavior"
+		InitialValue=""
 		Type="Boolean"
 		EditorType=""
 	#tag EndViewProperty
 	#tag ViewProperty
 		Name="LockHorizontal"
-		Visible=true
+		Visible=false
 		Group="Behavior"
-		InitialValue="False"
+		InitialValue=""
 		Type="Boolean"
 		EditorType=""
 	#tag EndViewProperty
 	#tag ViewProperty
 		Name="LockLeft"
-		Visible=true
+		Visible=false
 		Group="Behavior"
-		InitialValue="True"
+		InitialValue=""
 		Type="Boolean"
 		EditorType=""
 	#tag EndViewProperty
 	#tag ViewProperty
 		Name="LockRight"
-		Visible=true
+		Visible=false
 		Group="Behavior"
-		InitialValue="False"
+		InitialValue=""
 		Type="Boolean"
 		EditorType=""
 	#tag EndViewProperty
 	#tag ViewProperty
 		Name="LockTop"
-		Visible=true
+		Visible=false
 		Group="Behavior"
-		InitialValue="True"
+		InitialValue=""
 		Type="Boolean"
 		EditorType=""
 	#tag EndViewProperty
 	#tag ViewProperty
 		Name="LockVertical"
-		Visible=true
+		Visible=false
 		Group="Behavior"
-		InitialValue="False"
+		InitialValue=""
 		Type="Boolean"
 		EditorType=""
 	#tag EndViewProperty
 	#tag ViewProperty
 		Name="Visible"
-		Visible=true
+		Visible=false
 		Group="Behavior"
 		InitialValue=""
 		Type="Boolean"
+		EditorType=""
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="Width"
+		Visible=true
+		Group="Behavior"
+		InitialValue="600"
+		Type="Integer"
 		EditorType=""
 	#tag EndViewProperty
 	#tag ViewProperty
@@ -335,20 +276,6 @@ End
 		InitialValue=""
 		Type="String"
 		EditorType="MultiLineEditor"
-	#tag EndViewProperty
-	#tag ViewProperty
-		Name="ScrollDirection"
-		Visible=true
-		Group="Behavior"
-		InitialValue="ScrollDirections.None"
-		Type="WebContainer.ScrollDirections"
-		EditorType="Enum"
-		#tag EnumValues
-			"0 - None"
-			"1 - Horizontal"
-			"2 - Vertical"
-			"3 - Both"
-		#tag EndEnumValues
 	#tag EndViewProperty
 	#tag ViewProperty
 		Name="TabIndex"
@@ -379,21 +306,9 @@ End
 		#tag EndEnumValues
 	#tag EndViewProperty
 	#tag ViewProperty
-		Name="LayoutType"
-		Visible=true
-		Group="View"
-		InitialValue="LayoutTypes.Fixed"
-		Type="LayoutTypes"
-		EditorType="Enum"
-		#tag EnumValues
-			"0 - Fixed"
-			"1 - Flex"
-		#tag EndEnumValues
-	#tag EndViewProperty
-	#tag ViewProperty
 		Name="LayoutDirection"
 		Visible=true
-		Group="View"
+		Group="WebView"
 		InitialValue="LayoutDirections.LeftToRight"
 		Type="LayoutDirections"
 		EditorType="Enum"
@@ -403,21 +318,5 @@ End
 			"2 - TopToBottom"
 			"3 - BottomToTop"
 		#tag EndEnumValues
-	#tag EndViewProperty
-	#tag ViewProperty
-		Name="Width"
-		Visible=false
-		Group=""
-		InitialValue="250"
-		Type="Integer"
-		EditorType=""
-	#tag EndViewProperty
-	#tag ViewProperty
-		Name="Height"
-		Visible=false
-		Group=""
-		InitialValue="250"
-		Type="Integer"
-		EditorType=""
 	#tag EndViewProperty
 #tag EndViewBehavior

@@ -176,6 +176,7 @@ WebContainer=RentalDetailsControl;SpecialControls/RentalDetailsControl.xojo_code
 WebContainer=AcknowlegeControl;SpecialControls/AcknowlegeControl.xojo_code;&h0000000050D727FF;&h000000006640DFFF;false
 WebContainer=GroupDetailsControl;Pages/Reservations/GroupDetailsControl.xojo_code;&h00000000545757FF;&h000000001DEA0FFF;false
 Class=TWILIOSOCKET;TWILIOSOCKET.xojo_code;&h00000000384607FF;&h0000000000000000;false
+WebView=WrongResIdWebDialog;SpecialControls/WrongResIdWebDialog.xojo_code;&h0000000009981FFF;&h000000006640DFFF;false
 DefaultWindow=PhoneNumberSearchPage
 MajorVersion=1
 MinorVersion=2

@@ -41,10 +41,10 @@ Protected Module CalendarToolkit
 		  case CalendarToolkit.EventLengths.FULLDAY
 		    return "Full Day"
 		    
-		  case CalendarToolkit.EventLengths.FULLDAY
+		  case CalendarToolkit.EventLengths.THIRDDAY
 		    return "Third Day"
 		    
-		  case CalendarToolkit.EventLengths.FULLDAY
+		  case CalendarToolkit.EventLengths.TWOTHIRDSDAY
 		    return "TwoThirds Day"
 		    
 		  else
