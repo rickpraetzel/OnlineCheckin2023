@@ -205,7 +205,14 @@ End
 		Sub Invalid()
 		  self.logEntry("Invalid customer information")
 		  CustomerInfoControl1.highlightErrors()
-		  MessageBox "Please fix the marked errors"
+		  '-----
+		  dim errormessagebox as new MessageBoxWebDialog
+		  if errormessagebox <> nil then
+		    errormessagebox.label1.text = "Please fix the marked errors"
+		    errormessagebox.show
+		  end if
+		  '-----
+		  'MessageBox "Please fix the marked errors"
 		  MovementControl1.ActivatePrimary()
 		End Sub
 	#tag EndEvent
@@ -231,7 +238,14 @@ End
 		      
 		    catch ee as BookingToolkit.Exceptions.CustomerException
 		      self.logEntry(765272, "Unable to load previous customer information", ee)
-		      MessageBox "There was an error storing your information, please try again"
+		      '-----
+		      dim errormessagebox as new MessageBoxWebDialog
+		      if errormessagebox <> nil then
+		        errormessagebox.label1.text = "There was an error storing your information, please try again"
+		        errormessagebox.show
+		      end if
+		      '-----
+		      'MessageBox "There was an error storing your information, please try again"
 		      
 		      return
 		      
@@ -239,7 +253,14 @@ End
 		    
 		  catch err as BookingToolkit.Exceptions.CustomerException
 		    self.logEntry(875427, "Unable to store new customer information", err)
-		    MessageBox "There was an error storing your information, please try again"
+		    '-----
+		    dim errormessagebox as new MessageBoxWebDialog
+		    if errormessagebox <> nil then
+		      errormessagebox.label1.text = "There was an error storing your information, please try again"
+		      errormessagebox.show
+		    end if
+		    '-----
+		    'MessageBox "There was an error storing your information, please try again"
 		    
 		    return
 		    
@@ -253,7 +274,14 @@ End
 	#tag Event
 		Sub Error(msg as string)
 		  self.logEntry(msg, SimpleLogger.LogLevels.Warning)
-		  MessageBox "There was an error validating your information, please try again"
+		  '-----
+		  dim errormessagebox as new MessageBoxWebDialog
+		  if errormessagebox <> nil then
+		    errormessagebox.label1.text = "There was an error validating your information, please try again"
+		    errormessagebox.show
+		  end if
+		  '-----
+		  'MessageBox "There was an error validating your information, please try again"
 		  MovementControl1.ActivatePrimary()
 		End Sub
 	#tag EndEvent

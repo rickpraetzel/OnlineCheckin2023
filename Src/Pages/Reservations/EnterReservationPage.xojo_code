@@ -148,6 +148,34 @@ Begin mPage EnterReservationPage
       _mDesignWidth   =   0
       _mPanelIndex    =   -1
    End
+   Begin MessageBoxWebDialog MessageBoxWebDialog1
+      ControlCount    =   0
+      ControlID       =   ""
+      Enabled         =   True
+      Height          =   158
+      Index           =   -2147483648
+      Indicator       =   0
+      LayoutDirection =   0
+      LayoutType      =   0
+      Left            =   0
+      LockBottom      =   False
+      LockedInPosition=   False
+      LockHorizontal  =   False
+      LockLeft        =   False
+      LockRight       =   False
+      LockTop         =   False
+      LockVertical    =   False
+      Scope           =   2
+      TabIndex        =   2
+      TabStop         =   True
+      Tooltip         =   ""
+      Top             =   0
+      Visible         =   True
+      Width           =   310
+      _mDesignHeight  =   0
+      _mDesignWidth   =   0
+      _mPanelIndex    =   -1
+   End
 End
 #tag EndWebPage
 
@@ -263,14 +291,29 @@ End
 	#tag EndEvent
 	#tag Event
 		Sub FailedToLocateReservation()
-		  MessageBox "Unable to find your reservation, please check the ID and try again"
+		  'MessageBox "Unable to find your reservation, please check the ID and try again"
+		  '-----
+		  dim errormessagebox as new MessageBoxWebDialog
+		  if errormessagebox <> nil then
+		    errormessagebox.label1.text = "There was an unknown error"
+		    errormessagebox.show
+		  end if
+		  '-----
+		  'MessageBoxWebDialog1.show
 		End Sub
 	#tag EndEvent
 	#tag Event
 		Sub ReservationFound(res as BookingToolkit.reservation)
 		  dim errorMsg as string = findReservationErrors(res)
 		  if errorMsg <> "" then
-		    MessageBox errorMsg
+		    '-----
+		    dim errormessagebox as new MessageBoxWebDialog
+		    if errormessagebox <> nil then
+		      errormessagebox.label1.text = errormsg
+		      errormessagebox.show
+		    end if
+		    '-----
+		    'MessageBox errorMsg
 		    return
 		    
 		  end if

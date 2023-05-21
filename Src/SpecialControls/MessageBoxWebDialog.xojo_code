@@ -19,7 +19,7 @@ Begin WebDialog MessageBoxWebDialog
    TabIndex        =   0
    Top             =   0
    Visible         =   True
-   Width           =   310
+   Width           =   362
    _mDesignHeight  =   0
    _mDesignWidth   =   0
    _mPanelIndex    =   -1
@@ -28,12 +28,12 @@ Begin WebDialog MessageBoxWebDialog
       ControlID       =   ""
       Enabled         =   True
       FontName        =   ""
-      FontSize        =   0.0
-      Height          =   50
+      FontSize        =   15.0
+      Height          =   72
       Index           =   -2147483648
       Indicator       =   ""
       Italic          =   False
-      Left            =   42
+      Left            =   20
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   False
@@ -51,7 +51,7 @@ Begin WebDialog MessageBoxWebDialog
       Top             =   20
       Underline       =   False
       Visible         =   True
-      Width           =   226
+      Width           =   322
       _mPanelIndex    =   -1
    End
    Begin WebButton Button1
@@ -64,7 +64,7 @@ Begin WebDialog MessageBoxWebDialog
       Height          =   38
       Index           =   -2147483648
       Indicator       =   1
-      Left            =   105
+      Left            =   131
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   False

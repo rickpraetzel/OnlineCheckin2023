@@ -182,36 +182,30 @@ Begin mPage StoreCreditCardPage
    Begin ANetProfileManager ANetProfileManager1
       Index           =   -2147483648
       isProcessingLiveRequests=   False
-      Left            =   0.0
       LockedInPosition=   False
       Scope           =   2
       TabPanelIndex   =   0
-      Top             =   0.0
    End
    Begin WebTimer RequestTimer
       ControlID       =   ""
       Enabled         =   True
       Index           =   -2147483648
-      Left            =   0.0
       Location        =   0
       LockedInPosition=   False
       Period          =   500
       RunMode         =   1
       Scope           =   2
-      Top             =   0.0
       _mPanelIndex    =   -1
    End
    Begin WebTimer AdvancePageTimer
       ControlID       =   ""
       Enabled         =   True
       Index           =   -2147483648
-      Left            =   0.0
       Location        =   0
       LockedInPosition=   False
       Period          =   100
       RunMode         =   0
       Scope           =   2
-      Top             =   0.0
       _mPanelIndex    =   -1
    End
    Begin MovementControl MovementControl1
@@ -441,14 +435,28 @@ End
 		      
 		    else
 		      self.logEntry(128653, "Unknown duplicate error received: " + rsp.errorMessage, SimpleLogger.LogLevels.Warning)
-		      MessageBox "An error occured while trying to store your credit card information. Please try again."
+		      '-----
+		      dim errormessagebox as new MessageBoxWebDialog
+		      if errormessagebox <> nil then
+		        errormessagebox.label1.text = "An error occured while trying to store your credit card information. Please try again."
+		        errormessagebox.show
+		      end if
+		      '-----
+		      'MessageBox "An error occured while trying to store your credit card information. Please try again."
 		      
 		    end select
 		    
 		  case app.kDecline,app.kLengthError,app.kExpiredError
 		    self.logEntry(128654, "Decline/Generic Error(" + rsp.lastErrorCode + "): " + rsp.errorMessage)
 		    CCInfoControl1.setHighlights(rsp)
-		    MessageBox rsp.errorMessage
+		    '-----
+		    dim errormessagebox as new MessageBoxWebDialog
+		    if errormessagebox <> nil then
+		      errormessagebox.label1.text = rsp.errorMessage
+		      errormessagebox.show
+		    end if
+		    '-----
+		    'MessageBox rsp.errorMessage
 		    
 		  else
 		    self.logEntry(128655, "Unknown error (" + rsp.lastErrorCode + "): " + rsp.errorMessage, SimpleLogger.LogLevels.Warning)
@@ -526,7 +534,14 @@ End
 	#tag Event
 		Sub Error(err as xojo.Net.NetException)
 		  self.logEntry(653291, "Error communication with ANet", err)
-		  MessageBox "An error occured while trying to store your credit card informaiton, please try again."
+		  '-----
+		  dim errormessagebox as new MessageBoxWebDialog
+		  if errormessagebox <> nil then
+		    errormessagebox.label1.text = "An error occured while trying to store your credit card informaiton, please try again."
+		    errormessagebox.show
+		  end if
+		  '-----
+		  'MessageBox "An error occured while trying to store your credit card informaiton, please try again."
 		  MovementControl1.ActivatePrimary()
 		End Sub
 	#tag EndEvent
@@ -577,7 +592,14 @@ End
 		      
 		    catch err as Xojo.Core.UnsupportedOperationException
 		      self.logEntry(187533, "Error processing ANet request: " + nextRequest.getJSON().ToString(), err, SimpleLogger.LogLevels.Critical)
-		      MessageBox "An error has occured while trying to store your credit card information. Please try again."
+		      '-----
+		      dim errormessagebox as new MessageBoxWebDialog
+		      if errormessagebox <> nil then
+		        errormessagebox.label1.text = "An error has occured while trying to store your credit card information. Please try again."
+		        errormessagebox.show
+		      end if
+		      '-----
+		      'MessageBox "An error has occured while trying to store your credit card information. Please try again."
 		      
 		    end try
 		    
@@ -604,7 +626,14 @@ End
 		Sub PrimaryButtonPressed()
 		  if not CCInfoControl1.isValidData then
 		    CCInfoControl1.setHighlights()
-		    MessageBox "Please complete all required fields"
+		    '-----
+		    dim errormessagebox as new MessageBoxWebDialog
+		    if errormessagebox <> nil then
+		      errormessagebox.label1.text = "Please complete all required fields"
+		      errormessagebox.show
+		    end if
+		    '-----
+		    'MessageBox "Please complete all required fields"
 		    
 		    return
 		    

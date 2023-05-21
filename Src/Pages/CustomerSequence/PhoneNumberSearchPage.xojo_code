@@ -29,7 +29,6 @@ Begin mPage PhoneNumberSearchPage
    _ImplicitInstance=   False
    _mDesignHeight  =   0
    _mDesignWidth   =   0
-   _mName          =   ""
    _mPanelIndex    =   -1
    Begin WebImageViewer ImageView1
       ControlID       =   ""
@@ -224,7 +223,14 @@ End
 		Sub Pressed()
 		  if PhoneField.Text = "" then
 		    'PhoneField.Style = FieldStyle_Alert
-		    MessageBox "Please enter a valid phone number"
+		    '-----
+		    dim errormessagebox as new MessageBoxWebDialog
+		    if errormessagebox <> nil then
+		      errormessagebox.label1.text = "Please enter a valid phone number"
+		      errormessagebox.show
+		    end if
+		    '-----
+		    'MessageBox "Please enter a valid phone number"
 		    return
 		    
 		  end if

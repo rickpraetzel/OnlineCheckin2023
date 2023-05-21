@@ -37,7 +37,14 @@ Inherits WebSession
 		      
 		    catch err as Xojo.IO.IOException
 		      self.logEntry(167926, "Unable to create ERC_Controller", err, SimpleLogger.LogLevels.Critical)
-		      MessageBox "Internal server error"
+		      '-----
+		      dim errormessagebox as new MessageBoxWebDialog
+		      if errormessagebox <> nil then
+		        errormessagebox.label1.text = "Internal server error"
+		        errormessagebox.show
+		      end if
+		      '-----
+		      'MessageBox "Internal server error"
 		      self.Quit()
 		      
 		    end try
@@ -70,7 +77,14 @@ Inherits WebSession
 		    '----------
 		  else
 		    self.logEntry("Unable to create a database connection", SimpleLogger.LogLevels.Critical)
-		    MessageBox "Internal server error" 
+		    '-----
+		    dim errormessagebox as new MessageBoxWebDialog
+		    if errormessagebox <> nil then
+		      errormessagebox.label1.text = "Internal server error"
+		      errormessagebox.show
+		    end if
+		    '-----
+		    'MessageBox "Internal server error" 
 		    self.Quit()
 		    
 		  end if
@@ -81,7 +95,14 @@ Inherits WebSession
 	#tag Event
 		Function UnhandledException(Error As RuntimeException) As Boolean
 		  self.logEntry(185936, "An unhandled exception was thrown", error, SimpleLogger.LogLevels.Critical)
-		  MessageBox "There was an unknown error"
+		  '-----
+		  dim errormessagebox as new MessageBoxWebDialog
+		  if errormessagebox <> nil then
+		    errormessagebox.label1.text = "There was an unknown error"
+		    errormessagebox.show
+		  end if
+		  '-----
+		  'MessageBox "There was an unknown error"
 		  self.Quit()
 		  
 		  return true
@@ -91,6 +112,7 @@ Inherits WebSession
 	#tag Event
 		Sub UserTimedOut()
 		  self.logEntry("Session timeout triggered")
+		  
 		  MessageBox "Your session has timed out, please start over"
 		  self.Quit()
 		End Sub

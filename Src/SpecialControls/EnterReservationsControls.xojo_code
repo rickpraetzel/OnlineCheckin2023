@@ -116,6 +116,34 @@ Begin WebContainer EnterReservationsControls
       Width           =   98
       _mPanelIndex    =   -1
    End
+   Begin MessageBoxWebDialog MessageBoxWebDialog1
+      ControlCount    =   0
+      ControlID       =   ""
+      Enabled         =   True
+      Height          =   158
+      Index           =   -2147483648
+      Indicator       =   0
+      LayoutDirection =   0
+      LayoutType      =   0
+      Left            =   0
+      LockBottom      =   False
+      LockedInPosition=   False
+      LockHorizontal  =   False
+      LockLeft        =   False
+      LockRight       =   False
+      LockTop         =   False
+      LockVertical    =   False
+      Scope           =   2
+      TabIndex        =   3
+      TabStop         =   True
+      Tooltip         =   ""
+      Top             =   0
+      Visible         =   True
+      Width           =   310
+      _mDesignHeight  =   0
+      _mDesignWidth   =   0
+      _mPanelIndex    =   -1
+   End
 End
 #tag EndWebContainerControl
 
@@ -156,14 +184,14 @@ End
 		Sub Pressed()
 		  if len(ResIdField.Text) < 6 or not IsNumeric(ResIdField.Text) then
 		    'MessageBox "There is a problem with the reservation ID that you entered"
-		    MessageBoxWebDialog.show
+		    MessageBoxWebDialog1.show
 		    Return
 		    
 		  end if
 		  
 		  if instr(ResIdField.Text, " ") > 0 or len(ResIdField.Text) < 6 then
 		    'MessageBox "There is a problem with the reservation ID that you entered"
-		    MessageBoxWebDialog.show
+		    MessageBoxWebDialog1.show
 		    'ResIdField.Style = FieldStyle_Alert
 		    return
 		    

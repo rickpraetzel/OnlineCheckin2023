@@ -323,11 +323,25 @@ End
 		    
 		  catch err as BookingToolkit.Exceptions.ReservationException
 		    self.logEntry(765479, "Failed", err)
-		    MessageBox "There was a problem, please try again"
+		    '-----
+		    dim errormessagebox as new MessageBoxWebDialog
+		    if errormessagebox <> nil then
+		      errormessagebox.label1.text = "There was a problem, please try again"
+		      errormessagebox.show
+		    end if
+		    '-----
+		    'MessageBox "There was a problem, please try again"
 		    
 		  catch err as BookingToolkit.Exceptions.CustomerException
 		    self.logEntry(765473, "Failed", err)
-		    MessageBox "There was a problem, please try again"
+		    '-----
+		    dim errormessagebox as new MessageBoxWebDialog
+		    if errormessagebox <> nil then
+		      errormessagebox.label1.text = "There was a problem, please try again"
+		      errormessagebox.show
+		    end if
+		    '-----
+		    'MessageBox "There was a problem, please try again"
 		    
 		  end try
 		End Sub

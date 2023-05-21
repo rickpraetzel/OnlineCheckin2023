@@ -22,7 +22,6 @@ Begin WebDialog DateDropDown
    Width           =   245
    _mDesignHeight  =   0
    _mDesignWidth   =   0
-   _mName          =   ""
    _mPanelIndex    =   -1
    Begin WebPopupMenu PopupMenu1
       ControlID       =   ""
@@ -390,7 +389,14 @@ End
 	#tag Event
 		Sub Pressed()
 		  if xojo.core.date.now().compareTo(mDate.toCoreDate()) = 1 then
-		    MessageBox "Return date can not be in the past"
+		    '-----
+		    dim errormessagebox as new MessageBoxWebDialog
+		    if errormessagebox <> nil then
+		      errormessagebox.label1.text = "Return date can not be in the past"
+		      errormessagebox.show
+		    end if
+		    '-----
+		    'MessageBox "Return date can not be in the past"
 		    return
 		  else 'Check to see if this is a post 2pm same day return declaration
 		    if mdate.hour >= 14 then
