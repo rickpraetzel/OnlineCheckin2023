@@ -62,7 +62,7 @@ Begin mPage ExistingReservationPage
       ControlCount    =   0
       ControlID       =   ""
       Enabled         =   True
-      Height          =   324
+      Height          =   355
       Index           =   -2147483648
       Indicator       =   0
       LayoutDirection =   0
@@ -79,7 +79,7 @@ Begin mPage ExistingReservationPage
       ScrollDirection =   0
       TabIndex        =   0
       Tooltip         =   ""
-      Top             =   192
+      Top             =   171
       Visible         =   True
       Width           =   304
       _mDesignHeight  =   0
@@ -92,7 +92,7 @@ Begin mPage ExistingReservationPage
       Enabled         =   True
       FontName        =   ""
       FontSize        =   0.0
-      Height          =   50
+      Height          =   33
       Index           =   -2147483648
       Indicator       =   ""
       Italic          =   False
@@ -108,7 +108,7 @@ Begin mPage ExistingReservationPage
       Scope           =   2
       TabIndex        =   0
       Text            =   "Group Details"
-      TextAlignment   =   0
+      TextAlignment   =   2
       TextColor       =   &c00000000
       Tooltip         =   ""
       Top             =   132
@@ -126,11 +126,11 @@ Begin mPage ExistingReservationPage
       Indicator       =   ""
       LayoutDirection =   0
       LayoutType      =   0
-      Left            =   0
+      Left            =   1
       LockBottom      =   False
       LockedInPosition=   False
-      LockHorizontal  =   False
-      LockLeft        =   True
+      LockHorizontal  =   True
+      LockLeft        =   False
       LockRight       =   False
       LockTop         =   True
       LockVertical    =   False
@@ -140,7 +140,7 @@ Begin mPage ExistingReservationPage
       Tooltip         =   ""
       Top             =   546
       Visible         =   True
-      Width           =   304
+      Width           =   302
       _mDesignHeight  =   0
       _mDesignWidth   =   0
       _mPanelIndex    =   -1
@@ -152,6 +152,8 @@ End
 	#tag Method, Flags = &h0
 		Sub show(cust as bookingtoolkit.customer, res as bookingtoolkit.reservation)
 		  GroupDetailsControl1.showDetails(res, cust)
+		  
+		  
 		  MovementControl1.ActivatePrimary()
 		  Super.show(cust, res)
 		  

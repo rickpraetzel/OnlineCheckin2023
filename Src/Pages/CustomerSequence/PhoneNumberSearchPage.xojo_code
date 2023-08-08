@@ -144,7 +144,7 @@ Begin mPage PhoneNumberSearchPage
       Scope           =   2
       TabIndex        =   0
       Text            =   ""
-      TextAlignment   =   0
+      TextAlignment   =   2
       Tooltip         =   ""
       Top             =   252
       Visible         =   True

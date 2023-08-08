@@ -44,7 +44,6 @@ Begin WebContainer ItemSelector
       LockVertical    =   False
       Scope           =   2
       TabIndex        =   1
-      TabStop         =   True
       Tooltip         =   ""
       Top             =   0
       Visible         =   True
@@ -56,7 +55,7 @@ Begin WebContainer ItemSelector
          Bold            =   False
          ControlID       =   ""
          Enabled         =   True
-         FontName        =   ""
+         FontName        =   "Arial"
          FontSize        =   0.0
          Height          =   32
          Index           =   -2147483648
@@ -74,10 +73,11 @@ Begin WebContainer ItemSelector
          Parent          =   "Rectangle1"
          Scope           =   2
          TabIndex        =   0
+         TabPanelIndex   =   0
+         TabStop         =   True
          Text            =   "Untitled"
          TextAlignment   =   2
          TextColor       =   &c00000000
-         Tooltip         =   ""
          Top             =   6
          Underline       =   False
          Visible         =   True

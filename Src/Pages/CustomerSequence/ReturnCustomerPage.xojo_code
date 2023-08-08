@@ -127,7 +127,7 @@ Begin mPage ReturnCustomerPage
       Indicator       =   ""
       LayoutDirection =   0
       LayoutType      =   0
-      Left            =   0
+      Left            =   1
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   True
@@ -139,9 +139,9 @@ Begin mPage ReturnCustomerPage
       ScrollDirection =   0
       TabIndex        =   1
       Tooltip         =   ""
-      Top             =   668
+      Top             =   684
       Visible         =   True
-      Width           =   304
+      Width           =   302
       _mDesignHeight  =   0
       _mDesignWidth   =   0
       _mPanelIndex    =   -1

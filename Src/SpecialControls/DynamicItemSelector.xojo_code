@@ -4,7 +4,7 @@ Begin WebContainer DynamicItemSelector
    ControlCount    =   0
    ControlID       =   ""
    Enabled         =   True
-   Height          =   36
+   Height          =   40
    Indicator       =   0
    LayoutDirection =   0
    LayoutType      =   0
@@ -32,7 +32,7 @@ Begin WebContainer DynamicItemSelector
       Enabled         =   True
       Height          =   32
       Index           =   -2147483648
-      Indicator       =   ""
+      Indicator       =   0
       Left            =   12
       LockBottom      =   True
       LockedInPosition=   False
@@ -41,11 +41,10 @@ Begin WebContainer DynamicItemSelector
       LockRight       =   True
       LockTop         =   False
       LockVertical    =   False
-      Parent          =   "nil"
       Scope           =   2
       TabIndex        =   2
       Tooltip         =   ""
-      Top             =   0
+      Top             =   1
       Visible         =   True
       Width           =   280
       _mPanelIndex    =   -1
@@ -77,7 +76,7 @@ End
 		  const kVerticalPadding = 12
 		  const kControlHeight = 40
 		  const kControlWidth = 304
-		  dim currentTop as integer = 1
+		  dim currentTop as integer = 1 '**********
 		  dim xCoord as integer = me.Width/2 - kControlWidth/2
 		  for each customer as bookingtoolkit.customer in customers
 		    dim custControl as new ItemSelector(customer)
