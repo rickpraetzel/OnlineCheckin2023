@@ -50,7 +50,7 @@ Begin WebContainer AcknowlegeControl
       Tooltip         =   ""
       Top             =   0
       Visible         =   True
-      Width           =   305
+      Width           =   344
       _mPanelIndex    =   -1
    End
    Begin WebCheckbox Checkbox1

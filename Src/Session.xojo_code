@@ -58,17 +58,17 @@ Inherits WebSession
 		      
 		    end try
 		    
-		    if checkIsLocalConntection then
-		      self.logEntry("Connection found to be local, bypassing login page")
-		      ReservationCheck.show()
-		      'self.Timeout = 0
-		      self.isLocal = true
-		      
-		    else
-		      self.logEntry("Loading login page")
-		      'LoginPage.Show()
-		      session.PhoneNumberSearch.show(new bookingtoolkit.customer(), new bookingtoolkit.reservation())
-		    end if
+		    'if checkIsLocalConntection then
+		    'self.logEntry("Connection found to be local, bypassing login page")
+		    'ReservationCheck.show()
+		    ''self.Timeout = 0
+		    'self.isLocal = true
+		    '
+		    'else
+		    self.logEntry("Loading login page")
+		    'LoginPage.Show()
+		    session.PhoneNumberSearch.show(new bookingtoolkit.customer(), new bookingtoolkit.reservation())
+		    'end if
 		    '----------
 		    todaysdate = new Date
 		    TWILIOSOCKET1 = new TWILIOSOCKET
@@ -190,13 +190,13 @@ Inherits WebSession
 		  dim xx as integer = Ticks()
 		  self.logEntry("Caching pages...")
 		  done = new DonePage()
-		  EnterReservation = new EnterReservationPage()
+		  'EnterReservation = new EnterReservationPage()
 		  ExistingReservation = new ExistingReservationPage()
 		  InformedConsent = new InformedConsentPage()
 		  NewCustomer = new NewCustomerPage()
 		  PhoneNumberSearch = new PhoneNumberSearchPage()
 		  RentalDetails = new RentalDetailsPage()
-		  ReservationCheck = new ReservationCheckPage()
+		  'ReservationCheck = new ReservationCheckPage()
 		  ReturnCustomer = new ReturnCustomerPage()
 		  SelectPerson = new SelectPersonPage()
 		  StoreCreditCard = new StoreCreditCardPage()

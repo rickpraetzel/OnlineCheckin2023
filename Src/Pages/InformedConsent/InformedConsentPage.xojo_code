@@ -25,7 +25,7 @@ Begin mPage InformedConsentPage
    Title           =   "Untitled"
    Top             =   0
    Visible         =   True
-   Width           =   340
+   Width           =   560
    _ImplicitInstance=   False
    _mDesignHeight  =   0
    _mDesignWidth   =   0
@@ -37,7 +37,7 @@ Begin mPage InformedConsentPage
       HorizontalAlignment=   0
       Index           =   -2147483648
       Indicator       =   ""
-      Left            =   115
+      Left            =   225
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   True
@@ -85,7 +85,7 @@ Begin mPage InformedConsentPage
       Tooltip         =   ""
       Top             =   161
       Visible         =   True
-      Width           =   326
+      Width           =   546
       _mPanelIndex    =   -1
    End
    Begin WebLabel Label1
@@ -98,7 +98,7 @@ Begin mPage InformedConsentPage
       Index           =   -2147483648
       Indicator       =   ""
       Italic          =   False
-      Left            =   11
+      Left            =   121
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   True
@@ -129,13 +129,13 @@ Begin mPage InformedConsentPage
       Index           =   -2147483648
       Indicator       =   ""
       Italic          =   False
-      Left            =   31
-      LockBottom      =   False
+      Left            =   141
+      LockBottom      =   True
       LockedInPosition=   False
       LockHorizontal  =   True
       LockLeft        =   False
       LockRight       =   False
-      LockTop         =   True
+      LockTop         =   False
       LockVertical    =   False
       Multiline       =   True
       Scope           =   2
@@ -161,13 +161,13 @@ Begin mPage InformedConsentPage
       Hint            =   ""
       Index           =   -2147483648
       Indicator       =   ""
-      Left            =   17
-      LockBottom      =   False
+      Left            =   127
+      LockBottom      =   True
       LockedInPosition=   False
       LockHorizontal  =   True
       LockLeft        =   False
       LockRight       =   False
-      LockTop         =   True
+      LockTop         =   False
       LockVertical    =   False
       MaximumCharactersAllowed=   0
       ReadOnly        =   False
@@ -191,13 +191,13 @@ Begin mPage InformedConsentPage
       Height          =   34
       Index           =   -2147483648
       Indicator       =   0
-      Left            =   101
-      LockBottom      =   False
+      Left            =   211
+      LockBottom      =   True
       LockedInPosition=   False
       LockHorizontal  =   True
       LockLeft        =   False
       LockRight       =   False
-      LockTop         =   True
+      LockTop         =   False
       LockVertical    =   False
       Scope           =   2
       TabIndex        =   0
@@ -216,13 +216,13 @@ Begin mPage InformedConsentPage
       Indicator       =   ""
       LayoutDirection =   0
       LayoutType      =   0
-      Left            =   17
-      LockBottom      =   False
+      Left            =   105
+      LockBottom      =   True
       LockedInPosition=   False
       LockHorizontal  =   True
       LockLeft        =   False
       LockRight       =   False
-      LockTop         =   True
+      LockTop         =   False
       LockVertical    =   False
       Scope           =   0
       ScrollDirection =   0
@@ -230,7 +230,7 @@ Begin mPage InformedConsentPage
       Tooltip         =   ""
       Top             =   565
       Visible         =   True
-      Width           =   305
+      Width           =   347
       _mDesignHeight  =   0
       _mDesignWidth   =   0
       _mPanelIndex    =   -1
