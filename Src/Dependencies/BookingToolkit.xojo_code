@@ -193,7 +193,7 @@ Protected Module BookingToolkit
 	#tag EndNote
 
 
-	#tag Constant, Name = kAllCalEventFields, Type = String, Dynamic = False, Default = \"title\x2Cstartdate\x2Cenddate\x2Cstatus\x2CcreatorName\x2CcreationTimeStamp\x2CguideEmpSerial\x2CguideSerial\x2Cacceptsres\x2Cnotes\x2Crank\x2Cstaffempserial\x2CisPrivate\x2CtitleNotes\x2Cserial\x2CcalendarSerial\x2CbaseEventSerial\x2CmeetingParts\x2Cstarttime\x2CmoverDate\x2Cvehicle\x2CcommitID", Scope = Private
+	#tag Constant, Name = kAllCalEventFields, Type = String, Dynamic = False, Default = \"title\x2Cstartdate\x2Cenddate\x2Cstatus\x2CcreatorName\x2CcreationTimeStamp\x2CguideEmpSerial\x2CguideSerial\x2Cacceptsres\x2Cnotes\x2Cviewrank\x2Cstaffempserial\x2CisPrivate\x2CtitleNotes\x2Cserial\x2CcalendarSerial\x2CbaseEventSerial\x2CmeetingParts\x2Cstarttime\x2CmoverDate\x2Cvehicle\x2CcommitID", Scope = Private
 	#tag EndConstant
 
 	#tag Constant, Name = kAllCustomerFieldsUsed, Type = String, Dynamic = False, Default = \"profileID\x2CpaymentProfileID\x2Ccity\x2Ccompany\x2CcontactDiary\x2Ccountry\x2Cfirstname\x2Clastname\x2CdiscType\x2Cemail\x2Cemailoptout\x2CisCompany\x2CisEmp\x2Clists\x2Cphone\x2Cserial\x2Cshipcity\x2Cshipzip\x2Cstate\x2Cstreet\x2Ctobeinvoiced\x2Ctype\x2Czip\x2CcommitID\x2CisEmailValidated", Scope = Private
