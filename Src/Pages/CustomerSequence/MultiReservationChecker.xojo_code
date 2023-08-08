@@ -4,7 +4,7 @@ Begin WebDialog MultiReservationChecker
    ControlCount    =   0
    ControlID       =   ""
    Enabled         =   True
-   Height          =   300
+   Height          =   272
    Index           =   0
    Indicator       =   0
    LayoutDirection =   0
@@ -22,7 +22,6 @@ Begin WebDialog MultiReservationChecker
    Width           =   304
    _mDesignHeight  =   0
    _mDesignWidth   =   0
-   _mName          =   ""
    _mPanelIndex    =   -1
    Begin WebLabel Label1
       Bold            =   False
@@ -30,7 +29,7 @@ Begin WebDialog MultiReservationChecker
       Enabled         =   True
       FontName        =   ""
       FontSize        =   0.0
-      Height          =   102
+      Height          =   50
       Index           =   -2147483648
       Indicator       =   ""
       Italic          =   False
@@ -59,7 +58,7 @@ Begin WebDialog MultiReservationChecker
       ControlCount    =   0
       ControlID       =   ""
       Enabled         =   True
-      Height          =   57
+      Height          =   42
       Index           =   -2147483648
       Indicator       =   ""
       LayoutDirection =   0
@@ -76,8 +75,8 @@ Begin WebDialog MultiReservationChecker
       ScrollDirection =   0
       TabIndex        =   1
       Tooltip         =   ""
-      Top             =   130
-      Visible         =   False
+      Top             =   102
+      Visible         =   True
       Width           =   304
       _mDesignHeight  =   0
       _mDesignWidth   =   0

@@ -182,30 +182,36 @@ Begin mPage StoreCreditCardPage
    Begin ANetProfileManager ANetProfileManager1
       Index           =   -2147483648
       isProcessingLiveRequests=   False
+      Left            =   0.0
       LockedInPosition=   False
       Scope           =   2
       TabPanelIndex   =   0
+      Top             =   0.0
    End
    Begin WebTimer RequestTimer
       ControlID       =   ""
       Enabled         =   True
       Index           =   -2147483648
+      Left            =   0.0
       Location        =   0
       LockedInPosition=   False
       Period          =   500
       RunMode         =   1
       Scope           =   2
+      Top             =   0.0
       _mPanelIndex    =   -1
    End
    Begin WebTimer AdvancePageTimer
       ControlID       =   ""
       Enabled         =   True
       Index           =   -2147483648
+      Left            =   0.0
       Location        =   0
       LockedInPosition=   False
       Period          =   100
       RunMode         =   0
       Scope           =   2
+      Top             =   0.0
       _mPanelIndex    =   -1
    End
    Begin MovementControl MovementControl1
@@ -217,7 +223,7 @@ Begin mPage StoreCreditCardPage
       Indicator       =   ""
       LayoutDirection =   0
       LayoutType      =   0
-      Left            =   0
+      Left            =   1
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   False

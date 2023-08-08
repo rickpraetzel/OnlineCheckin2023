@@ -149,7 +149,7 @@ Protected Class CalendarEvent
 		    isAcceptReservations = convertStringToBoolean(generator.Value("isAcceptReservations"))
 		    temp = generator.value("staffEmpSerial")
 		    staffEmpSerial = new SQLSerial(temp)
-		    temp = generator.Value("rank")
+		    temp = generator.Value("viewrank")
 		    rank = val(temp)
 		    isPrivate = convertStringToBoolean(generator.Value("isPrivate"))
 		    
@@ -215,7 +215,7 @@ Protected Class CalendarEvent
 		  generator.Value("guideEventSerial") = stringToText(guideEventSerial.toString())
 		  generator.Value("isAcceptReservations") = convertBooleanToInteger(isAcceptReservations).ToText()
 		  generator.Value("staffEmpSerial") = stringToText(staffEmpSerial.toString())
-		  generator.Value("rank") = rank.ToText()
+		  generator.Value("viewrank") = rank.ToText()
 		  generator.Value("isPrivate") = UtilityFunctions.convertBooleanToInteger(isPrivate).ToText()
 		  if startTime <> Nil then
 		    generator.Value("starttime") = stringToText(startTime.format_SQL)
