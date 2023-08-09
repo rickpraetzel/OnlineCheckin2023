@@ -22,6 +22,7 @@ Begin WebContainer RentalDetailsControl
    Width           =   304
    _mDesignHeight  =   0
    _mDesignWidth   =   0
+   _mName          =   ""
    _mPanelIndex    =   -1
    Begin WebLabel Label1
       Bold            =   False
@@ -224,8 +225,10 @@ End
 		  
 		  
 		  if d.hour >= 14 then
+		    label3.Enabled = false
 		    label3.Visible = false
 		  else
+		    label3.Enabled = true
 		    label3.Visible = true
 		  end if
 		End Sub
@@ -270,7 +273,7 @@ End
 		  RaiseEvent DateSelected(xojo.core.date.now())
 		  if xojo.core.date.now.hour >= 14 then
 		    if xojo.core.date.now.year = todaysdate.year AND xojo.core.date.now.month = todaysdate.month AND xojo.core.date.now.day = todaysdate.day then 'send Rick a text
-		      SendSMS("Post 2pm end date same as today specified throughTODAY button.")
+		      SendSMS("Post 2pm end date same as today specified through TODAY button.")
 		    end if
 		  end if
 		End Sub

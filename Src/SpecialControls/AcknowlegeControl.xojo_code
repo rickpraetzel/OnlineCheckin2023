@@ -22,6 +22,7 @@ Begin WebContainer AcknowlegeControl
    Width           =   305
    _mDesignHeight  =   0
    _mDesignWidth   =   0
+   _mName          =   ""
    _mPanelIndex    =   -1
    Begin WebTextArea TextArea1
       AllowReturnKey  =   True
@@ -45,7 +46,7 @@ Begin WebContainer AcknowlegeControl
       ReadOnly        =   True
       Scope           =   2
       TabIndex        =   1
-      Text            =   "     I have read and accept the con- ditions of the above informed consent."
+      Text            =   "     I have read and accept the conditions of the above informed consent."
       TextAlignment   =   0
       Tooltip         =   ""
       Top             =   0
