@@ -187,7 +187,7 @@ Begin mPage InformedConsentPage
       Caption         =   "AGREE"
       ControlID       =   ""
       Default         =   False
-      Enabled         =   True
+      Enabled         =   False
       Height          =   34
       Index           =   -2147483648
       Indicator       =   0
