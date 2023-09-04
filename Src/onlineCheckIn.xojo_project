@@ -148,6 +148,7 @@ Folder=InformedConsent;Pages/InformedConsent;&h00000000484C27FF;&h000000000E1FA7
 WebView=InformedConsentPage;Pages/InformedConsent/InformedConsentPage.xojo_code;&h0000000018AAAFFF;&h00000000484C27FF;false
 Folder=CustomerSequence;Pages/CustomerSequence;&h0000000061FEAFFF;&h000000000E1FA7FF;false
 WebView=PhoneNumberSearchPage;Pages/CustomerSequence/PhoneNumberSearchPage.xojo_code;&h0000000010D2EFFF;&h0000000061FEAFFF;false
+WebView=LastNameSearchPage;Pages/CustomerSequence/LastNameSearchPage.xojo_code;&h0000000052F7FFFF;&h0000000061FEAFFF;false
 WebView=SelectPersonPage;Pages/CustomerSequence/SelectPersonPage.xojo_code;&h000000003A111FFF;&h0000000061FEAFFF;false
 Folder=Utility;Dependencies/Utility;&h000000000709B7FF;&h000000003B29D7FF;false
 WebView=RentalDetailsPage;Pages/CustomerSequence/RentalDetailsPage.xojo_code;&h0000000045702FFF;&h0000000061FEAFFF;false

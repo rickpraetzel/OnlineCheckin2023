@@ -1,11 +1,11 @@
 #tag WebPage
-Begin mPage RequestReserialFromStaffPage
+Begin mPage LastNameSearchPage
    AllowTabOrderWrap=   True
    Compatibility   =   ""
    ControlCount    =   0
    ControlID       =   ""
    Enabled         =   True
-   Height          =   783
+   Height          =   400
    ImplicitInstance=   True
    Index           =   -2147483648
    Indicator       =   0
@@ -59,41 +59,13 @@ Begin mPage RequestReserialFromStaffPage
       _mPanelIndex    =   -1
       _ProtectImage   =   False
    End
-   Begin MovementControl MovementControl1
-      ControlCount    =   0
-      ControlID       =   ""
-      Enabled         =   False
-      Height          =   44
-      Index           =   -2147483648
-      Indicator       =   0
-      LayoutDirection =   0
-      LayoutType      =   0
-      Left            =   1
-      LockBottom      =   False
-      LockedInPosition=   False
-      LockHorizontal  =   False
-      LockLeft        =   True
-      LockRight       =   False
-      LockTop         =   True
-      LockVertical    =   False
-      Scope           =   0
-      ScrollDirection =   0
-      TabIndex        =   1
-      Tooltip         =   ""
-      Top             =   719
-      Visible         =   False
-      Width           =   302
-      _mDesignHeight  =   0
-      _mDesignWidth   =   0
-      _mPanelIndex    =   -1
-   End
-   Begin weblabel StartNewLabel
+   Begin WebLabel Label1
       Bold            =   False
       ControlID       =   ""
       Enabled         =   True
       FontName        =   ""
       FontSize        =   0.0
-      Height          =   78
+      Height          =   62
       Index           =   -2147483648
       Indicator       =   0
       Italic          =   False
@@ -108,76 +80,130 @@ Begin mPage RequestReserialFromStaffPage
       Multiline       =   True
       Scope           =   2
       TabIndex        =   0
-      Text            =   "We were unable to find a matching record for you. Request help from staff or create a new record?"
-      TextAlignment   =   0
+      Text            =   "Please enter your last name"
+      TextAlignment   =   2
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   182
+      Top             =   140
       Underline       =   False
       Visible         =   True
       Width           =   294
       _mPanelIndex    =   -1
    End
-   Begin WebButton Button1
-      AllowAutoDisable=   False
-      Cancel          =   False
-      Caption         =   "Request help"
+   Begin WebLabel Label2
+      Bold            =   False
       ControlID       =   ""
-      Default         =   False
       Enabled         =   True
-      Height          =   33
+      FontName        =   ""
+      FontSize        =   0.0
+      Height          =   25
       Index           =   -2147483648
       Indicator       =   0
-      Left            =   31
+      Italic          =   False
+      Left            =   5
       LockBottom      =   False
       LockedInPosition=   False
-      LockHorizontal  =   False
-      LockLeft        =   True
+      LockHorizontal  =   True
+      LockLeft        =   False
       LockRight       =   False
       LockTop         =   True
       LockVertical    =   False
+      Multiline       =   True
       Scope           =   2
-      TabIndex        =   2
+      TabIndex        =   0
+      Text            =   "We will check for existing records first"
+      TextAlignment   =   2
+      TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   296
+      Top             =   212
+      Underline       =   False
       Visible         =   True
-      Width           =   237
+      Width           =   294
       _mPanelIndex    =   -1
    End
-   Begin WebButton Button2
-      AllowAutoDisable=   False
-      Cancel          =   False
-      Caption         =   "Create New"
+   Begin WebTextField PhoneField
+      AllowAutoComplete=   False
+      AllowSpellChecking=   False
+      Caption         =   ""
       ControlID       =   ""
-      Default         =   False
       Enabled         =   True
-      Height          =   33
+      FieldType       =   4
+      Height          =   30
+      Hint            =   ""
       Index           =   -2147483648
       Indicator       =   0
-      Left            =   31
+      Left            =   20
       LockBottom      =   False
       LockedInPosition=   False
-      LockHorizontal  =   False
-      LockLeft        =   True
+      LockHorizontal  =   True
+      LockLeft        =   False
       LockRight       =   False
       LockTop         =   True
       LockVertical    =   False
+      MaximumCharactersAllowed=   0
+      ReadOnly        =   False
       Scope           =   2
-      TabIndex        =   3
+      TabIndex        =   0
+      Text            =   ""
+      TextAlignment   =   2
       Tooltip         =   ""
-      Top             =   355
+      Top             =   252
       Visible         =   True
-      Width           =   237
+      Width           =   264
+      _mPanelIndex    =   -1
+   End
+   Begin WebLabel Label3
+      Bold            =   False
+      ControlID       =   ""
+      Enabled         =   True
+      FontName        =   ""
+      FontSize        =   0.0
+      Height          =   45
+      Index           =   -2147483648
+      Indicator       =   0
+      Italic          =   False
+      Left            =   102
+      LockBottom      =   False
+      LockedInPosition=   False
+      LockHorizontal  =   True
+      LockLeft        =   False
+      LockRight       =   False
+      LockTop         =   True
+      LockVertical    =   False
+      Multiline       =   False
+      Scope           =   2
+      TabIndex        =   0
+      Text            =   "SUBMIT"
+      TextAlignment   =   2
+      TextColor       =   &c00000000
+      Tooltip         =   ""
+      Top             =   312
+      Underline       =   False
+      Visible         =   True
+      Width           =   100
       _mPanelIndex    =   -1
    End
 End
 #tag EndWebPage
 
 #tag WindowCode
+	#tag Event
+		Sub Shown()
+		  'dim i,n as integer
+		  '
+		  'i = session.PhoneNumberSearch.width
+		  'n = session.PhoneNumberSearch.height
+		  '
+		  'MessageBox str(i) + " x " + str(n)
+		End Sub
+	#tag EndEvent
+
+
 	#tag Method, Flags = &h0
 		Sub show(cust as bookingtoolkit.customer, res as bookingtoolkit.reservation)
-		  CustomerInfoControl1.showCustomer(cust)
-		  MovementControl1.ActivatePrimary()
+		  PhoneField.Text = ""
+		  'PhoneField.Style = FieldStyle_Body
+		  
 		  Super.show(cust, res)
 		  
 		End Sub
@@ -193,17 +219,49 @@ End
 		End Sub
 	#tag EndEvent
 #tag EndEvents
-#tag Events MovementControl1
+#tag Events Label3
 	#tag Event
-		Sub PrimaryButtonPressed()
-		  self.logEntry("Validating customer informaiton...")
-		  me.deactivatePrimary()
-		  CustomerInfoControl1.validate()
-		End Sub
-	#tag EndEvent
-	#tag Event
-		Sub SecondaryButtonPressed()
-		  session.goBack(mCustomer, mReservation)
+		Sub Pressed()
+		  if PhoneField.Text = "" then
+		    'PhoneField.Style = FieldStyle_Alert
+		    '-----
+		    dim errormessagebox as new MessageBoxWebDialog
+		    if errormessagebox <> nil then
+		      errormessagebox.label1.text = "Please enter a valid phone number"
+		      errormessagebox.show
+		    end if
+		    '-----
+		    'MessageBox "Please enter a valid phone number"
+		    return
+		    
+		  end if
+		  
+		  session.addPageToPath(self)
+		  mCustomer.phoneNumber = new Bookingtoolkit.PhoneNumber(PhoneField.Text)
+		  
+		  self.logEntry("Searching for matching phone records...")
+		  dim potentialCustomers() as bookingtoolkit.customer =_
+		  Session.ERC_Controller.getCustomersFromDetails(mCustomer)
+		  
+		  select case UBound(potentialCustomers)
+		  case -1
+		    self.logEntry("No matching records found")
+		    dim newCustomer as new bookingtoolkit.customer()
+		    newCustomer.phoneNumber = mCustomer.phoneNumber
+		    session.NewCustomer.show(newCustomer, mReservation)
+		    
+		  case 0
+		    self.logEntry("One matching record found")
+		    mCustomer = potentialCustomers(0)
+		    session.ReturnCustomer.show(mCustomer, mReservation)
+		    
+		  else
+		    self.logEntry("Multiple matching records found")
+		    session.SelectPerson.Show(potentialCustomers, mReservation)
+		    
+		  end Select
+		  
+		  
 		End Sub
 	#tag EndEvent
 #tag EndEvents

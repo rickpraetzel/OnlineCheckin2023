@@ -6,6 +6,7 @@ Inherits WebSession
   disconnectmessage=You have been disconnected from this application.
   confirmmessage=
   AllowTabOrderWrap=True
+  ColorMode=0
 #tag EndSession
 	#tag Event
 		Sub Closing(appQuitting as Boolean)
@@ -195,6 +196,7 @@ Inherits WebSession
 		  InformedConsent = new InformedConsentPage()
 		  NewCustomer = new NewCustomerPage()
 		  PhoneNumberSearch = new PhoneNumberSearchPage()
+		  LastNameSearch = new LastNameSearchPage()
 		  RentalDetails = new RentalDetailsPage()
 		  'ReservationCheck = new ReservationCheckPage()
 		  ReturnCustomer = new ReturnCustomerPage()
@@ -316,6 +318,10 @@ Inherits WebSession
 	#tag EndProperty
 
 	#tag Property, Flags = &h21
+		Private LastNameSearch As LastNameSearchPage
+	#tag EndProperty
+
+	#tag Property, Flags = &h21
 		Private logger As SimpleLogger
 	#tag EndProperty
 
@@ -389,6 +395,27 @@ Inherits WebSession
 
 
 	#tag ViewBehavior
+		#tag ViewProperty
+			Name="ColorMode"
+			Visible=false
+			Group="Behavior"
+			InitialValue=""
+			Type="WebSession.ColorModes"
+			EditorType="Enum"
+			#tag EnumValues
+				"0 - Auto"
+				"1 - Light"
+				"2 - Dark"
+			#tag EndEnumValues
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="UserPrefersDarkMode"
+			Visible=false
+			Group="Behavior"
+			InitialValue=""
+			Type="Boolean"
+			EditorType=""
+		#tag EndViewProperty
 		#tag ViewProperty
 			Name="UserTimeout"
 			Visible=false
