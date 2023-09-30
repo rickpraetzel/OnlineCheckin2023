@@ -189,6 +189,10 @@ Protected Class Reservation
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
+		consentTimestamp As string
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
 		consentTypedName As string
 	#tag EndProperty
 

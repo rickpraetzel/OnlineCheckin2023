@@ -35,6 +35,7 @@ Begin mPage ExistingReservationPage
       Enabled         =   True
       Height          =   100
       HorizontalAlignment=   0
+      Image           =   0
       Index           =   -2147483648
       Indicator       =   ""
       Left            =   102
@@ -45,7 +46,6 @@ Begin mPage ExistingReservationPage
       LockRight       =   False
       LockTop         =   True
       LockVertical    =   False
-      Picture         =   0
       Scope           =   2
       SVGData         =   ""
       TabIndex        =   0
@@ -129,8 +129,8 @@ Begin mPage ExistingReservationPage
       Left            =   0
       LockBottom      =   False
       LockedInPosition=   False
-      LockHorizontal  =   False
-      LockLeft        =   True
+      LockHorizontal  =   True
+      LockLeft        =   False
       LockRight       =   False
       LockTop         =   True
       LockVertical    =   False

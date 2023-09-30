@@ -1894,6 +1894,9 @@ Protected Class Controller
 		      rs.Field("balance").DoubleValue = resDetails.balance
 		      rs.field("caleventSerial").IntegerValue = resDetails.calendarEventSerial.toInteger()
 		      rs.field("consenttypedname").StringValue = resDetails.consentTypedName
+		      '-----
+		      rs.field("consenttimestamp").stringvalue = resDetails.consentTimestamp
+		      '-----
 		      rs.field("creator").StringValue = resDetails.creatorName
 		      rs.field("creatorSerial").IntegerValue = val(resDetails.creatorSerial)
 		      rs.Field("customerSerial").StringValue = resDetails.customerSerial.toString()

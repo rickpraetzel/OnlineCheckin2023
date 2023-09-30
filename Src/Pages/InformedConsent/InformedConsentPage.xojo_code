@@ -35,6 +35,7 @@ Begin mPage InformedConsentPage
       Enabled         =   True
       Height          =   100
       HorizontalAlignment=   0
+      Image           =   0
       Index           =   -2147483648
       Indicator       =   ""
       Left            =   105
@@ -45,7 +46,6 @@ Begin mPage InformedConsentPage
       LockRight       =   False
       LockTop         =   True
       LockVertical    =   False
-      Picture         =   0
       Scope           =   2
       SVGData         =   ""
       TabIndex        =   0
@@ -312,6 +312,10 @@ End
 		    
 		    mReservation.startDate = xojo.core.date.Now()
 		    mReservation.consentTypedName = SignatureField.Text
+		    '-----
+		    var d as datetime = datetime.now
+		    mReservation.consentTimestamp = d.SQLDateTime
+		    '-----
 		    mReservation.gaveInformedConsent = true
 		    mReservation.customerSerial = mCustomer.serial
 		    mReservation.status = BookingToolkit.Statuses.Active

@@ -35,6 +35,7 @@ Begin mPage ReturnCustomerPage
       Enabled         =   True
       Height          =   100
       HorizontalAlignment=   0
+      Image           =   0
       Index           =   -2147483648
       Indicator       =   ""
       Left            =   102
@@ -45,7 +46,6 @@ Begin mPage ReturnCustomerPage
       LockRight       =   False
       LockTop         =   True
       LockVertical    =   False
-      Picture         =   0
       Scope           =   2
       SVGData         =   ""
       TabIndex        =   0
@@ -349,7 +349,7 @@ End
 		  MovementControl1.ActivatePrimary()
 		  session.addPageToPath(self)
 		  mCustomer = cust
-		  
+		  me.clearHighlights
 		  try
 		    self.logEntry("Updating customer record")
 		    mCustomer = session.ERC_Controller.updateCustomer(mCustomer, BookingToolkit.UpdateBehavior.SKIP_DATA_CHECK)
