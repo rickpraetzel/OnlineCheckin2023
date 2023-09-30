@@ -35,6 +35,7 @@ Begin mPage PhoneNumberSearchPage
       Enabled         =   True
       Height          =   100
       HorizontalAlignment=   0
+      Image           =   0
       Index           =   -2147483648
       Indicator       =   ""
       Left            =   102
@@ -45,7 +46,6 @@ Begin mPage PhoneNumberSearchPage
       LockRight       =   False
       LockTop         =   True
       LockVertical    =   False
-      Picture         =   0
       Scope           =   2
       SVGData         =   ""
       TabIndex        =   0
@@ -151,17 +151,17 @@ Begin mPage PhoneNumberSearchPage
       Width           =   264
       _mPanelIndex    =   -1
    End
-   Begin WebLabel Label3
-      Bold            =   False
+   Begin WebButton Button1
+      AllowAutoDisable=   False
+      Cancel          =   False
+      Caption         =   "SUBMIT"
       ControlID       =   ""
+      Default         =   False
       Enabled         =   True
-      FontName        =   ""
-      FontSize        =   0.0
-      Height          =   45
+      Height          =   38
       Index           =   -2147483648
-      Indicator       =   ""
-      Italic          =   False
-      Left            =   102
+      Indicator       =   0
+      Left            =   92
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   True
@@ -169,17 +169,13 @@ Begin mPage PhoneNumberSearchPage
       LockRight       =   False
       LockTop         =   True
       LockVertical    =   False
-      Multiline       =   False
       Scope           =   2
-      TabIndex        =   0
-      Text            =   "SUBMIT"
-      TextAlignment   =   2
-      TextColor       =   &c00000000
+      TabIndex        =   1
+      TabStop         =   True
       Tooltip         =   ""
-      Top             =   312
-      Underline       =   False
+      Top             =   318
       Visible         =   True
-      Width           =   100
+      Width           =   120
       _mPanelIndex    =   -1
    End
 End
@@ -218,7 +214,7 @@ End
 		End Sub
 	#tag EndEvent
 #tag EndEvents
-#tag Events Label3
+#tag Events Button1
 	#tag Event
 		Sub Pressed()
 		  if PhoneField.Text = "" then

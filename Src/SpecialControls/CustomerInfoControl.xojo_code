@@ -22,7 +22,6 @@ Begin WebContainer CustomerInfoControl
    Width           =   304
    _mDesignHeight  =   0
    _mDesignWidth   =   0
-   _mName          =   ""
    _mPanelIndex    =   -1
    Begin WebLabel Label1
       Bold            =   False
@@ -66,7 +65,7 @@ Begin WebContainer CustomerInfoControl
       Hint            =   ""
       Index           =   -2147483648
       Indicator       =   ""
-      Left            =   5
+      Left            =   0
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   False
@@ -81,7 +80,7 @@ Begin WebContainer CustomerInfoControl
       Text            =   ""
       TextAlignment   =   0
       Tooltip         =   ""
-      Top             =   41
+      Top             =   39
       Visible         =   True
       Width           =   294
       _mPanelIndex    =   -1
@@ -337,23 +336,29 @@ Begin WebContainer CustomerInfoControl
    Begin USPS.Controller Controller1
       Index           =   -2147483648
       isSecure        =   False
+      Left            =   0.0
       LockedInPosition=   False
       Scope           =   2
+      Top             =   0.0
    End
    Begin MailGun.EmailAddressValidator Validator
       Index           =   -2147483648
+      Left            =   0.0
       LockedInPosition=   False
       Scope           =   2
+      Top             =   0.0
    End
    Begin WebTimer EventTimer
       ControlID       =   ""
       Enabled         =   True
       Index           =   -2147483648
+      Left            =   0.0
       Location        =   0
       LockedInPosition=   False
       Period          =   200
       RunMode         =   0
       Scope           =   2
+      Top             =   0.0
       _mPanelIndex    =   -1
    End
 End
@@ -421,6 +426,12 @@ End
 		  'EmailField.Style = FieldStyle_Body
 		  'PhoneField.Style = FieldStyle_Body
 		  'ZipField.Style = FieldStyle_Body
+		  
+		  Label1.Style = app.Web2Styles(app.StyleDictionary.Value("FieldStyle_Body"))
+		  Label2.Style = app.Web2Styles(app.StyleDictionary.Value("FieldStyle_Body"))
+		  Label3.Style = app.Web2Styles(app.StyleDictionary.Value("FieldStyle_Body"))
+		  Label4.Style = app.Web2Styles(app.StyleDictionary.Value("FieldStyle_Body"))
+		  Label5.Style = app.Web2Styles(app.StyleDictionary.Value("FieldStyle_Body"))
 		End Sub
 	#tag EndMethod
 
@@ -458,42 +469,44 @@ End
 	#tag Method, Flags = &h0
 		Sub highlightErrors()
 		  if FirstnameField.Text <> "" then
-		    'FirstnameField.Style = FieldStyle_Body
+		    label1.style = app.Web2Styles(app.StyleDictionary.Value("FieldStyle_Body"))
+		     
 		    
 		  else
-		    'FirstnameField.Style = FieldStyle_Alert
+		    Label1.Style = app.Web2Styles(app.StyleDictionary.Value("FieldStyle_Alert"))
 		    
 		  end if
 		  
 		  if LastnameField.Text <> "" then
 		    'LastnameField.Style = FieldStyle_Body
-		    
+		    label2.style = app.Web2Styles(app.StyleDictionary.Value("FieldStyle_Body"))
 		  else
 		    'LastnameField.Style = FieldStyle_Alert
-		    
+		    Label2.Style = app.Web2Styles(app.StyleDictionary.Value("FieldStyle_Alert"))
 		  end if
 		  
 		  if  PhoneField.Text <> "" then
 		    'PhoneField.Style = FieldStyle_Body
-		    
+		    label3.style = app.Web2Styles(app.StyleDictionary.Value("FieldStyle_Body"))
 		  else
 		    'PhoneField.Style = FieldStyle_Alert
-		    
+		    Label3.Style = app.Web2Styles(app.StyleDictionary.Value("FieldStyle_Alert"))
 		  end if
 		  
 		  if isValidEmailAddress then
 		    'EmailField.Style = FieldStyle_Body
-		    
+		    label4.style = app.Web2Styles(app.StyleDictionary.Value("FieldStyle_Body"))
 		  else
 		    'EmailField.Style = FieldStyle_Alert
-		    
+		    Label4.Style = app.Web2Styles(app.StyleDictionary.Value("FieldStyle_Alert"))
 		  end if
 		  
 		  if ZipField.text <> "" then
-		    'ZipField.Style = FieldStyle_Body
+		    Label5.style = app.Web2Styles(app.StyleDictionary.Value("FieldStyle_Body"))
 		    
 		  else
-		    'ZipField.Style = FieldStyle_Alert
+		    Label5.Style = app.Web2Styles(app.StyleDictionary.Value("FieldStyle_Alert"))
+		    
 		    
 		  end if
 		End Sub

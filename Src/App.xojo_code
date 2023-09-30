@@ -13,6 +13,7 @@ Inherits WebApplication
 		  preferences = getPreferences(sql)
 		  self.logEntry("APPLICATION START")
 		  loadCalendarData(sql)
+		  LoadWebStyles
 		  instantiateRefreshTimer()
 		  sql.Close()
 		  self.logEntry("APPLICATION STARTUP COMPLETE")
@@ -68,13 +69,13 @@ Inherits WebApplication
 		  dim db as new MySQLCommunityServer()
 		  db.DatabaseName = "ZacReg"
 		  db.Host = "192.168.0.102"
-		  if DebugBuild then
-		    db.DatabaseName = "ZacTest"
-		    
-		  else
-		    db.DatabaseName = "ZacReg"
-		    
-		  end if
+		  'if DebugBuild then
+		  'db.DatabaseName = "ZacTest"
+		  '
+		  'else
+		  db.DatabaseName = "ZacReg"
+		  
+		  'end if
 		  
 		  db.UserName = "olinecheckin"
 		  db.Password = "34sybutt0n"
@@ -145,6 +146,33 @@ Inherits WebApplication
 		    self.logEntry(764329, "Unable to load calendars", err, SimpleLogger.LogLevels.Critical)
 		    
 		  end try
+		End Sub
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
+		Sub LoadWebStyles()
+		  dim s,stiles(-1),cs,sname as string
+		  dim i as integer
+		  dim newstyle as webstyle
+		  me.styledictionary = new dictionary
+		  
+		  s = kWebstyleString
+		  
+		  if s <> "" then
+		    stiles = s.split(chr(10))
+		    if UBound(stiles) >= 1 then
+		      for i = 1 to ubound(stiles)
+		        newstyle = new webstyle
+		        newstyle.FontName = stiles(i).nthfield("|",2)
+		        newstyle.FontSize = val(stiles(i).NthField("|",3))
+		        cs = stiles(i).NthField("|",5)
+		        newstyle.ForegroundColor = color.rgb(val(cs.NthField(",",1)),val(cs.NthField(",",2)),val(cs.NthField(",",3)))
+		        sname = stiles(i).NthField("|",1)
+		        styledictionary.value(sname) = i -1
+		        Web2Styles.append newstyle
+		      next
+		    end if
+		  end if
 		End Sub
 	#tag EndMethod
 
@@ -306,6 +334,14 @@ Inherits WebApplication
 		Private refreshTimer As Timer
 	#tag EndProperty
 
+	#tag Property, Flags = &h0
+		StyleDictionary As dictionary
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
+		Web2Styles() As webstyle
+	#tag EndProperty
+
 
 	#tag Constant, Name = kDataError, Type = String, Dynamic = False, Default = \"E00003", Scope = Public
 	#tag EndConstant
@@ -326,6 +362,9 @@ Inherits WebApplication
 	#tag EndConstant
 
 	#tag Constant, Name = kLongestLineWidth, Type = Double, Dynamic = False, Default = \"800", Scope = Public
+	#tag EndConstant
+
+	#tag Constant, Name = kWebstyleString, Type = String, Dynamic = False, Default = \"StyleName|FontName|FontSize|FontStyle|FontColor\nFieldStyle_Body||16||0\x2C0\x2C0\nFieldStyle_Alert||16||255\x2C0\x2C0", Scope = Private
 	#tag EndConstant
 
 

@@ -78,7 +78,7 @@ Protected Class Controller
 		  cc.guideEventSerial = new SQLSerial(rs.field("guideSerial").IntegerValue)
 		  cc.isAcceptReservations = convertIntToBoolean(rs.field("acceptsres").IntegerValue)
 		  cc.notes = stringToText(rs.field("notes").StringValue)
-		  cc.rank = rs.field("rank").IntegerValue
+		  cc.rank = rs.field("viewrank").IntegerValue
 		  cc.staffEmpSerial = new SQLSerial(rs.field("staffEmpSerial").IntegerValue)
 		  cc.isPrivate = convertIntToBoolean(rs.Field("isPrivate").IntegerValue)
 		  cc.titleNotes = UtilityFunctions.stringToText(rs.Field("titleNotes").StringValue)
@@ -367,7 +367,7 @@ Protected Class Controller
 		  dr.Column("guideSerial") = calevent.guideEventSerial.toString()
 		  dr.column("acceptsres") = convertBooleanToText(calevent.isAcceptReservations)
 		  dr.Column("notes") = calevent.notes
-		  dr.Column("rank") = calevent.rank.ToText()
+		  dr.Column("viewrank") = calevent.rank.ToText()
 		  dr.Column("staffEmpSerial") = calevent.staffEmpSerial.toString()
 		  if calevent.startTime <> NIl then 
 		    dr.Column("starttime") = calevent.startTime.format_SQL
@@ -1700,7 +1700,7 @@ Protected Class Controller
 		      rs.field("guideSerial").IntegerValue = cc.guideEventSerial.toInteger()
 		      rs.field("acceptsres").IntegerValue = convertBooleanToInteger(cc.isAcceptReservations)
 		      rs.field("notes").StringValue = cc.notes
-		      rs.field("rank").IntegerValue = cc.rank
+		      rs.field("viewrank").IntegerValue = cc.rank
 		      rs.field("staffEmpSerial").IntegerValue = cc.staffEmpSerial.toInteger()
 		      rs.Field("isPrivate").IntegerValue = convertBooleanToInteger(cc.isPrivate)
 		      rs.field("titleNotes").StringValue = cc.titleNotes
