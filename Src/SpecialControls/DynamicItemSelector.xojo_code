@@ -41,7 +41,6 @@ Begin WebContainer DynamicItemSelector
       LockRight       =   True
       LockTop         =   False
       LockVertical    =   False
-      Parent          =   "nil"
       Scope           =   2
       TabIndex        =   2
       Tooltip         =   ""
