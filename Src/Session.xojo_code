@@ -6,6 +6,7 @@ Inherits WebSession
   disconnectmessage=You have been disconnected from this application.
   confirmmessage=
   AllowTabOrderWrap=True
+  ColorMode=0
 #tag EndSession
 	#tag Event
 		Sub Closing(appQuitting as Boolean)
@@ -58,17 +59,17 @@ Inherits WebSession
 		      
 		    end try
 		    
-		    if checkIsLocalConntection then
-		      self.logEntry("Connection found to be local, bypassing login page")
-		      ReservationCheck.show()
-		      'self.Timeout = 0
-		      self.isLocal = true
-		      
-		    else
-		      self.logEntry("Loading login page")
-		      'LoginPage.Show()
-		      session.PhoneNumberSearch.show(new bookingtoolkit.customer(), new bookingtoolkit.reservation())
-		    end if
+		    'if checkIsLocalConntection then
+		    'self.logEntry("Connection found to be local, bypassing login page")
+		    'ReservationCheck.show()
+		    ''self.Timeout = 0
+		    'self.isLocal = true
+		    '
+		    'else
+		    self.logEntry("Loading login page")
+		    'LoginPage.Show()
+		    session.PhoneNumberSearch.show(new bookingtoolkit.customer(), new bookingtoolkit.reservation())
+		    'end if
 		    '----------
 		    todaysdate = new Date
 		    TWILIOSOCKET1 = new TWILIOSOCKET
@@ -389,6 +390,27 @@ Inherits WebSession
 
 
 	#tag ViewBehavior
+		#tag ViewProperty
+			Name="ColorMode"
+			Visible=false
+			Group="Behavior"
+			InitialValue=""
+			Type="WebSession.ColorModes"
+			EditorType="Enum"
+			#tag EnumValues
+				"0 - Auto"
+				"1 - Light"
+				"2 - Dark"
+			#tag EndEnumValues
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="UserPrefersDarkMode"
+			Visible=false
+			Group="Behavior"
+			InitialValue=""
+			Type="Boolean"
+			EditorType=""
+		#tag EndViewProperty
 		#tag ViewProperty
 			Name="UserTimeout"
 			Visible=false
