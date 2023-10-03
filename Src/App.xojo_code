@@ -69,13 +69,13 @@ Inherits WebApplication
 		  dim db as new MySQLCommunityServer()
 		  db.DatabaseName = "ZacReg"
 		  db.Host = "192.168.0.102"
-		  if DebugBuild then
-		    db.DatabaseName = "ZacTest"
-		    
-		  else
-		    db.DatabaseName = "ZacReg"
-		    
-		  end if
+		  'if DebugBuild then
+		  'db.DatabaseName = "ZacTest"
+		  '
+		  'else
+		  db.DatabaseName = "ZacReg"
+		  
+		  'end if
 		  
 		  db.UserName = "olinecheckin"
 		  db.Password = "34sybutt0n"

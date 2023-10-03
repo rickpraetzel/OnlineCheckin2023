@@ -35,6 +35,7 @@ Begin WebPage SelectPersonPage
       Enabled         =   True
       Height          =   100
       HorizontalAlignment=   0
+      Image           =   0
       Index           =   -2147483648
       Indicator       =   ""
       Left            =   102
@@ -45,7 +46,6 @@ Begin WebPage SelectPersonPage
       LockRight       =   False
       LockTop         =   True
       LockVertical    =   False
-      Picture         =   0
       Scope           =   2
       SVGData         =   ""
       TabIndex        =   0
@@ -98,7 +98,7 @@ Begin WebPage SelectPersonPage
       Indicator       =   ""
       LayoutDirection =   0
       LayoutType      =   0
-      Left            =   0
+      Left            =   5
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   True
