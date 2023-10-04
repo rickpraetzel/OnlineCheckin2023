@@ -211,7 +211,7 @@ Begin mPage InformedConsentPage
       ControlCount    =   0
       ControlID       =   ""
       Enabled         =   True
-      Height          =   61
+      Height          =   75
       Index           =   -2147483648
       Indicator       =   ""
       LayoutDirection =   0
@@ -250,6 +250,14 @@ End
 		  end if
 		  
 		  TextArea1.Left = me.Width/2 - TextArea1.Width/2 - 4
+		End Sub
+	#tag EndEvent
+
+	#tag Event
+		Sub Shown()
+		  clear
+		  acknowlegecontrol1.textarea1.style = app.Web2Styles(app.StyleDictionary.Value("InformedConsentCheckbox"))
+		  label2.style = app.Web2Styles(app.StyleDictionary.Value("InformedConsentCheckbox"))
 		End Sub
 	#tag EndEvent
 

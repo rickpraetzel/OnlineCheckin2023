@@ -43,7 +43,7 @@ Begin WebContainer AcknowlegeControl
       LockVertical    =   False
       MaximumCharactersAllowed=   0
       ReadOnly        =   True
-      Scope           =   2
+      Scope           =   0
       TabIndex        =   1
       Text            =   "     I have read and accept the con- ditions of the above informed consent."
       TextAlignment   =   0

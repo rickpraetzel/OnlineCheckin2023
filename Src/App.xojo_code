@@ -364,7 +364,7 @@ Inherits WebApplication
 	#tag Constant, Name = kLongestLineWidth, Type = Double, Dynamic = False, Default = \"800", Scope = Public
 	#tag EndConstant
 
-	#tag Constant, Name = kWebstyleString, Type = String, Dynamic = False, Default = \"StyleName|FontName|FontSize|FontStyle|FontColor\nFieldStyle_Body||16||0\x2C0\x2C0\nFieldStyle_Alert||16||255\x2C0\x2C0", Scope = Private
+	#tag Constant, Name = kWebstyleString, Type = String, Dynamic = False, Default = \"StyleName|FontName|FontSize|FontStyle|FontColor\nFieldStyle_Body||16||0\x2C0\x2C0\nFieldStyle_Alert||16||255\x2C0\x2C0\nInformedConsentCheckbox||16||0\x2C0\x2C255", Scope = Private
 	#tag EndConstant
 
 

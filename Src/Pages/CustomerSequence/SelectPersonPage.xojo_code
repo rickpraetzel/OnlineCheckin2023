@@ -98,7 +98,7 @@ Begin WebPage SelectPersonPage
       Indicator       =   ""
       LayoutDirection =   0
       LayoutType      =   0
-      Left            =   5
+      Left            =   0
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   True
@@ -115,6 +115,33 @@ Begin WebPage SelectPersonPage
       Width           =   304
       _mDesignHeight  =   0
       _mDesignWidth   =   0
+      _mPanelIndex    =   -1
+   End
+   Begin WebButton Button1
+      AllowAutoDisable=   False
+      Cancel          =   False
+      Caption         =   "BACK"
+      ControlID       =   ""
+      Default         =   False
+      Enabled         =   True
+      Height          =   38
+      Index           =   -2147483648
+      Indicator       =   0
+      Left            =   102
+      LockBottom      =   True
+      LockedInPosition=   False
+      LockHorizontal  =   True
+      LockLeft        =   False
+      LockRight       =   False
+      LockTop         =   False
+      LockVertical    =   False
+      Scope           =   2
+      TabIndex        =   2
+      TabStop         =   True
+      Tooltip         =   ""
+      Top             =   298
+      Visible         =   True
+      Width           =   100
       _mPanelIndex    =   -1
    End
 End
@@ -156,6 +183,13 @@ End
 		Sub ItemSelected(item as variant)
 		  dim cust as BookingToolkit.Customer = item
 		  session.ReturnCustomer.show(cust, mReservation)
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events Button1
+	#tag Event
+		Sub Pressed()
+		  PhoneNumberSearchPage.show(new bookingtoolkit.customer(), new bookingtoolkit.reservation())
 		End Sub
 	#tag EndEvent
 #tag EndEvents
