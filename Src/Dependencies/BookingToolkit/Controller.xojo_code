@@ -1886,51 +1886,51 @@ Protected Class Controller
 		  
 		  dim stmt as string =_
 		  "SELECT " + kdedicatedResFieldsUsed + " FROM reservations WHERE serial = " + resDetails.serial.toString()
-		  dim rs as RecordSet = mSqlServer.SQLSelect(stmt)
+		  dim rs as rowset = mSqlServer.SelectSQL(stmt)
 		  if rs <> NIl then
-		    if mode = BookingToolkit.UpdateBehavior.SKIP_DATA_CHECK or rs.Field("commitID").IntegerValue = resDetails.getCommitID() then 
-		      rs.Edit()
-		      rs.Field("approvingGuide").StringValue = resDetails.approvingGuide
-		      rs.Field("balance").DoubleValue = resDetails.balance
-		      rs.field("caleventSerial").IntegerValue = resDetails.calendarEventSerial.toInteger()
-		      rs.field("consenttypedname").StringValue = resDetails.consentTypedName
+		    if mode = BookingToolkit.UpdateBehavior.SKIP_DATA_CHECK or rs.column("commitID").IntegerValue = resDetails.getCommitID() then 
+		      rs.EditRow
+		      rs.column("approvingGuide").StringValue = resDetails.approvingGuide
+		      rs.column("balance").DoubleValue = resDetails.balance
+		      rs.column("caleventSerial").IntegerValue = resDetails.calendarEventSerial.toInteger()
+		      rs.column("consenttypedname").StringValue = resDetails.consentTypedName
 		      '-----
-		      rs.field("consenttimestamp").stringvalue = resDetails.consentTimestamp
+		      rs.column("consenttimestamp").stringvalue = resDetails.consentTimestamp
 		      '-----
-		      rs.field("creator").StringValue = resDetails.creatorName
-		      rs.field("creatorSerial").IntegerValue = val(resDetails.creatorSerial)
-		      rs.Field("customerSerial").StringValue = resDetails.customerSerial.toString()
+		      rs.column("creator").StringValue = resDetails.creatorName
+		      rs.column("creatorSerial").IntegerValue = val(resDetails.creatorSerial)
+		      rs.column("customerSerial").StringValue = resDetails.customerSerial.toString()
 		      if resDetails.endDate <> Nil then 
-		        rs.field("enddate").StringValue = datetoworddate(resDetails.endDate)
+		        rs.column("enddate").StringValue = datetoworddate(resDetails.endDate)
 		        
 		      end if
-		      rs.field("gearres_ID").StringValue = resDetails.gearResID
-		      rs.field("groupsize").IntegerValue = resDetails.groupSize
-		      rs.Field("guideApprovedCanyons").StringValue = resDetails.guideApprovedCanyons
-		      rs.field("hasDayAfterGear").IntegerValue = convertBooleanToInteger(resDetails.hasDayAfterGear)
-		      rs.field("hotel").StringValue = resDetails.hotel
-		      rs.Field("howTheyHeard").StringValue = resDetails.howTheyHeard
-		      rs.field("gear_returned").IntegerValue = convertBooleanToInteger(resDetails.isGearReturned)
-		      rs.field("paid").IntegerValue = convertBooleanToInteger(resDetails.isPaid)
-		      rs.Field("reservationDepositRedeemed").IntegerValue = convertBooleanToInteger(resDetails.isReservationDepositRedeemed)
-		      rs.Field("taxable").IntegerValue = convertBooleanToInteger(resdetails.isTaxable)
-		      rs.field("notes").StringValue = resDetails.notes
-		      rs.field("remittance").DoubleValue = resDetails.remittance
-		      rs.field("serial").IntegerValue = resDetails.serial.toInteger()
+		      rs.column("gearres_ID").StringValue = resDetails.gearResID
+		      rs.column("groupsize").IntegerValue = resDetails.groupSize
+		      rs.column("guideApprovedCanyons").StringValue = resDetails.guideApprovedCanyons
+		      rs.column("hasDayAfterGear").IntegerValue = convertBooleanToInteger(resDetails.hasDayAfterGear)
+		      rs.column("hotel").StringValue = resDetails.hotel
+		      rs.column("howTheyHeard").StringValue = resDetails.howTheyHeard
+		      rs.column("gear_returned").IntegerValue = convertBooleanToInteger(resDetails.isGearReturned)
+		      rs.column("paid").IntegerValue = convertBooleanToInteger(resDetails.isPaid)
+		      rs.column("reservationDepositRedeemed").IntegerValue = convertBooleanToInteger(resDetails.isReservationDepositRedeemed)
+		      rs.column("taxable").IntegerValue = convertBooleanToInteger(resdetails.isTaxable)
+		      rs.column("notes").StringValue = resDetails.notes
+		      rs.column("remittance").DoubleValue = resDetails.remittance
+		      rs.column("serial").IntegerValue = resDetails.serial.toInteger()
 		      if resDetails.startDate <> Nil then 
-		        rs.Field("startdate").StringValue = datetoworddate(resDetails.startDate)
+		        rs.column("startdate").StringValue = datetoworddate(resDetails.startDate)
 		        
 		      end if
-		      rs.field("status").StringValue = BookingToolkit.mapStatus(resDetails.status)
-		      rs.Field("total").DoubleValue = resDetails.total
-		      rs.Field("contactDiary").StringValue = resDetails.contactDiary
-		      rs.Field("informedwhattobring").IntegerValue = convertBooleanToInteger(resDetails.isInformedWhatToBring)
-		      rs.field("informedcancellationpolicy").IntegerValue= convertBooleanToInteger(resDetails.isInformedOfCancellationPolicy)
-		      rs.Field("informedtimezone").IntegerValue = convertBooleanToInteger(resDetails.isInformedTimeZone)
-		      rs.Field("informedpickuplocation").IntegerValue = convertBooleanToInteger(resDetails.isInformedPickupLocation)
-		      rs.Field("creationMethod").StringValue = BookingToolkit.mapCreationMethod(resDetails.creationMethod)
+		      rs.column("status").StringValue = BookingToolkit.mapStatus(resDetails.status)
+		      rs.column("total").DoubleValue = resDetails.total
+		      rs.column("contactDiary").StringValue = resDetails.contactDiary
+		      rs.column("informedwhattobring").IntegerValue = convertBooleanToInteger(resDetails.isInformedWhatToBring)
+		      rs.column("informedcancellationpolicy").IntegerValue= convertBooleanToInteger(resDetails.isInformedOfCancellationPolicy)
+		      rs.column("informedtimezone").IntegerValue = convertBooleanToInteger(resDetails.isInformedTimeZone)
+		      rs.column("informedpickuplocation").IntegerValue = convertBooleanToInteger(resDetails.isInformedPickupLocation)
+		      rs.column("creationMethod").StringValue = BookingToolkit.mapCreationMethod(resDetails.creationMethod)
 		      
-		      rs.Update()
+		      rs.SaveRow
 		      
 		      if not mSqlServer.error then
 		        return getReservation(resDetails.serial)
