@@ -22,6 +22,7 @@ Begin WebContainer CustomerInfoControl
    Width           =   304
    _mDesignHeight  =   0
    _mDesignWidth   =   0
+   _mName          =   ""
    _mPanelIndex    =   -1
    Begin WebLabel Label1
       Bold            =   False
@@ -399,11 +400,6 @@ End
 		    
 		  end if
 		  
-		  if ZipField.Text = "" then
-		    return false
-		    
-		  end if
-		  
 		  return true
 		End Function
 	#tag EndMethod
@@ -470,7 +466,7 @@ End
 		Sub highlightErrors()
 		  if FirstnameField.Text <> "" then
 		    label1.style = app.Web2Styles(app.StyleDictionary.Value("FieldStyle_Body"))
-		     
+		    
 		    
 		  else
 		    Label1.Style = app.Web2Styles(app.StyleDictionary.Value("FieldStyle_Alert"))
