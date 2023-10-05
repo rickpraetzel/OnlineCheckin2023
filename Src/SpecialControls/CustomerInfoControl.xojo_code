@@ -22,6 +22,7 @@ Begin WebContainer CustomerInfoControl
    Width           =   304
    _mDesignHeight  =   0
    _mDesignWidth   =   0
+   _mName          =   ""
    _mPanelIndex    =   -1
    Begin WebLabel Label1
       Bold            =   False
