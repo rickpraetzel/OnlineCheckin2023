@@ -29,6 +29,7 @@ Begin mPage InformedConsentPage
    _ImplicitInstance=   False
    _mDesignHeight  =   0
    _mDesignWidth   =   0
+   _mName          =   ""
    _mPanelIndex    =   -1
    Begin WebImageViewer ImageView1
       ControlID       =   ""
@@ -304,58 +305,89 @@ End
 #tag Events SubmitButton
 	#tag Event
 		Sub PressedButton()
-		  try
-		    self.logEntry("Updating customer record")
-		    mCustomer = session.ERC_Controller.updateCustomer(mCustomer, BookingToolkit.UpdateBehavior.SKIP_DATA_CHECK)
-		    self.logEntry("success")
-		    
-		    if not mReservation.isInDatabase then 
-		      mReservation.creatorName = "ESI"
-		      mReservation.creatorSerial = "0"
-		      self.logEntry("Creating reservation...")
-		      mReservation.serial = session.ERC_Controller.createNewReservation(mReservation)
-		      self.logEntry("Success")
+		  '----- 20231015
+		  dim havecheckbox,havesignature as boolean
+		  dim dialogtext as string
+		  if AcknowlegeControl1.isActive then
+		    havecheckbox = true
+		    if signaturefield.text <> "" then
+		      havesignature = true
+		    end if
+		  else
+		    if signaturefield.text <> "" then
+		      havesignature = true
+		    end if
+		  end if
+		  if havecheckbox and havesignature then
+		    '----- 20231015
+		    try
+		      self.logEntry("Updating customer record")
+		      mCustomer = session.ERC_Controller.updateCustomer(mCustomer, BookingToolkit.UpdateBehavior.SKIP_DATA_CHECK)
+		      self.logEntry("success")
 		      
+		      if not mReservation.isInDatabase then 
+		        mReservation.creatorName = "ESI"
+		        mReservation.creatorSerial = "0"
+		        self.logEntry("Creating reservation...")
+		        mReservation.serial = session.ERC_Controller.createNewReservation(mReservation)
+		        self.logEntry("Success")
+		        
+		      end if
+		      
+		      mReservation.startDate = xojo.core.date.Now()
+		      mReservation.consentTypedName = SignatureField.Text
+		      '-----
+		      var d as datetime = datetime.now
+		      mReservation.consentTimestamp = d.SQLDateTime
+		      '-----
+		      mReservation.gaveInformedConsent = true
+		      mReservation.customerSerial = mCustomer.serial
+		      mReservation.status = BookingToolkit.Statuses.Active
+		      
+		      self.logEntry("Updating Reservation...")
+		      mReservation = session.ERC_Controller.updateReservation(mReservation, BookingToolkit.UpdateBehavior.SKIP_DATA_CHECK)
+		      self.logEntry("Success")
+		      session.Done.show()
+		      
+		    catch err as BookingToolkit.Exceptions.ReservationException
+		      self.logEntry(765479, "Failed", err)
+		      '-----
+		      dim errormessagebox as new MessageBoxWebDialog
+		      if errormessagebox <> nil then
+		        errormessagebox.label1.text = "There was a problem, please try again"
+		        errormessagebox.show
+		      end if
+		      '-----
+		      'MessageBox "There was a problem, please try again"
+		      
+		    catch err as BookingToolkit.Exceptions.CustomerException
+		      self.logEntry(765473, "Failed", err)
+		      '-----
+		      dim errormessagebox as new MessageBoxWebDialog
+		      if errormessagebox <> nil then
+		        errormessagebox.label1.text = "There was a problem, please try again"
+		        errormessagebox.show
+		      end if
+		      '-----
+		      'MessageBox "There was a problem, please try again"
+		      
+		    end try
+		  else
+		    if havesignature = false and havecheckbox = true then
+		      dialogtext = "Please type your name to assume responsibility..."
+		    elseif havesignature = true and havecheckbox = false then
+		      dialogtext = "Please check the checkbox to assume responsibility..."
+		    elseif havesignature = false and havecheckbox = false then
+		      dialogtext = "Please check the checkbox and type your name to assume responsibility..."
 		    end if
-		    
-		    mReservation.startDate = xojo.core.date.Now()
-		    mReservation.consentTypedName = SignatureField.Text
-		    '-----
-		    var d as datetime = datetime.now
-		    mReservation.consentTimestamp = d.SQLDateTime
-		    '-----
-		    mReservation.gaveInformedConsent = true
-		    mReservation.customerSerial = mCustomer.serial
-		    mReservation.status = BookingToolkit.Statuses.Active
-		    
-		    self.logEntry("Updating Reservation...")
-		    mReservation = session.ERC_Controller.updateReservation(mReservation, BookingToolkit.UpdateBehavior.SKIP_DATA_CHECK)
-		    self.logEntry("Success")
-		    session.Done.show()
-		    
-		  catch err as BookingToolkit.Exceptions.ReservationException
-		    self.logEntry(765479, "Failed", err)
-		    '-----
+		    '----- Display the alert dialog...
 		    dim errormessagebox as new MessageBoxWebDialog
 		    if errormessagebox <> nil then
-		      errormessagebox.label1.text = "There was a problem, please try again"
+		      errormessagebox.label1.text = dialogtext
 		      errormessagebox.show
 		    end if
-		    '-----
-		    'MessageBox "There was a problem, please try again"
-		    
-		  catch err as BookingToolkit.Exceptions.CustomerException
-		    self.logEntry(765473, "Failed", err)
-		    '-----
-		    dim errormessagebox as new MessageBoxWebDialog
-		    if errormessagebox <> nil then
-		      errormessagebox.label1.text = "There was a problem, please try again"
-		      errormessagebox.show
-		    end if
-		    '-----
-		    'MessageBox "There was a problem, please try again"
-		    
-		  end try
+		    '----- 
+		  end if
 		End Sub
 	#tag EndEvent
 #tag EndEvents
