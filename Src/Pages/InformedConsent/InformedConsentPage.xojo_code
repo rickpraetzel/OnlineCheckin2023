@@ -29,7 +29,6 @@ Begin mPage InformedConsentPage
    _ImplicitInstance=   False
    _mDesignHeight  =   0
    _mDesignWidth   =   0
-   _mName          =   ""
    _mPanelIndex    =   -1
    Begin WebImageViewer ImageView1
       ControlID       =   ""
@@ -212,7 +211,7 @@ Begin mPage InformedConsentPage
       ControlCount    =   0
       ControlID       =   ""
       Enabled         =   True
-      Height          =   75
+      Height          =   65
       Index           =   -2147483648
       Indicator       =   ""
       LayoutDirection =   0
