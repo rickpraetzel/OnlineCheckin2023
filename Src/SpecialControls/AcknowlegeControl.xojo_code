@@ -4,7 +4,7 @@ Begin WebContainer AcknowlegeControl
    ControlCount    =   0
    ControlID       =   ""
    Enabled         =   True
-   Height          =   66
+   Height          =   75
    Indicator       =   0
    LayoutDirection =   0
    LayoutType      =   0
@@ -30,7 +30,7 @@ Begin WebContainer AcknowlegeControl
       Caption         =   ""
       ControlID       =   ""
       Enabled         =   True
-      Height          =   65
+      Height          =   75
       Hint            =   ""
       Index           =   -2147483648
       Indicator       =   ""
