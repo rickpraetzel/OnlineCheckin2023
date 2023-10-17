@@ -211,7 +211,7 @@ Begin mPage InformedConsentPage
       ControlCount    =   0
       ControlID       =   ""
       Enabled         =   True
-      Height          =   65
+      Height          =   75
       Index           =   -2147483648
       Indicator       =   ""
       LayoutDirection =   0
