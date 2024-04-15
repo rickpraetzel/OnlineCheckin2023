@@ -1930,12 +1930,14 @@ Protected Class Controller
 		      rs.column("informedpickuplocation").IntegerValue = convertBooleanToInteger(resDetails.isInformedPickupLocation)
 		      rs.column("creationMethod").StringValue = BookingToolkit.mapCreationMethod(resDetails.creationMethod)
 		      
-		      rs.SaveRow
-		      
-		      if not mSqlServer.error then
-		        return getReservation(resDetails.serial)
-		        
-		      end if
+		      try
+		        rs.SaveRow
+		        if not mSqlServer.error then
+		          return getReservation(resDetails.serial)
+		        end if
+		      catch err as DatabaseException
+		        MessageBox "Failed to update reservation in the database."
+		      end try
 		      
 		    else
 		      dim err as new BookingToolkit.Exceptions.RecordAlreadyModifiedException()

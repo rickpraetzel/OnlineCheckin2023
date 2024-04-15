@@ -32,9 +32,9 @@ Begin mPage ExistingReservationPage
    _mPanelIndex    =   -1
    Begin WebImageViewer ImageView1
       ControlID       =   ""
+      DisplayMode     =   3
       Enabled         =   True
       Height          =   100
-      HorizontalAlignment=   0
       Image           =   0
       Index           =   -2147483648
       Indicator       =   ""
@@ -52,7 +52,6 @@ Begin mPage ExistingReservationPage
       Tooltip         =   ""
       Top             =   20
       URL             =   "https://assets.zionadventures.com/zacLogoRound.png"
-      VerticalAlignment=   0
       Visible         =   True
       Width           =   100
       _mPanelIndex    =   -1

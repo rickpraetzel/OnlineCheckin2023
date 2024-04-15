@@ -22,7 +22,6 @@ Begin WebContainer CustomerInfoControl
    Width           =   304
    _mDesignHeight  =   0
    _mDesignWidth   =   0
-   _mName          =   ""
    _mPanelIndex    =   -1
    Begin WebLabel Label1
       Bold            =   False
@@ -337,29 +336,23 @@ Begin WebContainer CustomerInfoControl
    Begin USPS.Controller Controller1
       Index           =   -2147483648
       isSecure        =   False
-      Left            =   0.0
       LockedInPosition=   False
       Scope           =   2
-      Top             =   0.0
    End
    Begin MailGun.EmailAddressValidator Validator
       Index           =   -2147483648
-      Left            =   0.0
       LockedInPosition=   False
       Scope           =   2
-      Top             =   0.0
    End
    Begin WebTimer EventTimer
       ControlID       =   ""
       Enabled         =   True
       Index           =   -2147483648
-      Left            =   0.0
       Location        =   0
       LockedInPosition=   False
       Period          =   200
       RunMode         =   0
       Scope           =   2
-      Top             =   0.0
       _mPanelIndex    =   -1
    End
 End

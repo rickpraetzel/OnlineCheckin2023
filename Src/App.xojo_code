@@ -2,7 +2,7 @@
 Protected Class App
 Inherits WebApplication
 	#tag Event
-		Sub Opening(args() as String)
+		Sub Opening(args() As String)
 		  if not DebugBuild then
 		    call Daemonize()
 		    
@@ -21,7 +21,7 @@ Inherits WebApplication
 	#tag EndEvent
 
 	#tag Event
-		Function UnhandledException(Error As RuntimeException) As Boolean
+		Function UnhandledException(error As RuntimeException) As Boolean
 		  self.logEntry(782569, "Unhandled exception was thrown to App", error, SimpleLogger.LogLevels.Critical)
 		  break
 		End Function
@@ -69,13 +69,13 @@ Inherits WebApplication
 		  dim db as new MySQLCommunityServer()
 		  db.DatabaseName = "ZacReg"
 		  db.Host = "192.168.0.102"
-		  'if DebugBuild then
-		  'db.DatabaseName = "ZacTest"
-		  '
-		  'else
-		  db.DatabaseName = "ZacReg"
-		  
-		  'end if
+		  if DebugBuild then
+		    db.DatabaseName = "ZacTest"
+		    
+		  else
+		    db.DatabaseName = "ZacReg"
+		    
+		  end if
 		  
 		  db.UserName = "olinecheckin"
 		  db.Password = "34sybutt0n"
