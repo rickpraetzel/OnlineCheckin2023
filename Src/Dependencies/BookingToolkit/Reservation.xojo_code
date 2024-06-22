@@ -628,6 +628,14 @@ Protected Class Reservation
 				"3 - Active"
 			#tag EndEnumValues
 		#tag EndViewProperty
+		#tag ViewProperty
+			Name="consentTimestamp"
+			Visible=false
+			Group="Behavior"
+			InitialValue=""
+			Type="string"
+			EditorType=""
+		#tag EndViewProperty
 	#tag EndViewBehavior
 End Class
 #tag EndClass

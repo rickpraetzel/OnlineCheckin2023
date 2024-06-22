@@ -1957,6 +1957,93 @@ Protected Class Controller
 	#tag EndMethod
 
 	#tag Method, Flags = &h0
+		Function updateReservation2024(resDetails as BookingToolkit.Reservation, optional mode as BookingToolkit.UpdateBehavior = BookingToolkit.UpdateBehavior.ENFORCE_DATA_CHECK) As BookingToolkit.Reservation
+		  //This method provides optional enforcement of Optimistic Concurrency Control (OCC)
+		  //    through the optional mode parameter.
+		  //@param mode: Controls whether or not commitID is used. The default value is
+		  //    ENFORCE_DATA_CHECK, meaning that commitID is checked and if found to be invalid an exception 
+		  //    is thrown. You may override this behavior by passing SKIP_DATA_CHECK and forcing an update to take 
+		  //    place
+		  
+		  //@Throws: BookingToolkit.Exceptions.ReservationException
+		  //@throws: BookingToolkit.Exceptions.RecordAlreadyModifiedException
+		  
+		  using UtilityFunctions
+		  using DateModule
+		  
+		  
+		  
+		  if resdetails <> NIl then
+		    dim prefix as string = "UPDATE  reservations "
+		    dim suffix as string =  " WHERE serial = '" + resDetails.serial.toString() + "'"
+		    if mode = BookingToolkit.UpdateBehavior.SKIP_DATA_CHECK then 
+		      dim setstring as string
+		      setstring = "SET "
+		      setstring = setstring + "approvingGuide = '" + resDetails.approvingGuide + "'"
+		      setstring = setstring + ",balance = '" + format(resDetails.balance,"#0.00") + "'"
+		      setstring = setstring + ",caleventSerial = '" + resDetails.calendarEventSerial.toString() + "'"
+		      setstring = setstring + ",consenttypedname = '" + resDetails.consentTypedName + "'"
+		      '-----
+		      setstring = setstring + ",consenttimestamp = '" + resDetails.consentTimestamp + "'"
+		      '-----
+		      setstring = setstring + ",creator = '" + resDetails.creatorName + "'"
+		      setstring = setstring + ",creatorSerial = '" + resDetails.creatorSerial + "'"
+		      setstring = setstring + ",customerSerial = '" + resDetails.customerSerial.toString() + "'"
+		      if resDetails.endDate <> Nil then 
+		        setstring = setstring + ",enddate = '" + datetoworddate(resDetails.endDate) + "'"
+		      end if
+		      setstring = setstring + ",gearres_ID = '" + resDetails.gearResID + "'"
+		      setstring = setstring + ",groupsize = '" + str(resDetails.groupSize) + "'"
+		      setstring = setstring + ",guideApprovedCanyons = '" + resDetails.guideApprovedCanyons + "'"
+		      setstring = setstring + ",hasDayAfterGear = '" + str(convertBooleanToInteger(resDetails.hasDayAfterGear)) + "'"
+		      setstring = setstring + ",hotel = '" + resDetails.hotel + "'"
+		      setstring = setstring + ",howTheyHeard = '" + resDetails.howTheyHeard + "'"
+		      setstring = setstring + ",gear_returned = '" + str(convertBooleanToInteger(resDetails.isGearReturned)) + "'"
+		      setstring = setstring + ",paid = '" + str(convertBooleanToInteger(resDetails.isPaid)) + "'"
+		      setstring = setstring + ",reservationDepositRedeemed = '" + str(convertBooleanToInteger(resDetails.isReservationDepositRedeemed)) + "'"
+		      setstring = setstring + ",taxable = '" + str(convertBooleanToInteger(resdetails.isTaxable)) + "'"
+		      setstring = setstring + ",notes = '" + resDetails.notes + "'"
+		      setstring = setstring + ",remittance = '" + format(resDetails.remittance,"#0.00") + "'"
+		      setstring = setstring + ",serial = '" + resDetails.serial.toString() + "'"
+		      if resDetails.startDate <> Nil then 
+		        setstring = setstring + ",startdate = '" + datetoworddate(resDetails.startDate) + "'"
+		      end if
+		      setstring = setstring + ",status = '" + BookingToolkit.mapStatus(resDetails.status) + "'"
+		      setstring = setstring + ",total = '" + format(resDetails.total,"#0.00") + "'"
+		      setstring = setstring + ",contactDiary = '" + resDetails.contactDiary + "'"
+		      setstring = setstring + ",informedwhattobring = '" + str(convertBooleanToInteger(resDetails.isInformedWhatToBring)) + "'"
+		      setstring = setstring + ",informedcancellationpolicy = '" + str(convertBooleanToInteger(resDetails.isInformedOfCancellationPolicy)) + "'"
+		      setstring = setstring + ",informedtimezone = '" + str(convertBooleanToInteger(resDetails.isInformedTimeZone)) + "'"
+		      setstring = setstring + ",informedpickuplocation = '" + str(convertBooleanToInteger(resDetails.isInformedPickupLocation)) + "'"
+		      setstring = setstring + ",creationMethod = '" + BookingToolkit.mapCreationMethod(resDetails.creationMethod) + "'"
+		      
+		      try
+		        mSqlServer.executeSQL(prefix + setstring + suffix)
+		        if not mSqlServer.error then
+		          return getReservation(resDetails.serial)
+		        end if
+		      catch err as DatabaseException
+		        MessageBox "Failed to update reservation in the database."
+		      end try
+		      
+		    else
+		      dim err as new BookingToolkit.Exceptions.RecordAlreadyModifiedException()
+		      err.UpdatedValue = getReservation(resDetails.serial)
+		      
+		      raise err 
+		      
+		    end if
+		    
+		  end if
+		  
+		  #Pragma BreakOnExceptions false 
+		  dim err as BookingToolkit.Exceptions.ReservationException = getReservationException()
+		  raise err
+		  #Pragma BreakOnExceptions true 
+		End Function
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
 		Sub updateResGearID(serial as SQLSerial, id as string)
 		  //@throws: BookingToolkit.Exceptions.ResGearItemException
 		  
