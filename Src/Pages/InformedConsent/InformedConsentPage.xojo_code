@@ -4,6 +4,7 @@ Begin mPage InformedConsentPage
    Compatibility   =   ""
    ControlCount    =   0
    ControlID       =   ""
+   CSSClasses      =   ""
    Enabled         =   True
    Height          =   749
    ImplicitInstance=   True
@@ -21,6 +22,8 @@ Begin mPage InformedConsentPage
    LockVertical    =   False
    MinimumHeight   =   400
    MinimumWidth    =   600
+   PanelIndex      =   0
+   ScaleFactor     =   0.0
    TabIndex        =   0
    Title           =   "Untitled"
    Top             =   0
@@ -32,6 +35,7 @@ Begin mPage InformedConsentPage
    _mPanelIndex    =   -1
    Begin WebImageViewer ImageView1
       ControlID       =   ""
+      CSSClasses      =   ""
       DisplayMode     =   3
       Enabled         =   True
       Height          =   100
@@ -46,9 +50,11 @@ Begin mPage InformedConsentPage
       LockRight       =   False
       LockTop         =   True
       LockVertical    =   False
+      PanelIndex      =   0
       Scope           =   2
       SVGData         =   ""
       TabIndex        =   0
+      TabStop         =   True
       Tooltip         =   ""
       Top             =   20
       URL             =   "https://assets.zionadventures.com/zacLogoRound.png"
@@ -62,6 +68,7 @@ Begin mPage InformedConsentPage
       AllowSpellChecking=   False
       Caption         =   ""
       ControlID       =   ""
+      CSSClasses      =   ""
       Enabled         =   True
       Height          =   339
       Hint            =   ""
@@ -76,9 +83,11 @@ Begin mPage InformedConsentPage
       LockTop         =   True
       LockVertical    =   False
       MaximumCharactersAllowed=   0
+      PanelIndex      =   0
       ReadOnly        =   True
       Scope           =   2
       TabIndex        =   0
+      TabStop         =   True
       Text            =   "I understand that outfitting for equipment rentals may include an information and safety orientation.  I agree to participate in this orientation.\n\nYOU ARE RESPONSIBLE FOR YOUR OWN SAFETY .\n\nIn accordance with the requests of our insurance provider and in consideration of being allowed to participate in any way in the program, related events and activities, I the undersigned, acknowledge, appreciate, and agree that:\n\n1.  THERE IS RISK ASSOCIATED WITH LIFE. The risk of injury from the activities involved in this program is significant, including the potential for permanent paralysis and death.\n\n2. By clicking the AGREE button, I ACKNOWLEDGE FULL AND SOLE RESPONSIBILITY FOR THE USE, CARE, AND RETURN OF THIS GEAR, whether used by myself or use shared with another. \n\n3.  I KNOWINGLY AND FREELY ASSUME ALL SUCH RISKS, both known and unknown, COMMITTING TO MANAGING THESE RISKS WITH AND ACCORDING TO RELEASEE INSTRUCTIONS and assume full responsibility for my participation.\n\n4.  I willingly agree to comply with terms and conditions for participation. If I observe any unusual significant hazard during my presence or participation, I will remove myself from participation and bring such to the attention of the nearest official immediately.\n\n5.  By participating in or attending any activity in connection with this program, whether on or off the premises, I consent to the use of any photographs, pictures, film or videotape taken of me or provided by me for publicity, promotion, television, websites or any other use, and expressly waive any right of privacy, compensation, copyright or other ownership right connected to same.\n\n6.  I, for myself and on behalf of my heirs, assigns, personal representatives and next of kin, HEREBY RELEASE, INDEMNIFY, AND HOLD HARMLESS THE: Zion Adventure Company, LLC, its officers, officials, agents and/or employees, other participants, sponsors, advertisers, and, if applicable, owners and lessors of premises used to conduct the event (RELEASEES), from any and all claims, demands, losses, and liability arising out of or related to any INJURY, DISABILITY OR DEATH I may suffer, or loss or damage to person or property, WHETHER ARISING FROM THE NEGLIGENCE OF THE RELEASEES OR OTHERWISE, to the fullest extent permitted by law.\n\nI HAVE READ THIS RELEASE OF LIABILITY AND ASSUMPTION OF RISK AGREEMENT, FULLY UNDERSTAND ITS TERMS, UNDERSTAND THAT I HAVE GIVEN UP SUBSTANTIAL RIGHTS BY ACCEPTING IT, AND ACCEPT IT FREELY AND VOLUNTARILY WITHOUT ANY INDUCEMENT.\n"
       TextAlignment   =   0
       Tooltip         =   ""
@@ -90,6 +99,7 @@ Begin mPage InformedConsentPage
    Begin WebLabel Label1
       Bold            =   False
       ControlID       =   ""
+      CSSClasses      =   ""
       Enabled         =   True
       FontName        =   ""
       FontSize        =   0.0
@@ -106,8 +116,10 @@ Begin mPage InformedConsentPage
       LockTop         =   True
       LockVertical    =   False
       Multiline       =   True
+      PanelIndex      =   0
       Scope           =   2
       TabIndex        =   0
+      TabStop         =   True
       Text            =   "Informed Consent"
       TextAlignment   =   2
       TextColor       =   &c00000000
@@ -121,6 +133,7 @@ Begin mPage InformedConsentPage
    Begin WebLabel Label2
       Bold            =   False
       ControlID       =   ""
+      CSSClasses      =   ""
       Enabled         =   True
       FontName        =   ""
       FontSize        =   0.0
@@ -137,8 +150,10 @@ Begin mPage InformedConsentPage
       LockTop         =   True
       LockVertical    =   False
       Multiline       =   True
+      PanelIndex      =   0
       Scope           =   2
       TabIndex        =   0
+      TabStop         =   True
       Text            =   "Please type your name:"
       TextAlignment   =   0
       TextColor       =   &c00000000
@@ -154,6 +169,7 @@ Begin mPage InformedConsentPage
       AllowSpellChecking=   False
       Caption         =   ""
       ControlID       =   ""
+      CSSClasses      =   ""
       Enabled         =   True
       FieldType       =   0
       Height          =   30
@@ -169,9 +185,11 @@ Begin mPage InformedConsentPage
       LockTop         =   True
       LockVertical    =   False
       MaximumCharactersAllowed=   0
+      PanelIndex      =   0
       ReadOnly        =   False
       Scope           =   2
       TabIndex        =   0
+      TabStop         =   True
       Text            =   ""
       TextAlignment   =   2
       Tooltip         =   ""
@@ -185,6 +203,7 @@ Begin mPage InformedConsentPage
       Cancel          =   False
       Caption         =   "AGREE"
       ControlID       =   ""
+      CSSClasses      =   ""
       Default         =   False
       Enabled         =   True
       Height          =   34
@@ -198,8 +217,11 @@ Begin mPage InformedConsentPage
       LockRight       =   False
       LockTop         =   True
       LockVertical    =   False
+      Outlined        =   False
+      PanelIndex      =   0
       Scope           =   2
       TabIndex        =   0
+      TabStop         =   True
       Tooltip         =   ""
       Top             =   695
       Visible         =   True
@@ -209,6 +231,7 @@ Begin mPage InformedConsentPage
    Begin AcknowlegeControl AcknowlegeControl1
       ControlCount    =   0
       ControlID       =   ""
+      CSSClasses      =   ""
       Enabled         =   True
       Height          =   75
       Index           =   -2147483648
@@ -223,9 +246,11 @@ Begin mPage InformedConsentPage
       LockRight       =   False
       LockTop         =   True
       LockVertical    =   False
+      PanelIndex      =   0
       Scope           =   0
       ScrollDirection =   0
       TabIndex        =   1
+      TabStop         =   True
       Tooltip         =   ""
       Top             =   515
       Visible         =   True
@@ -372,6 +397,22 @@ End
 	#tag EndEvent
 #tag EndEvents
 #tag ViewBehavior
+	#tag ViewProperty
+		Name="PanelIndex"
+		Visible=false
+		Group="Behavior"
+		InitialValue=""
+		Type="Integer"
+		EditorType=""
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="ScaleFactor"
+		Visible=false
+		Group="Behavior"
+		InitialValue=""
+		Type="Double"
+		EditorType=""
+	#tag EndViewProperty
 	#tag ViewProperty
 		Name="ControlCount"
 		Visible=false
