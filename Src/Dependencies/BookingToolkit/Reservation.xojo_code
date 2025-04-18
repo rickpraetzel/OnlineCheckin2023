@@ -197,6 +197,10 @@ Protected Class Reservation
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
+		consenttypednamenew As string
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
 		contactDiary As Text
 	#tag EndProperty
 
@@ -634,7 +638,7 @@ Protected Class Reservation
 			Group="Behavior"
 			InitialValue=""
 			Type="string"
-			EditorType=""
+			EditorType="MultiLineEditor"
 		#tag EndViewProperty
 	#tag EndViewBehavior
 End Class

@@ -1,0 +1,2 @@
+Apr 18, 2025 at 2:39:35 PM - Removing attributes: xattr -cr "/Users/Man/Current Projects/OnlineCheckin2023/Src/Builds - onlineCheckIn/macOS Universal/onlineCheckIn"
+Apr 18, 2025 at 2:39:36 PM - Signing; codesigning --force --deep  -s - "/Users/Man/Current Projects/OnlineCheckin2023/Src/Builds - onlineCheckIn/macOS Universal/onlineCheckIn"

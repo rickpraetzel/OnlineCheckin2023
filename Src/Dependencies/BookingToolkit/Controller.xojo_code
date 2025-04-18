@@ -1983,6 +1983,7 @@ Protected Class Controller
 		      setstring = setstring + ",balance = '" + format(resDetails.balance,"#0.00") + "'"
 		      setstring = setstring + ",caleventSerial = '" + resDetails.calendarEventSerial.toString() + "'"
 		      setstring = setstring + ",consenttypedname = '" + resDetails.consentTypedName + "'"
+		      setstring = setstring + ",consenttypednamenew = '" + resDetails.consenttypednamenew + "'"
 		      '-----
 		      setstring = setstring + ",consenttimestamp = '" + resDetails.consentTimestamp + "'"
 		      '-----

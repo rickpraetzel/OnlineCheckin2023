@@ -3,6 +3,7 @@ Begin WebContainer AcknowlegeControl
    Compatibility   =   ""
    ControlCount    =   0
    ControlID       =   ""
+   CSSClasses      =   ""
    Enabled         =   True
    Height          =   66
    Indicator       =   0
@@ -15,11 +16,12 @@ Begin WebContainer AcknowlegeControl
    LockRight       =   False
    LockTop         =   True
    LockVertical    =   False
+   PanelIndex      =   0
    ScrollDirection =   0
    TabIndex        =   0
    Top             =   0
    Visible         =   True
-   Width           =   305
+   Width           =   385
    _mDesignHeight  =   0
    _mDesignWidth   =   0
    _mPanelIndex    =   -1
@@ -28,12 +30,13 @@ Begin WebContainer AcknowlegeControl
       AllowSpellChecking=   False
       Caption         =   ""
       ControlID       =   ""
+      CSSClasses      =   ""
       Enabled         =   True
-      Height          =   65
+      Height          =   53
       Hint            =   ""
       Index           =   -2147483648
       Indicator       =   ""
-      Left            =   0
+      Left            =   26
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   False
@@ -42,26 +45,29 @@ Begin WebContainer AcknowlegeControl
       LockTop         =   True
       LockVertical    =   False
       MaximumCharactersAllowed=   0
+      PanelIndex      =   0
       ReadOnly        =   True
       Scope           =   0
       TabIndex        =   1
-      Text            =   "     I have read and accept the con- ditions of the above informed consent."
-      TextAlignment   =   0
+      TabStop         =   True
+      Text            =   "I have read and accept the conditions of the above informed consent."
+      TextAlignment   =   1
       Tooltip         =   ""
-      Top             =   0
+      Top             =   6
       Visible         =   True
-      Width           =   305
+      Width           =   348
       _mPanelIndex    =   -1
    End
    Begin WebCheckbox Checkbox1
       Caption         =   "Untitled"
       ControlID       =   ""
+      CSSClasses      =   ""
       Enabled         =   True
       Height          =   30
       Indeterminate   =   False
       Index           =   -2147483648
       Indicator       =   ""
-      Left            =   9
+      Left            =   6
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   False
@@ -69,10 +75,12 @@ Begin WebContainer AcknowlegeControl
       LockRight       =   False
       LockTop         =   True
       LockVertical    =   False
+      PanelIndex      =   0
       Scope           =   2
       TabIndex        =   0
+      TabStop         =   True
       Tooltip         =   ""
-      Top             =   0
+      Top             =   6
       Value           =   False
       Visible         =   True
       Width           =   24
@@ -110,6 +118,14 @@ End
 	#tag EndEvent
 #tag EndEvents
 #tag ViewBehavior
+	#tag ViewProperty
+		Name="PanelIndex"
+		Visible=false
+		Group="Behavior"
+		InitialValue=""
+		Type="Integer"
+		EditorType=""
+	#tag EndViewProperty
 	#tag ViewProperty
 		Name="ControlCount"
 		Visible=false

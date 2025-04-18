@@ -24,6 +24,10 @@
 		<data>
 		xP0KYqPRMpfyDDQPnYvLDoMSsW8=
 		</data>
+		<key>Resources/bootstrap.min.css</key>
+		<data>
+		phIRQxhu7KUSXJMAjM+apqiPAtE=
+		</data>
 		<key>Resources/en.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
@@ -111,6 +115,17 @@
 			71/aZXKB4yLTi3eLg3dBe6Xmxv47jMBpxIzzGyhgQJo=
 			</data>
 		</dict>
+		<key>Resources/bootstrap.min.css</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			phIRQxhu7KUSXJMAjM+apqiPAtE=
+			</data>
+			<key>hash2</key>
+			<data>
+			dIj0jfgaYrUs3x30P1afHuOHzcCzgrNsa9Xat2C5Vhg=
+			</data>
+		</dict>
 		<key>Resources/en.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
@@ -183,110 +198,110 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			fwTXKHGtEjtYdvPxYwHrx5OqUGk=
+			IP8YPVut5R+kvyr709q0Iovy8s4=
 			</data>
 			<key>hash2</key>
 			<data>
-			0eDzb304pta6yMM1maSWxxsBHvGgzubpf2Z41kI7FU4=
+			TjaXFiWVNDIfzHZtN24+OjtXlB1ipwrr1Ayv5Rk36is=
 			</data>
 		</dict>
 		<key>onlineCheckIn Libs/InternetEncodings.dylib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			UlBREPsDEiYX+ImmkvV/NV3w7O8=
+			goEMgU9oYAy33nQoU3a+LV2gHWU=
 			</data>
 			<key>hash2</key>
 			<data>
-			kf4tty2WssCP0X/pHxvbDyPrM/gnxSBCZKeIa+35zJc=
+			JW+5uWdi9/WmRUNsHO2tV/9oEI1zJ1yvdf/YO5XdvgE=
 			</data>
 		</dict>
 		<key>onlineCheckIn Libs/MySQLCommunityPlugin.dylib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			I0Yz/o6FZtR54R52CI3yzFDRXRA=
+			DYc2eDHSC2vpCIf0vdPwKWiruzU=
 			</data>
 			<key>hash2</key>
 			<data>
-			fNQSVsNOeDfdwTasJcyJx0/z9lskjJsYEKAfYyxemMw=
+			DMF9bnsaneRPw9iwgaFjWq7d6ODvYGipRrTjpGSyHh0=
 			</data>
 		</dict>
 		<key>onlineCheckIn Libs/RegEx.dylib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			3M6y8PFIQWMow4ykbIhqA8oa1KU=
+			ClweHieeltD671/K9tj80+hZkAg=
 			</data>
 			<key>hash2</key>
 			<data>
-			cozt/70XZzNZpOIeCa9tcHYl3K6nhLOOpb+oYaMNzqY=
+			ZyYSt77VakKOocTA0He3LBls9XLMw/39dfv4SXCh+K0=
 			</data>
 		</dict>
 		<key>onlineCheckIn Libs/SQLiteDatabase.dylib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			MoZIJr7BVWnT7aeJuwbn8c/gIqo=
+			Y8x/10m/LNF9EKGRUzvJegvGh1o=
 			</data>
 			<key>hash2</key>
 			<data>
-			ySKbpyAzSKSAdbrmwsPKQkcXsOJktiJ49/pID0UitEk=
+			i3BRkgXQACSVxJMnMI9vTnWN0+DyZraWg0gCZogN9Qk=
 			</data>
 		</dict>
 		<key>onlineCheckIn Libs/SSLSocket.dylib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			BpFM2VSl6hsnwDihvXA1N2B5oqA=
+			92HFK+W4YnAHob+foRtnb8W4RJY=
 			</data>
 			<key>hash2</key>
 			<data>
-			Hf+v8rkZ36Kwdn4LhNtwwI8p6/Q+eT5JWdgeMqi0i3c=
+			q6jNifrgdeMbB1m5oxvNYOZXaklDafj57OZCJMR7RTo=
 			</data>
 		</dict>
 		<key>onlineCheckIn Libs/Shell.dylib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ONUq+Gh8mLNi9v/tjiSn3NotT5s=
+			0YF6MEZOY30yJXQJe9nz79U0lis=
 			</data>
 			<key>hash2</key>
 			<data>
-			gX7Yti3xzLtEMDPd9gbhvNBtRKmkxjBxwsYJWKdc4zI=
+			9WUJpi2wpswCMmbEyRyXzRA3Q8cV5wC0hmiuuEJys1k=
 			</data>
 		</dict>
 		<key>onlineCheckIn Libs/XML.dylib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			PQxtFzeKqqi3ZVgOKMnuUO4mGDM=
+			CDGUhIeU4m2EFIdT/1VkQiQbnYg=
 			</data>
 			<key>hash2</key>
 			<data>
-			Ql0q7ZZRZZYNcrd8rCf7Sm8zsZVe5C7nOXdb2G2jMbI=
+			w9gDd//v4OKNDLUe4toLiCYNKdZiHBCb1tQn8HMP0nI=
 			</data>
 		</dict>
 		<key>onlineCheckIn Libs/libGzip.dylib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			3MqBL1M19PXbkkqT5+cAhSIBtjc=
+			EoRQqAEuZqPokyqLieqKZ6clwrc=
 			</data>
 			<key>hash2</key>
 			<data>
-			FJxh41uXCiebJ7oOrV+xugw1Uhc4iRAAtfJHEX96jDI=
+			ovztgGvZfSuUWcWL4uL/NX/B7Hx0qGrA/VCl/hGxScQ=
 			</data>
 		</dict>
 		<key>onlineCheckIn Libs/rbframework.dylib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			eGhyesQqiQSdHcQV2DUQZwgqWbQ=
+			YHhAKkFVWzQvhJLwfBWLsqcmUqU=
 			</data>
 			<key>hash2</key>
 			<data>
-			ZgyYs5340OV3i7S+cMN3M/6qvilWAtNqLvyWarJOqVY=
+			YndV8KeHZkNTFiG9fnQ3TgncfEqHlKvoo/xihL+PWRE=
 			</data>
 		</dict>
 	</dict>

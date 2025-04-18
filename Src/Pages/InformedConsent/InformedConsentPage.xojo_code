@@ -28,7 +28,7 @@ Begin mPage InformedConsentPage
    Title           =   "Untitled"
    Top             =   0
    Visible         =   True
-   Width           =   319
+   Width           =   600
    _ImplicitInstance=   False
    _mDesignHeight  =   0
    _mDesignWidth   =   0
@@ -42,7 +42,7 @@ Begin mPage InformedConsentPage
       Image           =   0
       Index           =   -2147483648
       Indicator       =   ""
-      Left            =   105
+      Left            =   244
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   True
@@ -74,7 +74,7 @@ Begin mPage InformedConsentPage
       Hint            =   ""
       Index           =   -2147483648
       Indicator       =   ""
-      Left            =   7
+      Left            =   61
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   True
@@ -93,7 +93,7 @@ Begin mPage InformedConsentPage
       Tooltip         =   ""
       Top             =   161
       Visible         =   True
-      Width           =   305
+      Width           =   474
       _mPanelIndex    =   -1
    End
    Begin WebLabel Label1
@@ -107,7 +107,7 @@ Begin mPage InformedConsentPage
       Index           =   -2147483648
       Indicator       =   ""
       Italic          =   False
-      Left            =   1
+      Left            =   140
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   True
@@ -141,7 +141,7 @@ Begin mPage InformedConsentPage
       Index           =   -2147483648
       Indicator       =   ""
       Italic          =   False
-      Left            =   21
+      Left            =   146
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   True
@@ -158,7 +158,7 @@ Begin mPage InformedConsentPage
       TextAlignment   =   0
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   598
+      Top             =   606
       Underline       =   False
       Visible         =   True
       Width           =   284
@@ -176,7 +176,7 @@ Begin mPage InformedConsentPage
       Hint            =   ""
       Index           =   -2147483648
       Indicator       =   ""
-      Left            =   7
+      Left            =   146
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   True
@@ -209,7 +209,7 @@ Begin mPage InformedConsentPage
       Height          =   34
       Index           =   -2147483648
       Indicator       =   0
-      Left            =   91
+      Left            =   233
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   True
@@ -238,7 +238,7 @@ Begin mPage InformedConsentPage
       Indicator       =   ""
       LayoutDirection =   0
       LayoutType      =   0
-      Left            =   7
+      Left            =   108
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   True
@@ -254,7 +254,7 @@ Begin mPage InformedConsentPage
       Tooltip         =   ""
       Top             =   515
       Visible         =   True
-      Width           =   305
+      Width           =   385
       _mDesignHeight  =   0
       _mDesignWidth   =   0
       _mPanelIndex    =   -1
@@ -328,58 +328,67 @@ End
 #tag Events SubmitButton
 	#tag Event
 		Sub PressedButton()
-		  try
-		    self.logEntry("Updating customer record")
-		    mCustomer = session.ERC_Controller.updateCustomer(mCustomer, BookingToolkit.UpdateBehavior.SKIP_DATA_CHECK)
-		    self.logEntry("success")
-		    
-		    if not mReservation.isInDatabase then 
-		      mReservation.creatorName = "ESI"
-		      mReservation.creatorSerial = "0"
-		      self.logEntry("Creating reservation...")
-		      mReservation.serial = session.ERC_Controller.createNewReservation(mReservation)
-		      self.logEntry("Success")
+		  
+		  if AcknowlegeControl1.checkbox1.value AND SignatureField.text <> "" then
+		    try
+		      self.logEntry("Updating customer record")
+		      mCustomer = session.ERC_Controller.updateCustomer(mCustomer, BookingToolkit.UpdateBehavior.SKIP_DATA_CHECK)
+		      self.logEntry("success")
 		      
-		    end if
-		    
-		    mReservation.startDate = xojo.core.date.Now()
-		    mReservation.consentTypedName = SignatureField.Text
-		    '-----
-		    var d as datetime = datetime.now
-		    mReservation.consentTimestamp = d.SQLDateTime
-		    '-----
-		    mReservation.gaveInformedConsent = true
-		    mReservation.customerSerial = mCustomer.serial
-		    mReservation.status = BookingToolkit.Statuses.Active
-		    
-		    self.logEntry("Updating Reservation...")
-		    mReservation = session.ERC_Controller.updateReservation2024(mReservation, BookingToolkit.UpdateBehavior.SKIP_DATA_CHECK)
-		    self.logEntry("Success")
-		    session.Done.show()
-		    
-		  catch err as BookingToolkit.Exceptions.ReservationException
-		    self.logEntry(765479, "Failed", err)
-		    '-----
-		    dim errormessagebox as new MessageBoxWebDialog
-		    if errormessagebox <> nil then
-		      errormessagebox.label1.text = "There was a problem, please try again"
-		      errormessagebox.show
-		    end if
-		    '-----
-		    'MessageBox "There was a problem, please try again"
-		    
-		  catch err as BookingToolkit.Exceptions.CustomerException
-		    self.logEntry(765473, "Failed", err)
-		    '-----
-		    dim errormessagebox as new MessageBoxWebDialog
-		    if errormessagebox <> nil then
-		      errormessagebox.label1.text = "There was a problem, please try again"
-		      errormessagebox.show
-		    end if
-		    '-----
-		    'MessageBox "There was a problem, please try again"
-		    
-		  end try
+		      if not mReservation.isInDatabase then 
+		        mReservation.creatorName = "ESI"
+		        mReservation.creatorSerial = "0"
+		        self.logEntry("Creating reservation...")
+		        mReservation.serial = session.ERC_Controller.createNewReservation(mReservation)
+		        self.logEntry("Success")
+		        
+		      end if
+		      
+		      mReservation.startDate = xojo.core.date.Now()
+		      mReservation.consentTypedName = SignatureField.Text
+		      mReservation.consenttypednamenew = SignatureField.text '20250418
+		      '-----
+		      var d as datetime = datetime.now
+		      mReservation.consentTimestamp = d.SQLDateTime
+		      '-----
+		      mReservation.gaveInformedConsent = true
+		      mReservation.customerSerial = mCustomer.serial
+		      mReservation.status = BookingToolkit.Statuses.Active
+		      
+		      self.logEntry("Updating Reservation...")
+		      mReservation = session.ERC_Controller.updateReservation2024(mReservation, BookingToolkit.UpdateBehavior.SKIP_DATA_CHECK)
+		      self.logEntry("Success")
+		      session.Done.show()
+		      
+		    catch err as BookingToolkit.Exceptions.ReservationException
+		      self.logEntry(765479, "Failed", err)
+		      '-----
+		      dim errormessagebox as new MessageBoxWebDialog
+		      if errormessagebox <> nil then
+		        errormessagebox.label1.text = "There was a problem, please try again"
+		        errormessagebox.show
+		      end if
+		      '-----
+		      'MessageBox "There was a problem, please try again"
+		      
+		    catch err as BookingToolkit.Exceptions.CustomerException
+		      self.logEntry(765473, "Failed", err)
+		      '-----
+		      dim errormessagebox as new MessageBoxWebDialog
+		      if errormessagebox <> nil then
+		        errormessagebox.label1.text = "There was a problem, please try again"
+		        errormessagebox.show
+		      end if
+		      '-----
+		      'MessageBox "There was a problem, please try again"
+		      
+		    end try
+		  elseif AcknowlegeControl1.checkbox1.value = false then
+		    MessageBox "Please type your name and check the checkbox..."
+		  elseif SignatureField.text = "" then
+		    MessageBox "Please type your name and check the checkbox..."
+		  end if
+		  
 		End Sub
 	#tag EndEvent
 #tag EndEvents
