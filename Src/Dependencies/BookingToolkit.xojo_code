@@ -208,7 +208,7 @@ Protected Module BookingToolkit
 	#tag Constant, Name = kAllResPartFields, Type = String, Dynamic = False, Default = \"serial\x2CresSerial\x2Cage\x2Cheight\x2Cname\x2ClastName\x2Cgender\x2Cweight", Scope = Private
 	#tag EndConstant
 
-	#tag Constant, Name = kdedicatedResFieldsUsed, Type = String, Dynamic = False, Default = \"serial\x2CapprovingGuide\x2Cbalance\x2CcalEventSerial\x2Cconsenttypedname\x2Cconsenttimestamp\x2Ccreator\x2CcreatorSerial\x2CcustomerSerial\x2CendDate\x2CeventType\x2CgearRes_ID\x2Cgroupsize\x2CguideApprovedCanyons\x2ChasDayAfterGear\x2Chotel\x2ChowTheyHeard\x2Cgear_returned\x2Cpaid\x2CreservationDepositRedeemed\x2Ctaxable\x2Cnotes\x2Cremittance\x2Cstartdate\x2CSTATUS\x2Ctotal\x2CcontactDiary\x2Cinformedwhattobring\x2Cinformedcancellationpolicy\x2Cinformedtimezone\x2Cinformedpickuplocation\x2CcommitID\x2CcreationTimeStamp\x2CcreationMethod", Scope = Private
+	#tag Constant, Name = kdedicatedResFieldsUsed, Type = String, Dynamic = False, Default = \"serial\x2CapprovingGuide\x2Cbalance\x2CcalEventSerial\x2Cconsenttypedname\x2Consenttypednamenew\x2Cconsenttimestamp\x2Cgaveinformedconsent\x2Ccreator\x2CcreatorSerial\x2CcustomerSerial\x2CendDate\x2CeventType\x2CgearRes_ID\x2Cgroupsize\x2CguideApprovedCanyons\x2ChasDayAfterGear\x2Chotel\x2ChowTheyHeard\x2Cgear_returned\x2Cpaid\x2CreservationDepositRedeemed\x2Ctaxable\x2Cnotes\x2Cremittance\x2Cstartdate\x2CSTATUS\x2Ctotal\x2CcontactDiary\x2Cinformedwhattobring\x2Cinformedcancellationpolicy\x2Cinformedtimezone\x2Cinformedpickuplocation\x2CcommitID\x2CcreationTimeStamp\x2CcreationMethod", Scope = Private
 	#tag EndConstant
 
 	#tag Constant, Name = kRetiredFlag, Type = String, Dynamic = False, Default = \"rip", Scope = Private

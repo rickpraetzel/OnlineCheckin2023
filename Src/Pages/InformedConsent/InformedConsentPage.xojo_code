@@ -32,6 +32,7 @@ Begin mPage InformedConsentPage
    _ImplicitInstance=   False
    _mDesignHeight  =   0
    _mDesignWidth   =   0
+   _mName          =   ""
    _mPanelIndex    =   -1
    Begin WebImageViewer ImageView1
       ControlID       =   ""
@@ -347,11 +348,12 @@ End
 		      mReservation.startDate = xojo.core.date.Now()
 		      mReservation.consentTypedName = SignatureField.Text
 		      mReservation.consenttypednamenew = SignatureField.text '20250418
+		      mReservation.gaveInformedConsent = "1"
 		      '-----
 		      var d as datetime = datetime.now
 		      mReservation.consentTimestamp = d.SQLDateTime
 		      '-----
-		      mReservation.gaveInformedConsent = true
+		      'mReservation.gaveInformedConsent = true
 		      mReservation.customerSerial = mCustomer.serial
 		      mReservation.status = BookingToolkit.Statuses.Active
 		      

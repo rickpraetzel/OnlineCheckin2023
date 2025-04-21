@@ -1894,6 +1894,9 @@ Protected Class Controller
 		      rs.column("balance").DoubleValue = resDetails.balance
 		      rs.column("caleventSerial").IntegerValue = resDetails.calendarEventSerial.toInteger()
 		      rs.column("consenttypedname").StringValue = resDetails.consentTypedName
+		      rs.column("consenttypednamenew").StringValue = resDetails.consentTypedNamenew '20250421
+		      rs.Column("gaveinformedconsent").integerValue = 1
+		      rs.Column("updater").stringvalue = "ESI"
 		      '-----
 		      rs.column("consenttimestamp").stringvalue = resDetails.consentTimestamp
 		      '-----

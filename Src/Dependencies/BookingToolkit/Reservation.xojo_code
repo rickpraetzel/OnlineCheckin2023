@@ -229,7 +229,7 @@ Protected Class Reservation
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
-		gaveInformedConsent As boolean
+		gaveInformedConsent As integer
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
@@ -344,6 +344,10 @@ Protected Class Reservation
 
 	#tag Property, Flags = &h0
 		total As double
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
+		updater As string
 	#tag EndProperty
 
 
@@ -639,6 +643,14 @@ Protected Class Reservation
 			InitialValue=""
 			Type="string"
 			EditorType="MultiLineEditor"
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="consenttypednamenew"
+			Visible=false
+			Group="Behavior"
+			InitialValue=""
+			Type="string"
+			EditorType=""
 		#tag EndViewProperty
 	#tag EndViewBehavior
 End Class
