@@ -32,7 +32,6 @@ Begin mPage InformedConsentPage
    _ImplicitInstance=   False
    _mDesignHeight  =   0
    _mDesignWidth   =   0
-   _mName          =   ""
    _mPanelIndex    =   -1
    Begin WebImageViewer ImageView1
       ControlID       =   ""
@@ -348,7 +347,7 @@ End
 		      mReservation.startDate = xojo.core.date.Now()
 		      mReservation.consentTypedName = SignatureField.Text
 		      mReservation.consenttypednamenew = SignatureField.text '20250418
-		      mReservation.gaveInformedConsent = "1"
+		      mReservation.gaveInformedConsent = 1
 		      '-----
 		      var d as datetime = datetime.now
 		      mReservation.consentTimestamp = d.SQLDateTime
@@ -358,7 +357,7 @@ End
 		      mReservation.status = BookingToolkit.Statuses.Active
 		      
 		      self.logEntry("Updating Reservation...")
-		      mReservation = session.ERC_Controller.updateReservation2024(mReservation, BookingToolkit.UpdateBehavior.SKIP_DATA_CHECK)
+		      mReservation = session.ERC_Controller.updateReservation(mReservation, BookingToolkit.UpdateBehavior.SKIP_DATA_CHECK)
 		      self.logEntry("Success")
 		      session.Done.show()
 		      
