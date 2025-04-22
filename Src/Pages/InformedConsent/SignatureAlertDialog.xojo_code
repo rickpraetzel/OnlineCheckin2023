@@ -1,12 +1,12 @@
 #tag WebPage
-Begin WebDialog PoliciesDialogue
+Begin WebDialog SignatureAlertDialog
    Compatibility   =   ""
    ControlCount    =   0
    ControlID       =   ""
    CSSClasses      =   ""
    Enabled         =   True
-   Height          =   425
-   Index           =   0
+   Height          =   148
+   Index           =   -2147483648
    Indicator       =   0
    LayoutDirection =   0
    LayoutType      =   0
@@ -22,43 +22,10 @@ Begin WebDialog PoliciesDialogue
    TabIndex        =   0
    Top             =   0
    Visible         =   True
-   Width           =   304
+   Width           =   276
    _mDesignHeight  =   0
    _mDesignWidth   =   0
    _mPanelIndex    =   -1
-   Begin WebTextArea TextArea1
-      AllowReturnKey  =   True
-      AllowSpellChecking=   False
-      Caption         =   ""
-      ControlID       =   ""
-      CSSClasses      =   ""
-      Enabled         =   True
-      Height          =   300
-      Hint            =   ""
-      Index           =   -2147483648
-      Indicator       =   ""
-      Left            =   20
-      LockBottom      =   True
-      LockedInPosition=   False
-      LockHorizontal  =   True
-      LockLeft        =   False
-      LockRight       =   False
-      LockTop         =   True
-      LockVertical    =   False
-      MaximumCharactersAllowed=   0
-      PanelIndex      =   0
-      ReadOnly        =   True
-      Scope           =   2
-      TabIndex        =   0
-      TabStop         =   True
-      Text            =   "- We require that a valid credit card be kept on file for the duration of all rentals\n\n- All credit card information is stored on secure servers that comply with all payment card industry digital security standards (PCI-DSS)\n\n- You may request to have your information deleted after you have returned all rental equipment"
-      TextAlignment   =   0
-      Tooltip         =   ""
-      Top             =   20
-      Visible         =   True
-      Width           =   264
-      _mPanelIndex    =   -1
-   End
    Begin WebLabel Label1
       Bold            =   False
       ControlID       =   ""
@@ -66,31 +33,61 @@ Begin WebDialog PoliciesDialogue
       Enabled         =   True
       FontName        =   ""
       FontSize        =   0.0
-      Height          =   45
+      Height          =   54
       Index           =   -2147483648
       Indicator       =   ""
       Italic          =   False
-      Left            =   87
-      LockBottom      =   True
+      Left            =   20
+      LockBottom      =   False
       LockedInPosition=   False
-      LockHorizontal  =   True
-      LockLeft        =   False
+      LockHorizontal  =   False
+      LockLeft        =   True
       LockRight       =   False
-      LockTop         =   False
+      LockTop         =   True
       LockVertical    =   False
-      Multiline       =   False
+      Multiline       =   True
       PanelIndex      =   0
       Scope           =   2
       TabIndex        =   0
       TabStop         =   True
-      Text            =   "CLOSE"
-      TextAlignment   =   2
-      TextColor       =   &c00000000
+      Text            =   "Please check the checkbox and type your name..."
+      TextAlignment   =   0
+      TextColor       =   &c000000FF
       Tooltip         =   ""
-      Top             =   350
+      Top             =   28
       Underline       =   False
       Visible         =   True
-      Width           =   130
+      Width           =   236
+      _mPanelIndex    =   -1
+   End
+   Begin WebButton Button1
+      AllowAutoDisable=   False
+      Cancel          =   False
+      Caption         =   "Okay"
+      ControlID       =   ""
+      CSSClasses      =   ""
+      Default         =   False
+      Enabled         =   True
+      Height          =   38
+      Index           =   -2147483648
+      Indicator       =   0
+      Left            =   148
+      LockBottom      =   False
+      LockedInPosition=   False
+      LockHorizontal  =   False
+      LockLeft        =   True
+      LockRight       =   False
+      LockTop         =   True
+      LockVertical    =   False
+      Outlined        =   False
+      PanelIndex      =   0
+      Scope           =   2
+      TabIndex        =   1
+      TabStop         =   True
+      Tooltip         =   ""
+      Top             =   90
+      Visible         =   True
+      Width           =   100
       _mPanelIndex    =   -1
    End
 End
@@ -99,10 +96,10 @@ End
 #tag WindowCode
 #tag EndWindowCode
 
-#tag Events Label1
+#tag Events Button1
 	#tag Event
 		Sub Pressed()
-		  self.Close()
+		  self.close
 		End Sub
 	#tag EndEvent
 #tag EndEvents
@@ -112,6 +109,46 @@ End
 		Visible=false
 		Group="Behavior"
 		InitialValue=""
+		Type="Integer"
+		EditorType=""
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="Index"
+		Visible=false
+		Group="ID"
+		InitialValue="-2147483648"
+		Type="Integer"
+		EditorType=""
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="Name"
+		Visible=true
+		Group="ID"
+		InitialValue=""
+		Type="String"
+		EditorType=""
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="Super"
+		Visible=true
+		Group="ID"
+		InitialValue=""
+		Type="String"
+		EditorType=""
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="Left"
+		Visible=true
+		Group="Position"
+		InitialValue="0"
+		Type="Integer"
+		EditorType=""
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="Top"
+		Visible=true
+		Group="Position"
+		InitialValue="0"
 		Type="Integer"
 		EditorType=""
 	#tag EndViewProperty
@@ -152,6 +189,22 @@ End
 		EditorType="MultiLineEditor"
 	#tag EndViewProperty
 	#tag ViewProperty
+		Name="Enabled"
+		Visible=true
+		Group="Behavior"
+		InitialValue="True"
+		Type="Boolean"
+		EditorType=""
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="Height"
+		Visible=true
+		Group="Behavior"
+		InitialValue="400"
+		Type="Integer"
+		EditorType=""
+	#tag EndViewProperty
+	#tag ViewProperty
 		Name="LayoutType"
 		Visible=true
 		Group="Behavior"
@@ -162,6 +215,70 @@ End
 			"0 - Fixed"
 			"1 - Flex"
 		#tag EndEnumValues
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="LockBottom"
+		Visible=false
+		Group="Behavior"
+		InitialValue=""
+		Type="Boolean"
+		EditorType=""
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="LockHorizontal"
+		Visible=false
+		Group="Behavior"
+		InitialValue=""
+		Type="Boolean"
+		EditorType=""
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="LockLeft"
+		Visible=false
+		Group="Behavior"
+		InitialValue=""
+		Type="Boolean"
+		EditorType=""
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="LockRight"
+		Visible=false
+		Group="Behavior"
+		InitialValue=""
+		Type="Boolean"
+		EditorType=""
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="LockTop"
+		Visible=false
+		Group="Behavior"
+		InitialValue=""
+		Type="Boolean"
+		EditorType=""
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="LockVertical"
+		Visible=false
+		Group="Behavior"
+		InitialValue=""
+		Type="Boolean"
+		EditorType=""
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="Visible"
+		Visible=false
+		Group="Behavior"
+		InitialValue=""
+		Type="Boolean"
+		EditorType=""
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="Width"
+		Visible=true
+		Group="Behavior"
+		InitialValue="600"
+		Type="Integer"
+		EditorType=""
 	#tag EndViewProperty
 	#tag ViewProperty
 		Name="_mDesignHeight"
@@ -228,125 +345,5 @@ End
 			"2 - TopToBottom"
 			"3 - BottomToTop"
 		#tag EndEnumValues
-	#tag EndViewProperty
-	#tag ViewProperty
-		Name="Enabled"
-		Visible=true
-		Group="Behavior"
-		InitialValue="True"
-		Type="Boolean"
-		EditorType=""
-	#tag EndViewProperty
-	#tag ViewProperty
-		Name="Height"
-		Visible=true
-		Group="Position"
-		InitialValue="300"
-		Type="Integer"
-		EditorType=""
-	#tag EndViewProperty
-	#tag ViewProperty
-		Name="Index"
-		Visible=false
-		Group="ID"
-		InitialValue=""
-		Type="Integer"
-		EditorType=""
-	#tag EndViewProperty
-	#tag ViewProperty
-		Name="Left"
-		Visible=false
-		Group="Position"
-		InitialValue=""
-		Type="Integer"
-		EditorType=""
-	#tag EndViewProperty
-	#tag ViewProperty
-		Name="LockBottom"
-		Visible=false
-		Group="Behavior"
-		InitialValue="False"
-		Type="Boolean"
-		EditorType=""
-	#tag EndViewProperty
-	#tag ViewProperty
-		Name="LockHorizontal"
-		Visible=false
-		Group="Behavior"
-		InitialValue=""
-		Type="Boolean"
-		EditorType=""
-	#tag EndViewProperty
-	#tag ViewProperty
-		Name="LockLeft"
-		Visible=false
-		Group="Behavior"
-		InitialValue="False"
-		Type="Boolean"
-		EditorType=""
-	#tag EndViewProperty
-	#tag ViewProperty
-		Name="LockRight"
-		Visible=false
-		Group="Behavior"
-		InitialValue="False"
-		Type="Boolean"
-		EditorType=""
-	#tag EndViewProperty
-	#tag ViewProperty
-		Name="LockTop"
-		Visible=false
-		Group="Behavior"
-		InitialValue="False"
-		Type="Boolean"
-		EditorType=""
-	#tag EndViewProperty
-	#tag ViewProperty
-		Name="LockVertical"
-		Visible=false
-		Group="Behavior"
-		InitialValue=""
-		Type="Boolean"
-		EditorType=""
-	#tag EndViewProperty
-	#tag ViewProperty
-		Name="Name"
-		Visible=true
-		Group="ID"
-		InitialValue=""
-		Type="String"
-		EditorType=""
-	#tag EndViewProperty
-	#tag ViewProperty
-		Name="Super"
-		Visible=true
-		Group="ID"
-		InitialValue=""
-		Type="String"
-		EditorType=""
-	#tag EndViewProperty
-	#tag ViewProperty
-		Name="Top"
-		Visible=false
-		Group="Position"
-		InitialValue=""
-		Type="Integer"
-		EditorType=""
-	#tag EndViewProperty
-	#tag ViewProperty
-		Name="Visible"
-		Visible=false
-		Group="Behavior"
-		InitialValue="True"
-		Type="Boolean"
-		EditorType=""
-	#tag EndViewProperty
-	#tag ViewProperty
-		Name="Width"
-		Visible=true
-		Group="Position"
-		InitialValue="300"
-		Type="Integer"
-		EditorType=""
 	#tag EndViewProperty
 #tag EndViewBehavior

@@ -259,6 +259,37 @@ Begin mPage InformedConsentPage
       _mDesignWidth   =   0
       _mPanelIndex    =   -1
    End
+   Begin SignatureAlertDialog SignatureAlertDialog1
+      ControlCount    =   0
+      ControlID       =   ""
+      CSSClasses      =   ""
+      Enabled         =   True
+      Height          =   148
+      Index           =   -2147483648
+      Indicator       =   0
+      LayoutDirection =   0
+      LayoutType      =   0
+      Left            =   0
+      LockBottom      =   False
+      LockedInPosition=   False
+      LockHorizontal  =   False
+      LockLeft        =   False
+      LockRight       =   False
+      LockTop         =   False
+      LockVertical    =   False
+      PanelIndex      =   0
+      Position        =   0
+      Scope           =   2
+      TabIndex        =   2
+      TabStop         =   True
+      Tooltip         =   ""
+      Top             =   0
+      Visible         =   True
+      Width           =   276
+      _mDesignHeight  =   0
+      _mDesignWidth   =   0
+      _mPanelIndex    =   -1
+   End
 End
 #tag EndWebPage
 
@@ -385,9 +416,9 @@ End
 		      
 		    end try
 		  elseif AcknowlegeControl1.checkbox1.value = false then
-		    MessageBox "Please type your name and check the checkbox..."
+		    SignatureAlertDialog1.show
 		  elseif SignatureField.text = "" then
-		    MessageBox "Please type your name and check the checkbox..."
+		    SignatureAlertDialog1.show
 		  end if
 		  
 		End Sub
