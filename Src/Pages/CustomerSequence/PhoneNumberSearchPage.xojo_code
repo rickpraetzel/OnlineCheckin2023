@@ -32,7 +32,6 @@ Begin mPage PhoneNumberSearchPage
    _ImplicitInstance=   False
    _mDesignHeight  =   0
    _mDesignWidth   =   0
-   _mName          =   ""
    _mPanelIndex    =   -1
    Begin WebImageViewer ImageView1
       ControlID       =   ""
@@ -199,17 +198,17 @@ Begin mPage PhoneNumberSearchPage
    Begin WebImageViewer ImageViewer1
       ControlID       =   ""
       CSSClasses      =   ""
-      DisplayMode     =   3
+      DisplayMode     =   0
       Enabled         =   True
       Height          =   28
-      Image           =   0
+      Image           =   932491263
       Index           =   -2147483648
       Indicator       =   ""
       Left            =   256
       LockBottom      =   False
       LockedInPosition=   False
-      LockHorizontal  =   False
-      LockLeft        =   True
+      LockHorizontal  =   True
+      LockLeft        =   False
       LockRight       =   False
       LockTop         =   True
       LockVertical    =   False
@@ -305,6 +304,15 @@ End
 		  end Select
 		  
 		  
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events ImageViewer1
+	#tag Event
+		Sub Pressed(x As Integer, y As Integer)
+		  'MessageBox "Hello"
+		  
+		  'Take them to a new page with a list of today's reservations.
 		End Sub
 	#tag EndEvent
 #tag EndEvents

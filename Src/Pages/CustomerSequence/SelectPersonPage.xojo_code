@@ -4,6 +4,7 @@ Begin WebPage SelectPersonPage
    Compatibility   =   ""
    ControlCount    =   0
    ControlID       =   ""
+   CSSClasses      =   ""
    Enabled         =   True
    Height          =   356
    ImplicitInstance=   False
@@ -21,6 +22,8 @@ Begin WebPage SelectPersonPage
    LockVertical    =   False
    MinimumHeight   =   400
    MinimumWidth    =   600
+   PanelIndex      =   0
+   ScaleFactor     =   0.0
    TabIndex        =   0
    Title           =   "Check In"
    Top             =   0
@@ -32,9 +35,10 @@ Begin WebPage SelectPersonPage
    _mPanelIndex    =   -1
    Begin WebImageViewer ImageView1
       ControlID       =   ""
+      CSSClasses      =   ""
+      DisplayMode     =   0
       Enabled         =   True
       Height          =   100
-      HorizontalAlignment=   0
       Image           =   0
       Index           =   -2147483648
       Indicator       =   ""
@@ -46,13 +50,14 @@ Begin WebPage SelectPersonPage
       LockRight       =   False
       LockTop         =   True
       LockVertical    =   False
+      PanelIndex      =   0
       Scope           =   2
       SVGData         =   ""
       TabIndex        =   0
+      TabStop         =   True
       Tooltip         =   ""
       Top             =   20
       URL             =   "https://assets.zionadventures.com/zacLogoRound.png"
-      VerticalAlignment=   0
       Visible         =   True
       Width           =   100
       _mPanelIndex    =   -1
@@ -61,6 +66,7 @@ Begin WebPage SelectPersonPage
    Begin WebLabel Label1
       Bold            =   False
       ControlID       =   ""
+      CSSClasses      =   ""
       Enabled         =   True
       FontName        =   ""
       FontSize        =   0.0
@@ -77,8 +83,10 @@ Begin WebPage SelectPersonPage
       LockTop         =   True
       LockVertical    =   False
       Multiline       =   True
+      PanelIndex      =   0
       Scope           =   0
       TabIndex        =   0
+      TabStop         =   True
       Text            =   "The information you provided matches existing records, please select which one is you..."
       TextAlignment   =   0
       TextColor       =   &c00000000
@@ -92,6 +100,7 @@ Begin WebPage SelectPersonPage
    Begin DynamicItemSelector DynamicCustomerSelectors1
       ControlCount    =   0
       ControlID       =   ""
+      CSSClasses      =   ""
       Enabled         =   True
       Height          =   55
       Index           =   -2147483648
@@ -106,9 +115,11 @@ Begin WebPage SelectPersonPage
       LockRight       =   False
       LockTop         =   True
       LockVertical    =   False
+      PanelIndex      =   0
       Scope           =   0
       ScrollDirection =   0
       TabIndex        =   1
+      TabStop         =   True
       Tooltip         =   ""
       Top             =   209
       Visible         =   True
@@ -122,6 +133,7 @@ Begin WebPage SelectPersonPage
       Cancel          =   False
       Caption         =   "BACK"
       ControlID       =   ""
+      CSSClasses      =   ""
       Default         =   False
       Enabled         =   True
       Height          =   38
@@ -135,6 +147,8 @@ Begin WebPage SelectPersonPage
       LockRight       =   False
       LockTop         =   False
       LockVertical    =   False
+      Outlined        =   False
+      PanelIndex      =   0
       Scope           =   2
       TabIndex        =   2
       TabStop         =   True
@@ -194,6 +208,22 @@ End
 	#tag EndEvent
 #tag EndEvents
 #tag ViewBehavior
+	#tag ViewProperty
+		Name="PanelIndex"
+		Visible=false
+		Group="Behavior"
+		InitialValue=""
+		Type="Integer"
+		EditorType=""
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="ScaleFactor"
+		Visible=false
+		Group="Behavior"
+		InitialValue=""
+		Type="Double"
+		EditorType=""
+	#tag EndViewProperty
 	#tag ViewProperty
 		Name="ControlCount"
 		Visible=false
