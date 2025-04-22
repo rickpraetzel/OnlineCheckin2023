@@ -4,6 +4,7 @@ Begin mPage PhoneNumberSearchPage
    Compatibility   =   ""
    ControlCount    =   0
    ControlID       =   ""
+   CSSClasses      =   ""
    Enabled         =   True
    Height          =   400
    ImplicitInstance=   True
@@ -21,6 +22,8 @@ Begin mPage PhoneNumberSearchPage
    LockVertical    =   False
    MinimumHeight   =   400
    MinimumWidth    =   600
+   PanelIndex      =   0
+   ScaleFactor     =   0.0
    TabIndex        =   0
    Title           =   "Untitled"
    Top             =   0
@@ -29,12 +32,14 @@ Begin mPage PhoneNumberSearchPage
    _ImplicitInstance=   False
    _mDesignHeight  =   0
    _mDesignWidth   =   0
+   _mName          =   ""
    _mPanelIndex    =   -1
    Begin WebImageViewer ImageView1
       ControlID       =   ""
+      CSSClasses      =   ""
+      DisplayMode     =   0
       Enabled         =   True
       Height          =   100
-      HorizontalAlignment=   0
       Image           =   0
       Index           =   -2147483648
       Indicator       =   ""
@@ -46,13 +51,14 @@ Begin mPage PhoneNumberSearchPage
       LockRight       =   False
       LockTop         =   True
       LockVertical    =   False
+      PanelIndex      =   0
       Scope           =   2
       SVGData         =   ""
       TabIndex        =   0
+      TabStop         =   True
       Tooltip         =   ""
       Top             =   20
       URL             =   "https://assets.zionadventures.com/zacLogoRound.png"
-      VerticalAlignment=   0
       Visible         =   True
       Width           =   100
       _mPanelIndex    =   -1
@@ -61,6 +67,7 @@ Begin mPage PhoneNumberSearchPage
    Begin WebLabel Label1
       Bold            =   False
       ControlID       =   ""
+      CSSClasses      =   ""
       Enabled         =   True
       FontName        =   ""
       FontSize        =   0.0
@@ -77,8 +84,10 @@ Begin mPage PhoneNumberSearchPage
       LockTop         =   True
       LockVertical    =   False
       Multiline       =   True
+      PanelIndex      =   0
       Scope           =   2
       TabIndex        =   0
+      TabStop         =   True
       Text            =   "Please enter your phone number"
       TextAlignment   =   2
       TextColor       =   &c00000000
@@ -92,6 +101,7 @@ Begin mPage PhoneNumberSearchPage
    Begin WebLabel Label2
       Bold            =   False
       ControlID       =   ""
+      CSSClasses      =   ""
       Enabled         =   True
       FontName        =   ""
       FontSize        =   0.0
@@ -108,8 +118,10 @@ Begin mPage PhoneNumberSearchPage
       LockTop         =   True
       LockVertical    =   False
       Multiline       =   True
+      PanelIndex      =   0
       Scope           =   2
       TabIndex        =   0
+      TabStop         =   True
       Text            =   "We will check for existing records first"
       TextAlignment   =   2
       TextColor       =   &c00000000
@@ -125,6 +137,7 @@ Begin mPage PhoneNumberSearchPage
       AllowSpellChecking=   False
       Caption         =   ""
       ControlID       =   ""
+      CSSClasses      =   ""
       Enabled         =   True
       FieldType       =   4
       Height          =   30
@@ -140,9 +153,11 @@ Begin mPage PhoneNumberSearchPage
       LockTop         =   True
       LockVertical    =   False
       MaximumCharactersAllowed=   0
+      PanelIndex      =   0
       ReadOnly        =   False
       Scope           =   2
       TabIndex        =   0
+      TabStop         =   True
       Text            =   ""
       TextAlignment   =   0
       Tooltip         =   ""
@@ -156,6 +171,7 @@ Begin mPage PhoneNumberSearchPage
       Cancel          =   False
       Caption         =   "SUBMIT"
       ControlID       =   ""
+      CSSClasses      =   ""
       Default         =   False
       Enabled         =   True
       Height          =   38
@@ -169,6 +185,8 @@ Begin mPage PhoneNumberSearchPage
       LockRight       =   False
       LockTop         =   True
       LockVertical    =   False
+      Outlined        =   False
+      PanelIndex      =   0
       Scope           =   2
       TabIndex        =   1
       TabStop         =   True
@@ -177,6 +195,36 @@ Begin mPage PhoneNumberSearchPage
       Visible         =   True
       Width           =   120
       _mPanelIndex    =   -1
+   End
+   Begin WebImageViewer ImageViewer1
+      ControlID       =   ""
+      CSSClasses      =   ""
+      DisplayMode     =   3
+      Enabled         =   True
+      Height          =   28
+      Image           =   0
+      Index           =   -2147483648
+      Indicator       =   ""
+      Left            =   256
+      LockBottom      =   False
+      LockedInPosition=   False
+      LockHorizontal  =   False
+      LockLeft        =   True
+      LockRight       =   False
+      LockTop         =   True
+      LockVertical    =   False
+      PanelIndex      =   0
+      Scope           =   2
+      SVGData         =   ""
+      TabIndex        =   2
+      TabStop         =   True
+      Tooltip         =   ""
+      Top             =   12
+      URL             =   ""
+      Visible         =   True
+      Width           =   36
+      _mPanelIndex    =   -1
+      _ProtectImage   =   False
    End
 End
 #tag EndWebPage
@@ -261,6 +309,22 @@ End
 	#tag EndEvent
 #tag EndEvents
 #tag ViewBehavior
+	#tag ViewProperty
+		Name="PanelIndex"
+		Visible=false
+		Group="Behavior"
+		InitialValue=""
+		Type="Integer"
+		EditorType=""
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="ScaleFactor"
+		Visible=false
+		Group="Behavior"
+		InitialValue=""
+		Type="Double"
+		EditorType=""
+	#tag EndViewProperty
 	#tag ViewProperty
 		Name="ControlCount"
 		Visible=false

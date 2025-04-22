@@ -179,6 +179,7 @@ Class=TWILIOSOCKET;TWILIOSOCKET.xojo_code;&h00000000384607FF;&h0000000000000000;
 WebView=MessageBoxWebDialog;SpecialControls/MessageBoxWebDialog.xojo_code;&h0000000009981FFF;&h000000006640DFFF;false
 RawData=bootstrapmin;../../../Downloads/bootstrap.min.css;&h000000001A23A7FF;&h0000000000000000;false
 WebView=SignatureAlertDialog;Pages/InformedConsent/SignatureAlertDialog.xojo_code;&h00000000533557FF;&h00000000484C27FF;false
+MultiImage=CreateFleetIcon;Resources/CreateFleetIcon.xojo_image;&h0000000027371FFF;&h000000003E9B57FF;false
 DefaultWindow=PhoneNumberSearchPage
 MajorVersion=1
 MinorVersion=3
