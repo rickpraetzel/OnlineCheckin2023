@@ -311,7 +311,7 @@ End
 	#tag Event
 		Sub Pressed(x As Integer, y As Integer)
 		  'MessageBox "Hello"
-		  
+		  session.SelectReservation.show
 		  'Take them to a new page with a list of today's reservations.
 		End Sub
 	#tag EndEvent

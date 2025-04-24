@@ -69,8 +69,28 @@ Inherits WebPage
 		Protected mReservation As bookingtoolkit.reservation
 	#tag EndProperty
 
+	#tag Property, Flags = &h1
+		Protected mReservationSerial As string
+	#tag EndProperty
+
 
 	#tag ViewBehavior
+		#tag ViewProperty
+			Name="PanelIndex"
+			Visible=false
+			Group="Behavior"
+			InitialValue=""
+			Type="Integer"
+			EditorType=""
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="ScaleFactor"
+			Visible=false
+			Group="Behavior"
+			InitialValue=""
+			Type="Double"
+			EditorType=""
+		#tag EndViewProperty
 		#tag ViewProperty
 			Name="ControlCount"
 			Visible=false

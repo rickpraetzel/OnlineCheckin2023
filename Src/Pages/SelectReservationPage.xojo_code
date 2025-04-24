@@ -32,25 +32,24 @@ Begin mPage SelectReservationPage
    _ImplicitInstance=   False
    _mDesignHeight  =   0
    _mDesignWidth   =   0
-   _mName          =   ""
    _mPanelIndex    =   -1
    Begin WebLabel Label1
-      Bold            =   False
+      Bold            =   True
       ControlID       =   ""
       CSSClasses      =   ""
       Enabled         =   True
       FontName        =   ""
       FontSize        =   0.0
-      Height          =   53
+      Height          =   30
       Index           =   -2147483648
       Indicator       =   ""
       Italic          =   False
-      Left            =   43
+      Left            =   0
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   False
       LockLeft        =   True
-      LockRight       =   False
+      LockRight       =   True
       LockTop         =   True
       LockVertical    =   False
       Multiline       =   True
@@ -62,10 +61,10 @@ Begin mPage SelectReservationPage
       TextAlignment   =   2
       TextColor       =   &c000000FF
       Tooltip         =   ""
-      Top             =   8
+      Top             =   22
       Underline       =   False
       Visible         =   True
-      Width           =   209
+      Width           =   304
       _mPanelIndex    =   -1
    End
    Begin WebListBox ListBox1
@@ -113,12 +112,139 @@ Begin mPage SelectReservationPage
       Width           =   304
       _mPanelIndex    =   -1
    End
+   Begin WebButton Button1
+      AllowAutoDisable=   False
+      Cancel          =   False
+      Caption         =   "Submit"
+      ControlID       =   ""
+      CSSClasses      =   ""
+      Default         =   False
+      Enabled         =   True
+      Height          =   38
+      Index           =   -2147483648
+      Indicator       =   0
+      Left            =   184
+      LockBottom      =   True
+      LockedInPosition=   False
+      LockHorizontal  =   False
+      LockLeft        =   False
+      LockRight       =   True
+      LockTop         =   False
+      LockVertical    =   False
+      Outlined        =   False
+      PanelIndex      =   0
+      Scope           =   0
+      TabIndex        =   2
+      TabStop         =   True
+      Tooltip         =   ""
+      Top             =   437
+      Visible         =   True
+      Width           =   100
+      _mPanelIndex    =   -1
+   End
+   Begin WebButton Button2
+      AllowAutoDisable=   False
+      Cancel          =   False
+      Caption         =   "Cancel"
+      ControlID       =   ""
+      CSSClasses      =   ""
+      Default         =   False
+      Enabled         =   True
+      Height          =   38
+      Index           =   -2147483648
+      Indicator       =   0
+      Left            =   20
+      LockBottom      =   True
+      LockedInPosition=   False
+      LockHorizontal  =   False
+      LockLeft        =   True
+      LockRight       =   False
+      LockTop         =   False
+      LockVertical    =   False
+      Outlined        =   False
+      PanelIndex      =   0
+      Scope           =   0
+      TabIndex        =   3
+      TabStop         =   True
+      Tooltip         =   ""
+      Top             =   437
+      Visible         =   True
+      Width           =   100
+      _mPanelIndex    =   -1
+   End
 End
 #tag EndWebPage
 
 #tag WindowCode
+	#tag Event
+		Sub Opening()
+		  LoadReservations
+		End Sub
+	#tag EndEvent
+
+
+	#tag Method, Flags = &h21
+		Private Sub LoadReservations()
+		  dim d as datetime = datetime.now
+		  dim yesterdaydate,todaydate,sqlstring as string
+		  
+		  
+		  listbox1.RemoveAllRows
+		  if d <> nil then
+		    todaydate = str(d.year) + format(d.month,"00") + format(d.day,"00")
+		    d = d.SubtractInterval(0,0,1)
+		    yesterdaydate = str(d.year) + format(d.month,"00") + format(d.day,"00")
+		    
+		    sqlstring = "Select concat(AA.lastname,', ',AA.firstname) as name,AA.groupsize,AA.Res_serial,AA.res_startdate,AA.super,AA.geartype FROM "
+		    sqlstring = sqlstring + " (SELECT customers.lastname as lastname,customers.firstname as firstname,reservations.groupsize as groupsize,reservations.serial as Res_serial,"
+		    sqlstring = sqlstring + "reservations.status, reservations.customerserial,reservations.startdate as res_startdate,reservations.enddate as res_enddate,resgearitems.super,resgearitems.geartype"
+		    sqlstring = sqlstring + " FROM reservations,customers,resgearitems WHERE reservations.customerserial = customers.serial AND resgearitems.resserial = reservations.serial"
+		    sqlstring = sqlstring + " AND '" + todaydate + "' >= reservations.startdate AND '" + todaydate + "' <= reservations.enddate AND reservations.status = 'ACTIVE'"
+		    sqlstring = sqlstring + " AND (resgearitems.super = 'Bike' OR resgearitems.super = 'Drywear' OR resgearitems.super = 'Narrows'))"
+		    sqlstring = sqlstring + " AA GROUP by AA.Res_serial ORDER by concat(AA.lastname,', ',AA.firstname)"
+		    
+		    dim rs as rowset
+		    
+		    try
+		      rs = session.mysqldb.SelectSQL(sqlstring)
+		      if not rs.AfterLastRow then
+		        while not rs.AfterLastRow
+		          listbox1.addrow rs.ColumnAt(0).StringValue,rs.columnat(5).stringvalue
+		          listbox1.CellTagAt(listbox1.LastRowIndex,0) = rs.ColumnAt(3).StringValue
+		          rs.MoveToNextRow
+		        wend
+		      end
+		    catch
+		      
+		    end try
+		  end if
+		  
+		End Sub
+	#tag EndMethod
+
+
 #tag EndWindowCode
 
+#tag Events ListBox1
+	#tag Event
+		Sub SelectionChanged(rows() As Integer)
+		  
+		  
+		  if me.SelectedRowIndex <> -1 then
+		    self.mReservationSerial = me.CellTagAt(me.SelectedRowIndex,0)
+		  end if
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events Button1
+	#tag Event
+		Sub Pressed()
+		  
+		  
+		  'set the mreservationserial in consent window and set indicator in the window that we are doing a quick signature
+		End Sub
+	#tag EndEvent
+#tag EndEvents
 #tag ViewBehavior
 	#tag ViewProperty
 		Name="PanelIndex"

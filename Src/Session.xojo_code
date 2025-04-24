@@ -7,9 +7,10 @@ Inherits WebSession
   confirmmessage=
   AllowTabOrderWrap=True
   ColorMode=0
+  SendEventsInBatches=False
 #tag EndSession
 	#tag Event
-		Sub Closing(appQuitting as Boolean)
+		Sub Closing(appQuitting As Boolean)
 		  if mysqldb <> Nil then
 		    mysqldb.close()
 		    
@@ -20,7 +21,7 @@ Inherits WebSession
 	#tag EndEvent
 
 	#tag Event
-		Sub JavaScriptError(ErrorName as String, ErrorMessage as String, ErrorStack as String)
+		Sub JavaScriptError(errorName as String, errorMessage as String, errorStack as String)
 		  self.logEntry(872694, "JavaScript Error: " + ErrorMessage, SimpleLogger.LogLevels.Critical)
 		  self.Quit()
 		End Sub
@@ -94,7 +95,7 @@ Inherits WebSession
 	#tag EndEvent
 
 	#tag Event
-		Function UnhandledException(Error As RuntimeException) As Boolean
+		Function UnhandledException(error As RuntimeException) As Boolean
 		  self.logEntry(185936, "An unhandled exception was thrown", error, SimpleLogger.LogLevels.Critical)
 		  '-----
 		  dim errormessagebox as new MessageBoxWebDialog
@@ -201,6 +202,7 @@ Inherits WebSession
 		  ReturnCustomer = new ReturnCustomerPage()
 		  SelectPerson = new SelectPersonPage()
 		  StoreCreditCard = new StoreCreditCardPage()
+		  SelectReservation = new SelectReservationPage()
 		  xx = ticks() - xx
 		  dim miliseconds as double = (xx / 60) * 1000
 		  self.logEntry("Done (" + str(miliseconds) + "ms)")
@@ -353,6 +355,10 @@ Inherits WebSession
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
+		SelectReservation As selectreservationpage
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
 		StoreCreditCard As StoreCreditCardPage
 	#tag EndProperty
 
@@ -390,6 +396,14 @@ Inherits WebSession
 
 
 	#tag ViewBehavior
+		#tag ViewProperty
+			Name="SendEventsInBatches"
+			Visible=false
+			Group="Behavior"
+			InitialValue=""
+			Type="Boolean"
+			EditorType=""
+		#tag EndViewProperty
 		#tag ViewProperty
 			Name="ColorMode"
 			Visible=false
