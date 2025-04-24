@@ -130,6 +130,7 @@ WebSession=Session;Session.xojo_code;&h00000000658037FF;&h0000000000000000;false
 Folder=Classes;Classes;&h00000000671A7FFF;&h0000000000000000;false
 Folder=Pages;Pages;&h000000000E1FA7FF;&h0000000000000000;false
 WebView=StandardPage;Pages/StandardPage.xojo_code;&h0000000000663FFF;&h000000000E1FA7FF;false
+WebView=SelectReservationPage;Pages/SelectReservationPage.xojo_code;&h000000007299D7FF;&h000000000E1FA7FF;false
 BuildSteps=Build Automation;Build Automation.xojo_code;&h00000000257307FF;&h0000000000000000;false
 Folder=Resources;Resources;&h000000003E9B57FF;&h0000000000000000;false
 Module=DateModule;Dependencies/DateModule.xojo_code;&h0000000032598FFF;&h000000003B29D7FF;false

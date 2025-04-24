@@ -1,13 +1,13 @@
 #tag WebPage
-Begin WebPage SelectPersonPage
+Begin mPage SelectReservationPage
    AllowTabOrderWrap=   True
    Compatibility   =   ""
    ControlCount    =   0
    ControlID       =   ""
    CSSClasses      =   ""
    Enabled         =   True
-   Height          =   356
-   ImplicitInstance=   False
+   Height          =   484
+   ImplicitInstance=   True
    Index           =   -2147483648
    Indicator       =   0
    IsImplicitInstance=   False
@@ -21,11 +21,11 @@ Begin WebPage SelectPersonPage
    LockTop         =   False
    LockVertical    =   False
    MinimumHeight   =   400
-   MinimumWidth    =   600
+   MinimumWidth    =   304
    PanelIndex      =   0
    ScaleFactor     =   0.0
    TabIndex        =   0
-   Title           =   "Check In"
+   Title           =   "Untitled"
    Top             =   0
    Visible         =   True
    Width           =   304
@@ -34,36 +34,6 @@ Begin WebPage SelectPersonPage
    _mDesignWidth   =   0
    _mName          =   ""
    _mPanelIndex    =   -1
-   Begin WebImageViewer ImageView1
-      ControlID       =   ""
-      CSSClasses      =   ""
-      DisplayMode     =   0
-      Enabled         =   True
-      Height          =   100
-      Image           =   0
-      Index           =   -2147483648
-      Indicator       =   ""
-      Left            =   102
-      LockBottom      =   False
-      LockedInPosition=   False
-      LockHorizontal  =   True
-      LockLeft        =   False
-      LockRight       =   False
-      LockTop         =   True
-      LockVertical    =   False
-      PanelIndex      =   0
-      Scope           =   2
-      SVGData         =   ""
-      TabIndex        =   0
-      TabStop         =   True
-      Tooltip         =   ""
-      Top             =   20
-      URL             =   "https://assets.zionadventures.com/zacLogoRound.png"
-      Visible         =   True
-      Width           =   100
-      _mPanelIndex    =   -1
-      _ProtectImage   =   False
-   End
    Begin WebLabel Label1
       Bold            =   False
       ControlID       =   ""
@@ -71,143 +41,84 @@ Begin WebPage SelectPersonPage
       Enabled         =   True
       FontName        =   ""
       FontSize        =   0.0
-      Height          =   76
+      Height          =   53
       Index           =   -2147483648
       Indicator       =   ""
       Italic          =   False
-      Left            =   5
+      Left            =   43
       LockBottom      =   False
       LockedInPosition=   False
-      LockHorizontal  =   True
-      LockLeft        =   False
+      LockHorizontal  =   False
+      LockLeft        =   True
       LockRight       =   False
       LockTop         =   True
       LockVertical    =   False
       Multiline       =   True
       PanelIndex      =   0
-      Scope           =   0
+      Scope           =   2
       TabIndex        =   0
       TabStop         =   True
-      Text            =   "The information you provided matches existing records, please select which one is you..."
-      TextAlignment   =   0
-      TextColor       =   &c00000000
+      Text            =   "Select Reservation for Consent Signature"
+      TextAlignment   =   2
+      TextColor       =   &c000000FF
       Tooltip         =   ""
-      Top             =   125
+      Top             =   8
       Underline       =   False
       Visible         =   True
-      Width           =   294
+      Width           =   209
       _mPanelIndex    =   -1
    End
-   Begin DynamicItemSelector DynamicCustomerSelectors1
-      ControlCount    =   0
+   Begin WebListBox ListBox1
+      AllowRowReordering=   False
+      ColumnCount     =   2
+      ColumnWidths    =   ""
       ControlID       =   ""
       CSSClasses      =   ""
+      DefaultRowHeight=   49
       Enabled         =   True
-      Height          =   55
+      GridLineStyle   =   3
+      HasBorder       =   True
+      HasHeader       =   True
+      HeaderHeight    =   0
+      Height          =   360
+      HighlightSortedColumn=   True
       Index           =   -2147483648
       Indicator       =   ""
-      LayoutDirection =   0
-      LayoutType      =   0
+      InitialValue    =   "Name	Res Type"
+      LastAddedRowIndex=   0
+      LastColumnIndex =   0
+      LastRowIndex    =   0
       Left            =   0
-      LockBottom      =   False
+      LockBottom      =   True
       LockedInPosition=   False
-      LockHorizontal  =   True
-      LockLeft        =   False
-      LockRight       =   False
+      LockHorizontal  =   False
+      LockLeft        =   True
+      LockRight       =   True
       LockTop         =   True
       LockVertical    =   False
+      NoRowsMessage   =   ""
       PanelIndex      =   0
-      Scope           =   0
-      ScrollDirection =   0
+      ProcessingMessage=   ""
+      RowCount        =   0
+      RowSelectionType=   1
+      Scope           =   2
+      SearchCriteria  =   ""
+      SelectedRowColor=   &c0d6efd
+      SelectedRowIndex=   0
       TabIndex        =   1
       TabStop         =   True
       Tooltip         =   ""
-      Top             =   209
+      Top             =   69
       Visible         =   True
       Width           =   304
-      _mDesignHeight  =   0
-      _mDesignWidth   =   0
-      _mPanelIndex    =   -1
-   End
-   Begin WebButton Button1
-      AllowAutoDisable=   False
-      Cancel          =   False
-      Caption         =   "BACK"
-      ControlID       =   ""
-      CSSClasses      =   ""
-      Default         =   False
-      Enabled         =   True
-      Height          =   38
-      Index           =   -2147483648
-      Indicator       =   0
-      Left            =   102
-      LockBottom      =   True
-      LockedInPosition=   False
-      LockHorizontal  =   True
-      LockLeft        =   False
-      LockRight       =   False
-      LockTop         =   False
-      LockVertical    =   False
-      Outlined        =   False
-      PanelIndex      =   0
-      Scope           =   2
-      TabIndex        =   2
-      TabStop         =   True
-      Tooltip         =   ""
-      Top             =   298
-      Visible         =   True
-      Width           =   100
       _mPanelIndex    =   -1
    End
 End
 #tag EndWebPage
 
 #tag WindowCode
-	#tag Method, Flags = &h0
-		Sub show(customers() as bookingtoolkit.customer, res as bookingtoolkit.reservation)
-		  DynamicCustomerSelectors1.loadItems(customers)
-		  mReservation = res
-		  
-		  Super.show()
-		  
-		End Sub
-	#tag EndMethod
-
-
-	#tag Property, Flags = &h21
-		Private mReservation As bookingtoolkit.reservation
-	#tag EndProperty
-
-
 #tag EndWindowCode
 
-#tag Events ImageView1
-	#tag Event
-		Sub Opening()
-		  me.Picture = app.Logo
-		End Sub
-	#tag EndEvent
-#tag EndEvents
-#tag Events DynamicCustomerSelectors1
-	#tag Event
-		Sub ItemNotFound()
-		  session.NewCustomer.show(new bookingtoolkit.customer(), mReservation)
-		End Sub
-	#tag EndEvent
-	#tag Event
-		Sub ItemSelected(item as variant)
-		  dim cust as BookingToolkit.Customer = item
-		  session.ReturnCustomer.show(cust, mReservation)
-		End Sub
-	#tag EndEvent
-#tag EndEvents
-#tag Events Button1
-	#tag Event
-		Sub Pressed()
-		  PhoneNumberSearchPage.show(new bookingtoolkit.customer(), new bookingtoolkit.reservation())
-		End Sub
-	#tag EndEvent
-#tag EndEvents
 #tag ViewBehavior
 	#tag ViewProperty
 		Name="PanelIndex"
