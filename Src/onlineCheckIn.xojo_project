@@ -147,6 +147,7 @@ Folder=Authorize.Net_API;Dependencies/Authorize.Net_API;&h000000001C684FFF;&h000
 Class=LogLineItem;Classes/LogLineItem.xojo_code;&h000000004855EFFF;&h00000000671A7FFF;false
 Folder=InformedConsent;Pages/InformedConsent;&h00000000484C27FF;&h000000000E1FA7FF;false
 WebView=InformedConsentPage;Pages/InformedConsent/InformedConsentPage.xojo_code;&h0000000018AAAFFF;&h00000000484C27FF;false
+WebView=QuickSignaturePage;Pages/InformedConsent/QuickSignaturePage.xojo_code;&h0000000021F447FF;&h00000000484C27FF;false
 Folder=CustomerSequence;Pages/CustomerSequence;&h0000000061FEAFFF;&h000000000E1FA7FF;false
 WebView=PhoneNumberSearchPage;Pages/CustomerSequence/PhoneNumberSearchPage.xojo_code;&h0000000010D2EFFF;&h0000000061FEAFFF;false
 WebView=SelectPersonPage;Pages/CustomerSequence/SelectPersonPage.xojo_code;&h000000003A111FFF;&h0000000061FEAFFF;false

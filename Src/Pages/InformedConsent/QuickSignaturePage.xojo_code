@@ -1,5 +1,5 @@
 #tag WebPage
-Begin mPage InformedConsentPage
+Begin mPage QuickSignaturePage
    AllowTabOrderWrap=   True
    Compatibility   =   ""
    ControlCount    =   0
@@ -42,7 +42,7 @@ Begin mPage InformedConsentPage
       Height          =   100
       Image           =   0
       Index           =   -2147483648
-      Indicator       =   ""
+      Indicator       =   0
       Left            =   244
       LockBottom      =   False
       LockedInPosition=   False
@@ -74,7 +74,7 @@ Begin mPage InformedConsentPage
       Height          =   339
       Hint            =   ""
       Index           =   -2147483648
-      Indicator       =   ""
+      Indicator       =   0
       Left            =   61
       LockBottom      =   False
       LockedInPosition=   False
@@ -106,7 +106,7 @@ Begin mPage InformedConsentPage
       FontSize        =   0.0
       Height          =   50
       Index           =   -2147483648
-      Indicator       =   ""
+      Indicator       =   0
       Italic          =   False
       Left            =   140
       LockBottom      =   False
@@ -140,7 +140,7 @@ Begin mPage InformedConsentPage
       FontSize        =   0.0
       Height          =   30
       Index           =   -2147483648
-      Indicator       =   ""
+      Indicator       =   0
       Italic          =   False
       Left            =   146
       LockBottom      =   False
@@ -176,7 +176,7 @@ Begin mPage InformedConsentPage
       Height          =   30
       Hint            =   ""
       Index           =   -2147483648
-      Indicator       =   ""
+      Indicator       =   0
       Left            =   146
       LockBottom      =   False
       LockedInPosition=   False
@@ -236,7 +236,7 @@ Begin mPage InformedConsentPage
       Enabled         =   True
       Height          =   75
       Index           =   -2147483648
-      Indicator       =   ""
+      Indicator       =   0
       LayoutDirection =   0
       LayoutType      =   0
       Left            =   108
