@@ -190,7 +190,7 @@ Begin mPage InformedConsentPage
       Scope           =   2
       TabIndex        =   0
       TabStop         =   True
-      Text            =   ""
+      Text            =   "YOUR NAME"
       TextAlignment   =   2
       Tooltip         =   ""
       Top             =   636
@@ -223,7 +223,7 @@ Begin mPage InformedConsentPage
       TabIndex        =   0
       TabStop         =   True
       Tooltip         =   ""
-      Top             =   695
+      Top             =   690
       Visible         =   True
       Width           =   130
       _mPanelIndex    =   -1
@@ -238,7 +238,7 @@ Begin mPage InformedConsentPage
       Indicator       =   ""
       LayoutDirection =   0
       LayoutType      =   0
-      Left            =   108
+      Left            =   81
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   True
@@ -254,7 +254,7 @@ Begin mPage InformedConsentPage
       Tooltip         =   ""
       Top             =   515
       Visible         =   True
-      Width           =   385
+      Width           =   439
       _mDesignHeight  =   0
       _mDesignWidth   =   0
       _mPanelIndex    =   -1
@@ -313,6 +313,7 @@ End
 		  clear
 		  acknowlegecontrol1.textarea1.style = app.Web2Styles(app.StyleDictionary.Value("InformedConsentCheckbox"))
 		  label2.style = app.Web2Styles(app.StyleDictionary.Value("InformedConsentCheckbox"))
+		  SubmitButton.activate()
 		End Sub
 	#tag EndEvent
 
@@ -345,13 +346,13 @@ End
 #tag Events SignatureField
 	#tag Event
 		Sub TextChanged()
-		  if me.Text <> "" and AcknowlegeControl1.isActive() then
-		    SubmitButton.activate()
-		    
-		  else
-		    SubmitButton.deactivate()
-		    
-		  end if
+		  'if me.Text <> "" and AcknowlegeControl1.isActive() then
+		  'SubmitButton.activate()
+		  '
+		  'else
+		  'SubmitButton.deactivate()
+		  '
+		  'end if
 		  
 		End Sub
 	#tag EndEvent
@@ -427,13 +428,13 @@ End
 #tag Events AcknowlegeControl1
 	#tag Event
 		Sub ValueChange()
-		  if SignatureField.Text <> "" and me.isActive() then
-		    SubmitButton.activate()
-		    
-		  else
-		    SubmitButton.deactivate()
-		    
-		  end if
+		  'if SignatureField.Text <> "" and me.isActive() then
+		  'SubmitButton.activate()
+		  '
+		  'else
+		  'SubmitButton.deactivate()
+		  '
+		  'end if
 		End Sub
 	#tag EndEvent
 #tag EndEvents

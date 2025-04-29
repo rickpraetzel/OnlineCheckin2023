@@ -4,6 +4,7 @@ Begin mPage StandardPage
    Compatibility   =   ""
    ControlCount    =   0
    ControlID       =   ""
+   CSSClasses      =   ""
    Enabled         =   True
    Height          =   300
    ImplicitInstance=   True
@@ -21,6 +22,8 @@ Begin mPage StandardPage
    LockVertical    =   False
    MinimumHeight   =   400
    MinimumWidth    =   600
+   PanelIndex      =   0
+   ScaleFactor     =   0.0
    TabIndex        =   0
    Title           =   "Untitled"
    Top             =   0
@@ -29,13 +32,14 @@ Begin mPage StandardPage
    _ImplicitInstance=   False
    _mDesignHeight  =   0
    _mDesignWidth   =   0
-   _mName          =   ""
    _mPanelIndex    =   -1
    Begin WebImageViewer ImageView1
       ControlID       =   ""
+      CSSClasses      =   ""
+      DisplayMode     =   0
       Enabled         =   True
       Height          =   100
-      HorizontalAlignment=   0
+      Image           =   0
       Index           =   -2147483648
       Indicator       =   ""
       Left            =   102
@@ -46,14 +50,14 @@ Begin mPage StandardPage
       LockRight       =   False
       LockTop         =   True
       LockVertical    =   False
-      Picture         =   0
+      PanelIndex      =   0
       Scope           =   2
       SVGData         =   ""
       TabIndex        =   0
+      TabStop         =   True
       Tooltip         =   ""
       Top             =   20
       URL             =   "https://assets.zionadventures.com/zacLogoRound.png"
-      VerticalAlignment=   0
       Visible         =   True
       Width           =   100
       _mPanelIndex    =   -1
@@ -73,6 +77,22 @@ End
 	#tag EndEvent
 #tag EndEvents
 #tag ViewBehavior
+	#tag ViewProperty
+		Name="PanelIndex"
+		Visible=false
+		Group="Behavior"
+		InitialValue=""
+		Type="Integer"
+		EditorType=""
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="ScaleFactor"
+		Visible=false
+		Group="Behavior"
+		InitialValue=""
+		Type="Double"
+		EditorType=""
+	#tag EndViewProperty
 	#tag ViewProperty
 		Name="ControlCount"
 		Visible=false

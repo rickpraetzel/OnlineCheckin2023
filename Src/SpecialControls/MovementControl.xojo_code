@@ -3,6 +3,7 @@ Begin WebContainer MovementControl
    Compatibility   =   ""
    ControlCount    =   0
    ControlID       =   ""
+   CSSClasses      =   ""
    Enabled         =   True
    Height          =   53
    Indicator       =   0
@@ -15,6 +16,7 @@ Begin WebContainer MovementControl
    LockRight       =   False
    LockTop         =   True
    LockVertical    =   False
+   PanelIndex      =   0
    ScrollDirection =   0
    TabIndex        =   0
    Top             =   0
@@ -28,6 +30,7 @@ Begin WebContainer MovementControl
       Cancel          =   False
       Caption         =   "BACK"
       ControlID       =   ""
+      CSSClasses      =   ""
       Default         =   False
       Enabled         =   True
       Height          =   38
@@ -41,8 +44,11 @@ Begin WebContainer MovementControl
       LockRight       =   False
       LockTop         =   True
       LockVertical    =   False
+      Outlined        =   False
+      PanelIndex      =   0
       Scope           =   2
       TabIndex        =   0
+      TabStop         =   True
       Tooltip         =   ""
       Top             =   7
       Visible         =   True
@@ -54,9 +60,10 @@ Begin WebContainer MovementControl
       Cancel          =   False
       Caption         =   "SUBMIT"
       ControlID       =   ""
+      CSSClasses      =   ""
       Default         =   False
       Enabled         =   False
-      Height          =   32
+      Height          =   38
       Index           =   -2147483648
       Indicator       =   ""
       Left            =   149
@@ -67,8 +74,11 @@ Begin WebContainer MovementControl
       LockRight       =   False
       LockTop         =   True
       LockVertical    =   False
+      Outlined        =   False
+      PanelIndex      =   0
       Scope           =   0
       TabIndex        =   1
+      TabStop         =   True
       Tooltip         =   ""
       Top             =   7
       Visible         =   True
@@ -130,6 +140,14 @@ End
 	#tag EndEvent
 #tag EndEvents
 #tag ViewBehavior
+	#tag ViewProperty
+		Name="PanelIndex"
+		Visible=false
+		Group="Behavior"
+		InitialValue=""
+		Type="Integer"
+		EditorType=""
+	#tag EndViewProperty
 	#tag ViewProperty
 		Name="ControlCount"
 		Visible=false

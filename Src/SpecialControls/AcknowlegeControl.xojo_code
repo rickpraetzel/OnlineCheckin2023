@@ -21,7 +21,7 @@ Begin WebContainer AcknowlegeControl
    TabIndex        =   0
    Top             =   0
    Visible         =   True
-   Width           =   385
+   Width           =   439
    _mDesignHeight  =   0
    _mDesignWidth   =   0
    _mPanelIndex    =   -1
@@ -36,7 +36,7 @@ Begin WebContainer AcknowlegeControl
       Hint            =   ""
       Index           =   -2147483648
       Indicator       =   ""
-      Left            =   26
+      Left            =   78
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   False
@@ -53,21 +53,21 @@ Begin WebContainer AcknowlegeControl
       Text            =   "I have read and accept the conditions of the above informed consent."
       TextAlignment   =   1
       Tooltip         =   ""
-      Top             =   6
+      Top             =   7
       Visible         =   True
       Width           =   348
       _mPanelIndex    =   -1
    End
-   Begin WebCheckbox Checkbox1
-      Caption         =   "Untitled"
+   Begin CheckboxImageViewer CHECKBOX1
       ControlID       =   ""
       CSSClasses      =   ""
+      DisplayMode     =   3
       Enabled         =   True
-      Height          =   30
-      Indeterminate   =   False
+      Height          =   50
+      Image           =   1219317759
       Index           =   -2147483648
       Indicator       =   ""
-      Left            =   6
+      Left            =   12
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   False
@@ -76,15 +76,17 @@ Begin WebContainer AcknowlegeControl
       LockTop         =   True
       LockVertical    =   False
       PanelIndex      =   0
-      Scope           =   2
-      TabIndex        =   0
+      Scope           =   0
+      SVGData         =   ""
+      TabIndex        =   2
       TabStop         =   True
       Tooltip         =   ""
-      Top             =   6
-      Value           =   False
+      Top             =   7
+      URL             =   ""
       Visible         =   True
-      Width           =   24
+      Width           =   50
       _mPanelIndex    =   -1
+      _ProtectImage   =   False
    End
 End
 #tag EndWebContainerControl
@@ -110,13 +112,6 @@ End
 
 #tag EndWindowCode
 
-#tag Events Checkbox1
-	#tag Event
-		Sub ValueChanged()
-		  RaiseEvent ValueChange
-		End Sub
-	#tag EndEvent
-#tag EndEvents
 #tag ViewBehavior
 	#tag ViewProperty
 		Name="PanelIndex"
