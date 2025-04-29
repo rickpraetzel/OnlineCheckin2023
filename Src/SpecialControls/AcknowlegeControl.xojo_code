@@ -25,39 +25,6 @@ Begin WebContainer AcknowlegeControl
    _mDesignHeight  =   0
    _mDesignWidth   =   0
    _mPanelIndex    =   -1
-   Begin WebTextArea TextArea1
-      AllowReturnKey  =   True
-      AllowSpellChecking=   False
-      Caption         =   ""
-      ControlID       =   ""
-      CSSClasses      =   ""
-      Enabled         =   True
-      Height          =   53
-      Hint            =   ""
-      Index           =   -2147483648
-      Indicator       =   ""
-      Left            =   78
-      LockBottom      =   False
-      LockedInPosition=   False
-      LockHorizontal  =   False
-      LockLeft        =   True
-      LockRight       =   False
-      LockTop         =   True
-      LockVertical    =   False
-      MaximumCharactersAllowed=   0
-      PanelIndex      =   0
-      ReadOnly        =   True
-      Scope           =   0
-      TabIndex        =   1
-      TabStop         =   True
-      Text            =   "I have read and accept the conditions of the above informed consent."
-      TextAlignment   =   1
-      Tooltip         =   ""
-      Top             =   7
-      Visible         =   True
-      Width           =   348
-      _mPanelIndex    =   -1
-   End
    Begin CheckboxImageViewer CHECKBOX1
       ControlID       =   ""
       CSSClasses      =   ""
@@ -75,6 +42,7 @@ Begin WebContainer AcknowlegeControl
       LockRight       =   False
       LockTop         =   True
       LockVertical    =   False
+      mValue          =   False
       PanelIndex      =   0
       Scope           =   0
       SVGData         =   ""
@@ -83,10 +51,45 @@ Begin WebContainer AcknowlegeControl
       Tooltip         =   ""
       Top             =   7
       URL             =   ""
+      Value           =   False
       Visible         =   True
       Width           =   50
       _mPanelIndex    =   -1
       _ProtectImage   =   False
+   End
+   Begin WebLabel TextArea1
+      Bold            =   False
+      ControlID       =   ""
+      CSSClasses      =   ""
+      Enabled         =   True
+      FontName        =   ""
+      FontSize        =   0.0
+      Height          =   50
+      Index           =   -2147483648
+      Indicator       =   ""
+      Italic          =   False
+      Left            =   83
+      LockBottom      =   False
+      LockedInPosition=   False
+      LockHorizontal  =   False
+      LockLeft        =   True
+      LockRight       =   False
+      LockTop         =   True
+      LockVertical    =   False
+      Multiline       =   True
+      PanelIndex      =   0
+      Scope           =   2
+      TabIndex        =   3
+      TabStop         =   True
+      Text            =   "I have read and accept the conditions of the above informed consent."
+      TextAlignment   =   0
+      TextColor       =   &c000000FF
+      Tooltip         =   ""
+      Top             =   7
+      Underline       =   False
+      Visible         =   True
+      Width           =   343
+      _mPanelIndex    =   -1
    End
 End
 #tag EndWebContainerControl
