@@ -24,9 +24,9 @@
 		<data>
 		xP0KYqPRMpfyDDQPnYvLDoMSsW8=
 		</data>
-		<key>Resources/bootstrap.min.css</key>
+		<key>Resources/checkedcheckbox.png</key>
 		<data>
-		phIRQxhu7KUSXJMAjM+apqiPAtE=
+		0Zvilq3sUppSpQUteFV6c96LpU4=
 		</data>
 		<key>Resources/en.lproj/Localizable.strings</key>
 		<dict>
@@ -52,6 +52,10 @@
 		<key>Resources/site.webmanifest</key>
 		<data>
 		Hjukgb09SknSFm9CvW7ss2csplc=
+		</data>
+		<key>Resources/uncheckedcheckbox.png</key>
+		<data>
+		JSZ1JAu7Pt1ctuA8vt+QbqoL/4c=
 		</data>
 		<key>Resources/zacLogoRound.png</key>
 		<data>
@@ -115,15 +119,15 @@
 			71/aZXKB4yLTi3eLg3dBe6Xmxv47jMBpxIzzGyhgQJo=
 			</data>
 		</dict>
-		<key>Resources/bootstrap.min.css</key>
+		<key>Resources/checkedcheckbox.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			phIRQxhu7KUSXJMAjM+apqiPAtE=
+			0Zvilq3sUppSpQUteFV6c96LpU4=
 			</data>
 			<key>hash2</key>
 			<data>
-			dIj0jfgaYrUs3x30P1afHuOHzcCzgrNsa9Xat2C5Vhg=
+			HzTerBQ8n7EOPh8huEjr/iHlXy3JXcGYeTerR6sO4G4=
 			</data>
 		</dict>
 		<key>Resources/en.lproj/Localizable.strings</key>
@@ -181,6 +185,17 @@
 			<key>hash2</key>
 			<data>
 			hddAX69TS3rphZUKwPoOX/LN8jCqGm3MS8p/Z+HLpPE=
+			</data>
+		</dict>
+		<key>Resources/uncheckedcheckbox.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			JSZ1JAu7Pt1ctuA8vt+QbqoL/4c=
+			</data>
+			<key>hash2</key>
+			<data>
+			4tjw6iLrvvAkLOjphuqki+pwfWjWkBcdQmJmUl/Wmf8=
 			</data>
 		</dict>
 		<key>Resources/zacLogoRound.png</key>
