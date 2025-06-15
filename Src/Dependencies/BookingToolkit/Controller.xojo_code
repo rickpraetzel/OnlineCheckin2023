@@ -296,7 +296,7 @@ Protected Class Controller
 		  lastname = custDetails.Name.lastname
 		  
 		  if phoneNumber <> "" then
-		    stmt = " AND phone = ?"
+		    stmt = " AND right(phone,10) = ?"
 		    
 		  end if
 		  
@@ -349,6 +349,73 @@ Protected Class Controller
 		  end if
 		  
 		  return ps
+		End Function
+	#tag EndMethod
+
+	#tag Method, Flags = &h21
+		Private Function createCustomerSearchQuery(custDetails as BookingToolkit.Customer) As string
+		  dim stmt,phoneNumber,firstname,lastname,email as string 
+		  
+		  phoneNumber = custDetails.phoneNumber.getUnformattedNumber()
+		  email = custDetails.email
+		  firstname = custDetails.Name.firstname
+		  lastname = custDetails.Name.lastname
+		  
+		  if phoneNumber <> "" then
+		    stmt = " AND right(phone,10) = '" + phoneNumber + "'"
+		    
+		  end if
+		  
+		  if email <> "" then
+		    stmt = stmt + " AND email = ?"
+		    
+		  end if
+		  
+		  if firstname <> "" then
+		    stmt = stmt + " AND firstname = ?"
+		    
+		  end if
+		  
+		  if lastname <> "" then
+		    stmt = stmt + " AND lastname = ?"
+		    
+		  end if
+		  
+		  const kLengthLeadingAND = 5
+		  stmt = "SELECT " + kAllCustomerFieldsUsed + " FROM customers WHERE " + right(stmt, Len(stmt) - kLengthLeadingAND) + " ORDER BY lastname, firstname"
+		  'dim ps as MySQLPreparedStatement = mSqlServer.Prepare(stmt)
+		  
+		  'dim currentBindNumber as integer = 0
+		  'if phoneNumber <> "" then
+		  'ps.BindType(currentBindNumber, MySQLPreparedStatement.MYSQL_TYPE_STRING)
+		  'ps.Bind(currentBindNumber, phoneNumber)
+		  'currentBindNumber = currentBindNumber + 1
+		  '
+		  'end if
+		  '
+		  'if email <> "" then
+		  'ps.BindType(currentBindNumber, MySQLPreparedStatement.MYSQL_TYPE_STRING)
+		  'ps.Bind(currentBindNumber, email)
+		  'currentBindNumber = currentBindNumber + 1
+		  '
+		  'end if
+		  '
+		  'if firstname <> "" then
+		  'ps.BindType(currentBindNumber, MySQLPreparedStatement.MYSQL_TYPE_STRING)
+		  'ps.Bind(currentBindNumber, firstname)
+		  'currentBindNumber = currentBindNumber + 1
+		  '
+		  'end if
+		  '
+		  'if lastname <> "" then
+		  'ps.BindType(currentBindNumber, MySQLPreparedStatement.MYSQL_TYPE_STRING)
+		  'ps.Bind(currentBindNumber, lastname)
+		  'currentBindNumber = currentBindNumber + 1
+		  '
+		  'end if
+		  '
+		  'return ps
+		  return stmt
 		End Function
 	#tag EndMethod
 
@@ -1061,15 +1128,15 @@ Protected Class Controller
 	#tag EndMethod
 
 	#tag Method, Flags = &h0
-		Function getCustomersFromDetails(custDetails as BookingToolkit.Customer) As BookingToolkit.Customer()
+		Function getCustomersFromDetails(custDetails as BookingToolkit.Customer) As BookingToolkit.Customer
 		  dim customers() as BookingToolkit.Customer
-		  dim ps as MySQLPreparedStatement = createCustomerSearchPreparedStatement(custDetails)
-		  dim rs as RecordSet = ps.SQLSelect()
+		  dim pq as string = createCustomerSearchQuery(custdetails)
+		  dim rs as rowset = session.mysqldb.SelectSQL(pq)
 		  dim custSerial as SQLSerial
 		  if rs <> NIl then
-		    while not rs.EOF
+		    while not rs.AfterLastRow
 		      try
-		        custSerial = new SQLSerial(rs.Field("serial").IntegerValue)
+		        custSerial = new SQLSerial(rs.column("serial").IntegerValue)
 		        customers.Append(getCustomer(custSerial))
 		        
 		      catch err as BookingToolkit.Exceptions.NoSuchItemException
@@ -1077,7 +1144,7 @@ Protected Class Controller
 		        
 		      end try
 		      
-		      rs.MoveNext()
+		      rs.MoveToNextRow
 		      
 		    wend
 		    

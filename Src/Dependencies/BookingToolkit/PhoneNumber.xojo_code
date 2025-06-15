@@ -31,6 +31,10 @@ Protected Class PhoneNumber
 		    
 		  end if
 		  
+		  '----------20250605
+		  return right(theplainNumber,10)
+		  '----------
+		  
 		  return thePlainNumber
 		End Function
 	#tag EndMethod
